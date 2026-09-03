@@ -1,0 +1,127 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - link [ref=f7e4] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=f7e5]
+      - generic [ref=f7e7]:
+        - generic [ref=f7e8]
+        - navigation "Main" [ref=f7e17]
+  - main [ref=f7e29]:
+    - generic [ref=f7e30]:
+      - navigation "Breadcrumb" [ref=f7e33]:
+        - list [ref=f7e34]
+      - generic [ref=f7e39]:
+        - generic [ref=f7e40]
+        - link "Get a Consultation" [ref=f7e47] [cursor=pointer]:
+          - /url: /contact/
+    - generic [ref=f7e54]:
+      - generic [ref=f7e55]:
+        - generic [ref=f7e56]
+        - generic [ref=f7e60]
+      - generic [ref=f7e63]:
+        - generic [ref=f7e64]
+        - generic [ref=f7e68]
+      - generic [ref=f7e71]:
+        - generic [ref=f7e72]
+        - generic [ref=f7e76]
+      - generic [ref=f7e79]:
+        - generic [ref=f7e80]
+        - generic [ref=f7e84]
+    - generic [ref=f7e89]:
+      - img "Powers & Worshtil attorneys reviewing an estate matter" [ref=f7e91]
+      - generic [ref=f7e92]:
+        - heading "An Estate Planning Firm That Treats Your Plan as Personal" [level=2] [ref=f7e93]
+        - paragraph [ref=f7e96]: We believe estate planning works best when it is treated as a conversation, not a transaction. The right documents come from understanding how a family actually works, not from filling in a standard template. Powers & Worshtil has practiced Maryland estate law since 1976. Partners Ralph W. Powers, Jr. and Zach Worshtil hold active roles inside the Prince George's County court system and bring that depth to every plan they draft.
+        - link "About Us" [ref=f7e97] [cursor=pointer]:
+          - /url: /about-us/
+    - generic [ref=f7e99]:
+      - heading "Results We Have Achieved" [level=2] [ref=f7e101]
+      - generic [ref=f7e103]:
+        - generic [ref=f7e104]
+        - generic [ref=f7e112]
+        - generic [ref=f7e120]
+      - generic [ref=f7e128]:
+        - button "Previous case" [ref=f7e129] [cursor=pointer]
+        - button "Next case" [ref=f7e130] [cursor=pointer]
+    - generic [ref=f7e132]:
+      - heading "Estate Planning Services We Provide in Maryland" [level=2] [ref=f7e133]
+      - paragraph [ref=f7e134]: Estate planning is rarely a single document. A complete plan accounts for how assets pass at death, who makes decisions if you cannot, and how to protect what you have built from long-term care costs or family conflict. Powers & Worshtil skillfully handles the full range.
+      - generic [ref=f7e135]:
+        - list [ref=f7e136]
+        - img "Powers & Worshtil attorneys reviewing a probate matter" [ref=f7e177]
+    - generic [ref=f7e180]:
+      - heading "Estate Plans Are Easier to Build Now Than to Fix Later" [level=2] [ref=f7e181]
+      - paragraph [ref=f7e182]: A document drafted before a health event gives you options. One drafted after gives you less.
+      - generic [ref=f7e183]:
+        - link "Schedule Your Case Review" [ref=f7e184] [cursor=pointer]:
+          - /url: /contact/
+        - generic [ref=f7e187]
+    - generic [ref=f7e193]:
+      - heading "Clients Share Their Experience" [level=2] [ref=f7e197]
+      - generic:
+        - button "Previous review" [disabled] [ref=f7e198]
+        - button "Next review" [ref=f7e199] [cursor=pointer]
+      - generic [ref=f7e200]: View More
+    - generic [ref=f7e203]:
+      - heading "Your Legal Team at Powers & Worshtil" [level=2] [ref=f7e205]
+      - list [ref=f7e206]:
+        - listitem [ref=f7e207]
+        - listitem [ref=f7e222]
+      - generic [ref=f7e237]:
+        - generic [ref=f7e238]
+        - generic [ref=f7e246]
+        - generic [ref=f7e254]
+        - generic [ref=f7e262]
+        - generic [ref=f7e270]
+        - generic [ref=f7e278]
+        - generic [ref=f7e286]
+        - generic [ref=f7e294]
+      - generic [ref=f7e302]:
+        - button "Previous team member" [ref=f7e303] [cursor=pointer]
+        - button "Next team member" [ref=f7e304] [cursor=pointer]
+      - link "Meet Our Team" [ref=f7e305] [cursor=pointer]:
+        - /url: /about-us/
+    - generic [ref=f7e307]:
+      - img "Map of the Maryland communities Powers & Worshtil serves" [ref=f7e308]
+      - generic [ref=f7e310]:
+        - generic [ref=f7e311]
+        - generic [ref=f7e314]
+    - generic [ref=f7e352]:
+      - generic [ref=f7e353]:
+        - heading "The Best Time to Plan Was Yesterday. The Second Best Is Now." [level=2] [ref=f7e354]
+        - paragraph [ref=f7e355]: Most estate planning mistakes are not made in the documents. They happen when you wait too long to create them. Tell us your situation, and we will show you exactly where the gaps are.
+      - generic [ref=f7e357]:
+        - generic [ref=f7e358]
+        - form "Contact form" [ref=f7e359]
+    - generic [ref=f7e394]:
+      - heading "Frequently Asked Questions" [level=2] [ref=f7e395]
+      - list [ref=f7e396]:
+        - listitem [ref=f7e397]
+        - listitem [ref=f7e404]
+        - listitem [ref=f7e409]
+        - listitem [ref=f7e414]
+        - listitem [ref=f7e419]
+  - contentinfo [ref=f7e424]:
+    - generic [ref=f7e426]:
+      - link "Powers & Worshtil, P.C." [ref=f7e427] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=f7e428]
+      - generic [ref=f7e429]:
+        - generic [ref=f7e430]
+        - generic [ref=f7e433]
+        - generic [ref=f7e436]
+        - generic [ref=f7e441]
+        - generic [ref=f7e450]
+      - generic [ref=f7e457]:
+        - separator [ref=f7e458]
+        - list [ref=f7e459]
+    - generic [ref=f7e463]:
+      - paragraph [ref=f7e464]: Copyright © 2026 Powers & Worshtil, P.C. All Rights Reserved
+      - paragraph [ref=f7e465]:
+        - link "Powered by Grow Law Marketing Agency" [ref=f7e466] [cursor=pointer]:
+          - /url: https://growlaw.co/
+  - iframe [ref=f7e469]:
+    - generic [ref=f8e6]:
+      - text: protected by
+      - strong [ref=f8e7]: reCAPTCHA

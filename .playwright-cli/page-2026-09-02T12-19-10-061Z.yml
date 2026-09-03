@@ -1,0 +1,303 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e5]
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - navigation "Main" [ref=e195]:
+            - list [ref=e196]:
+              - listitem [ref=e197]:
+                - button "Our Services" [ref=e198]
+              - listitem [ref=e201]:
+                - button "About Us" [ref=e202]
+              - listitem [ref=e205]:
+                - link "Contact Us" [ref=e206]:
+                  - /url: /contact/
+          - link "Tell Us About Your Case" [ref=e208] [cursor=pointer]:
+            - /url: /contact/
+        - generic [ref=e213]:
+          - button "Back to the menu" [ref=e214] [cursor=pointer]
+          - list [ref=e217]:
+            - listitem [ref=e218]:
+              - button "Estate Planning" [ref=e219] [cursor=pointer]
+            - listitem [ref=e221]:
+              - button "Probate & Estate Administration" [ref=e222] [cursor=pointer]
+            - listitem [ref=e224]:
+              - button "Estate & Trust Litigation" [ref=e225] [cursor=pointer]
+            - listitem [ref=e227]:
+              - button "Real Estate Litigation" [ref=e228] [cursor=pointer]
+        - generic [ref=e230]:
+          - button "Back to the menu" [ref=e231] [cursor=pointer]
+          - list [ref=e234]:
+            - listitem [ref=e235]:
+              - link "About Our Firm" [ref=e236] [cursor=pointer]:
+                - /url: /about-us/
+            - listitem [ref=e237]:
+              - link "Areas We Serve" [ref=e238] [cursor=pointer]:
+                - /url: /areas-we-serve/
+            - listitem [ref=e239]:
+              - link "Blog" [ref=e240] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=e241]:
+              - link "Careers" [ref=e242] [cursor=pointer]:
+                - /url: /careers/
+        - generic [ref=e243]:
+          - button "Back to the menu" [ref=e244] [cursor=pointer]
+          - list [ref=e247]:
+            - listitem [ref=e248]:
+              - generic [ref=e249]: Wills
+            - listitem [ref=e250]:
+              - link "Revocable Trusts" [ref=e251] [cursor=pointer]:
+                - /url: /revocable-trust-lawyers-md/
+            - listitem [ref=e252]:
+              - generic [ref=e253]: Power of Attorney
+            - listitem [ref=e254]:
+              - generic [ref=e255]: Healthcare Power of Attorney
+            - listitem [ref=e256]:
+              - generic [ref=e257]: Advance Medical Directive
+            - listitem [ref=e258]:
+              - generic [ref=e259]: Asset Protection Planning
+            - listitem [ref=e260]:
+              - generic [ref=e261]: Special Needs Planning
+            - listitem [ref=e262]:
+              - generic [ref=e263]: Elder Law
+          - link "View All Estate Planning" [ref=e264]:
+            - /url: /estate-planning-lawyers-md/
+        - generic [ref=e266]:
+          - button "Back to the menu" [ref=e267] [cursor=pointer]
+          - list [ref=e270]:
+            - listitem [ref=e271]:
+              - link "Probate Administration" [ref=e272] [cursor=pointer]:
+                - /url: /probate-administration-lawyers-md/
+            - listitem [ref=e273]:
+              - link "Probate Litigation" [ref=e274] [cursor=pointer]:
+                - /url: /probate-litigation-lawyers-md/
+            - listitem [ref=e275]:
+              - generic [ref=e276]: Trust Administration
+            - listitem [ref=e277]:
+              - generic [ref=e278]: Medicaid Asset Protection
+            - listitem [ref=e279]:
+              - generic [ref=e280]: Probate Without a Will
+          - link "View All Probate & Estate" [ref=e281]:
+            - /url: /probate-estate-administration-lawyers-md/
+        - generic [ref=e283]:
+          - button "Back to the menu" [ref=e284] [cursor=pointer]
+          - list [ref=e287]:
+            - listitem [ref=e288]:
+              - generic [ref=e289]: Will Contests
+            - listitem [ref=e290]:
+              - generic [ref=e291]: Trust Disputes
+            - listitem [ref=e292]:
+              - generic [ref=e293]: Fiduciary Litigation
+            - listitem [ref=e294]:
+              - generic [ref=e295]: Breach of Fiduciary Duty
+            - listitem [ref=e296]:
+              - generic [ref=e297]: Contested Guardianships
+            - listitem [ref=e298]:
+              - generic [ref=e299]: Inheritance Disputes
+            - listitem [ref=e300]:
+              - generic [ref=e301]: Claims Against an Estate
+          - link "View All Estate & Trust Litigation" [ref=e302]:
+            - /url: /estate-and-trust-litigation-lawyers-md/
+        - generic [ref=e304]:
+          - button "Back to the menu" [ref=e305] [cursor=pointer]
+          - list [ref=e308]:
+            - listitem [ref=e309]:
+              - generic [ref=e310]: Easement Disputes
+            - listitem [ref=e311]:
+              - generic [ref=e312]: Adverse Possession
+            - listitem [ref=e313]:
+              - generic [ref=e314]: Partition Actions
+            - listitem [ref=e315]:
+              - generic [ref=e316]: Zoning Violation Disputes
+            - listitem [ref=e317]:
+              - generic [ref=e318]: Real Estate & Property Use
+            - listitem [ref=e319]:
+              - generic [ref=e320]: Quiet Title Actions
+            - listitem [ref=e321]:
+              - generic [ref=e322]: Boundary Disputes
+            - listitem [ref=e323]:
+              - generic [ref=e324]: Ownership Disputes
+            - listitem [ref=e325]:
+              - generic [ref=e326]: Title Issues
+          - link "View All Real Estate Litigation" [ref=e327]:
+            - /url: /real-estate-litigation-lawyers-md/
+      - generic [ref=e6]:
+        - link "Call (301) 627-1000" [ref=e7] [cursor=pointer]:
+          - /url: tel:+13013812480
+        - button "Close menu" [expanded] [ref=e329] [cursor=pointer]
+  - main [ref=e14]:
+    - navigation "Breadcrumb" [ref=e15]:
+      - list [ref=e16]:
+        - listitem [ref=e17]:
+          - link "Powers & Worshtil, P.C." [ref=e18]:
+            - /url: https://pandwlaw.com/
+          - text: /
+        - listitem [ref=e19]:
+          - link "About Us" [ref=e20]:
+            - /url: https://pandwlaw.com/about-us/
+          - text: /
+        - listitem [ref=e21]: Zachary W. Worshtil
+    - generic [ref=e24]:
+      - img "Zachary W. Worshtil" [ref=e26]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - heading "Zachary W. Worshtil" [level=1] [ref=e29]
+          - paragraph [ref=e30]: Managing Partner
+        - list [ref=e31]:
+          - listitem [ref=e32]:
+            - heading [level=2] [ref=e33]:
+              - button "Biography" [expanded] [ref=e34] [cursor=pointer]
+            - generic "Biography" [ref=e37]:
+              - paragraph [ref=e38]: Zachary W. Worshtil is a partner at Powers & Worshtil, P.C., where he represents individuals and families in matters involving estate administration, estate and trust litigation, and estate planning. He is known for his thorough, solutions-oriented approach and his ability to guide clients through complex legal and financial issues with clarity and care.
+              - paragraph [ref=e39]: A lifelong resident of Prince George’s County, Zach brings deep roots in the community to his practice. He graduated from Tulane University before earning his law degree from the University of Baltimore School of Law and an M.B.A. from the University of Baltimore Merrick School of Business. Following graduation, he served as judicial law clerk to the Honorable Albert W. Northrop of the Circuit Court for Prince George’s County, gaining extensive experience in litigation and the judicial process. He then entered private practice, working across several areas of law before focusing his practice on estates and trusts.
+              - paragraph [ref=e40]: In addition to his client work, Zach has been appointed to numerous professional roles in the Maryland courts, reflecting the respect he has earned from the bench and bar. He also serves in leadership positions in several bar associations and professional organizations, helping to shape the future of trust and estate law in Maryland.
+          - listitem [ref=e41]:
+            - heading [level=2] [ref=e42]:
+              - button "Areas of Practice" [ref=e43] [cursor=pointer]
+          - listitem [ref=e46]:
+            - heading [level=2] [ref=e47]:
+              - button "Education" [ref=e48] [cursor=pointer]
+          - listitem [ref=e51]:
+            - heading [level=2] [ref=e52]:
+              - button "Admitted to Practice" [ref=e53] [cursor=pointer]
+          - listitem [ref=e56]:
+            - heading [level=2] [ref=e57]:
+              - button "Professional Appointments" [ref=e58] [cursor=pointer]
+          - listitem [ref=e61]:
+            - heading [level=2] [ref=e62]:
+              - button "Professional Associations And Memberships" [ref=e63] [cursor=pointer]
+          - listitem [ref=e66]:
+            - heading [level=2] [ref=e67]:
+              - button "Honors & Recognition" [ref=e68] [cursor=pointer]
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - heading "Articles by Zachary W. Worshtil" [level=2] [ref=e73]
+        - generic [ref=e75]:
+          - article [ref=e76]:
+            - heading [level=3] [ref=e78]:
+              - link "Should I Give My Home to My Child or Add His or Her Name to the Deed?" [ref=e79]:
+                - /url: https://pandwlaw.com/blog/should-i-give-my-home-to-my-child-or-add-his-or-her-name-to-the-deed/
+            - paragraph [ref=e80]:
+              - generic [ref=e81]: August 31, 2026
+              - generic [ref=e82]:
+                - text: By
+                - link "Zachary W. Worshtil" [ref=e83]:
+                  - /url: /about-us/zachary-w-worshtil/
+          - article [ref=e84]:
+            - heading [level=3] [ref=e86]:
+              - link "What Happens to a Child’s Inheritance When a Parent Dies Intestate in Maryland?" [ref=e87]:
+                - /url: https://pandwlaw.com/blog/child-inheritance-without-will/
+            - paragraph [ref=e88]:
+              - generic [ref=e89]: August 31, 2026
+              - generic [ref=e90]:
+                - text: By
+                - link "Zachary W. Worshtil" [ref=e91]:
+                  - /url: /about-us/zachary-w-worshtil/
+          - article [ref=e92]:
+            - heading [level=3] [ref=e94]:
+              - 'link "Durable vs. Limited POA in Maryland: Choosing the Right Level of Control" [ref=e95]':
+                - /url: https://pandwlaw.com/blog/durable-vs-limited-poa-in-maryland/
+            - paragraph [ref=e96]:
+              - generic [ref=e97]: August 31, 2026
+              - generic [ref=e98]:
+                - text: By
+                - link "Zachary W. Worshtil" [ref=e99]:
+                  - /url: /about-us/zachary-w-worshtil/
+      - generic:
+        - button "Previous post" [ref=e100] [cursor=pointer]
+        - button "Next post" [ref=e101] [cursor=pointer]
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - heading "Ready to Protect What Matters Most?" [level=2] [ref=e106]
+        - paragraph [ref=e107]: Estate matters rarely arrive with clear labels. Tell us what happened and we will tell you exactly where you stand.
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - status
+          - list
+        - form "Contact form" [ref=e111]:
+          - generic [ref=e112]:
+            - text: Company website
+            - textbox [ref=e113]
+          - generic [ref=e114]:
+            - generic: First Name *
+            - textbox "First Name *" [ref=e116]:
+              - /placeholder: ​
+          - generic [ref=e117]:
+            - generic: Last Name *
+            - textbox "Last Name *" [ref=e119]:
+              - /placeholder: ​
+          - generic [ref=e120]:
+            - generic: Phone *
+            - textbox "Phone *" [ref=e122]:
+              - /placeholder: ​
+          - generic [ref=e123]:
+            - generic: Email *
+            - textbox "Email *" [ref=e125]:
+              - /placeholder: ​
+          - generic [ref=e126]:
+            - generic: Choose Practice Area
+            - generic [ref=e128]:
+              - combobox
+              - button "Choose Practice Area Choose Practice Area" [ref=e129] [cursor=pointer]:
+                - generic [ref=e130]: Choose Practice Area
+          - generic [ref=e133]:
+            - generic: "Tell us more about your situation:"
+            - textbox "Tell us more about your situation:" [ref=e135]:
+              - /placeholder: ​
+          - generic [ref=e136]:
+            - button "Schedule Your Case Review" [ref=e137] [cursor=pointer]
+            - generic [ref=e140]:
+              - generic [ref=e141]: Receive a same-day response
+              - link "(301) 381-2480" [ref=e191]:
+                - /url: tel:+13013812480
+  - contentinfo [ref=e145]:
+    - generic [ref=e147]:
+      - link [ref=e148]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e149]
+      - generic [ref=e150]:
+        - generic [ref=e151]:
+          - heading "Main Office:" [level=2] [ref=e152]
+          - generic [ref=e153]: Prince George's County 5415 Water Street Upper Marlboro, MD 20772
+        - generic [ref=e154]:
+          - heading "By Appointment Only:" [level=2] [ref=e155]
+          - generic [ref=e156]: "Montgomery County 10605 Concord St #440 Kensington, MD 20895"
+        - generic [ref=e157]:
+          - heading "Contact Us" [level=2] [ref=e158]
+          - link "(301) 381-2480" [ref=e192]:
+            - /url: tel:+13013812480
+        - generic [ref=e162]:
+          - heading "Social Media" [level=2] [ref=e163]
+          - list [ref=e164]:
+            - listitem [ref=e165]:
+              - link "Facebook" [ref=e166]:
+                - /url: https://www.facebook.com/The-Law-Office-of-Ralph-W-Powers-Jr-PC-100359312522194/
+            - listitem [ref=e168]:
+              - link "LinkedIn" [ref=e169]:
+                - /url: https://www.linkedin.com/company/pandwlaw
+        - generic [ref=e171]:
+          - heading "Useful Resources" [level=2] [ref=e172]
+          - list [ref=e173]:
+            - listitem [ref=e174]:
+              - link "Blog" [ref=e175]:
+                - /url: https://pandwlaw.com/blog/
+            - listitem [ref=e176]:
+              - link "Careers" [ref=e177]:
+                - /url: https://pandwlaw.com/careers/
+      - generic [ref=e178]:
+        - separator [ref=e179]
+        - list [ref=e180]:
+          - listitem [ref=e181]:
+            - generic [ref=e182]: AI Info Page
+    - generic [ref=e184]:
+      - paragraph [ref=e185]: Copyright © 2026 Powers & Worshtil, P.C. All Rights Reserved
+      - paragraph [ref=e186]:
+        - link "Powered by Grow Law Marketing Agency" [ref=e187]:
+          - /url: https://growlaw.co/
+  - iframe [ref=e190]:
+    - generic [ref=f3e6]:
+      - text: protected by
+      - strong [ref=f3e7]: reCAPTCHA

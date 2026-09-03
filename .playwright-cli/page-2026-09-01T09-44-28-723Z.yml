@@ -1,0 +1,114 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "29 Broadway, 25th Floor, New York, New York 10006" [ref=e6] [cursor=pointer]:
+        - /url: https://www.google.com/maps/place/29+Broadway+25th+Floor,+New+York,+NY+10006/@40.7060265,-74.0134122,855m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c25a1146bc3d57:0xb0c60eecf1c1ce7!8m2!3d40.7060265!4d-74.0134122!16s%2Fg%2F11sv991_b6?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D
+      - link "212-994-0260" [ref=e7] [cursor=pointer]:
+        - /url: tel:+12129940260
+      - link "Contact" [ref=e8] [cursor=pointer]:
+        - /url: /contact
+    - generic [ref=e10]:
+      - link [ref=e11] [cursor=pointer]:
+        - /url: /
+        - img "CTBC logo" [ref=e12]
+      - navigation [ref=e13]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Attorneys" [ref=e18] [cursor=pointer]:
+              - /url: /attorneys
+            - generic:
+              - list:
+                - listitem:
+                  - link "Susan Baumel-Cornicello":
+                    - /url: /attorneys/susan-baumel-cornicello
+                - listitem:
+                  - link "Anthony J. Cornicello":
+                    - /url: /attorneys/anthony-j-cornicello
+                - listitem:
+                  - link "David B. Tendler":
+                    - /url: /attorneys/david-tendler
+                - listitem:
+                  - link "Frederick E. Park":
+                    - /url: /attorneys/frederick-e-park
+                - listitem:
+                  - link "Scott Greenblatt":
+                    - /url: /attorneys/scott-greenblatt
+                - listitem:
+                  - link "Jessica L. Lalehzar":
+                    - /url: /attorneys/jessica-l-lalehzar
+          - listitem [ref=e19]:
+            - link "Practice Area" [ref=e21] [cursor=pointer]:
+              - /url: /practice-areas
+            - generic:
+              - list:
+                - listitem:
+                  - link "Administrative Proceedings Rent Regulations & Due Diligence":
+                    - /url: /practice-areas/administrative-proceedings-rent-regulations-due-diligence
+                - listitem:
+                  - link "Litigation":
+                    - /url: /practice-areas/litigation
+                - listitem:
+                  - link "Leasing":
+                    - /url: /practice-areas/leasing
+          - listitem [ref=e22]:
+            - link "About Us" [ref=e24] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=e25]:
+            - link "Contact" [ref=e27] [cursor=pointer]:
+              - /url: /contact
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - list [ref=e31]:
+        - listitem [ref=e32]:
+          - img "HELPING NAVIGATE" [ref=e33]
+        - listitem [ref=e34]:
+          - img "HOMAPAGE HELPING NAVGATE" [ref=e35]
+        - listitem [ref=e36]:
+          - img "helping navigate" [ref=e37]
+      - generic [ref=e38]:
+        - heading "Helping Navigate" [level=1] [ref=e39]
+        - paragraph [ref=e40]: "new york`s real estate landscape"
+      - img "helping navigate" [ref=e42]
+    - generic [ref=e44]:
+      - heading "About Us" [level=2] [ref=e45]
+      - paragraph [ref=e46]: CTBC offers an intimate, attentive, and responsive approach to our clients’ needs, goals and budgets. Considering the City and State of New York may be the most regulated real estate market, our decades of experience in the courts and administrative proceedings offers CTBC unique insight on how to best guide and advocate for our clients. Firms with ancillary real estate practices do not have the depth of knowledge and flexibility that CTBC has to keep up with the ever-changing regulatory landscape.
+      - paragraph [ref=e47]: After years of large firm practice, CTBC was founded with the recognition that not every dispute necessitates the application of overwhelming force or a scorched earth approach. Instead, CTBC offers thoughtful case and client-tailored strategies to achieve the ultimate goal of victory that wins the war without breaking the bank.
+    - generic [ref=e48]:
+      - heading "Practice Areas" [level=2] [ref=e49]
+      - list [ref=e50]:
+        - listitem [ref=e51]:
+          - link [ref=e52] [cursor=pointer]:
+            - /url: /practice-areas/administrative-proceedings-rent-regulations-due-diligence
+            - img "ADMINISTRATIVE PROCEEDINGS RENT REGULATIONS & DUE DILIGENCE" [ref=e53]
+          - link "ADMINISTRATIVE PROCEEDINGS, RENT REGULATIONS & DUE DILIGENCE" [ref=e54] [cursor=pointer]:
+            - /url: /practice-areas/administrative-proceedings-rent-regulations-due-diligence
+        - listitem [ref=e56]:
+          - link [ref=e57] [cursor=pointer]:
+            - /url: /practice-areas/litigation
+            - img "LITIGATION" [ref=e58]
+          - link "litigation" [ref=e59] [cursor=pointer]:
+            - /url: /practice-areas/litigation
+        - listitem [ref=e61]:
+          - link [ref=e62] [cursor=pointer]:
+            - /url: /practice-areas/leasing
+            - img "Leasing" [ref=e63]
+          - link "leasing" [ref=e64] [cursor=pointer]:
+            - /url: /practice-areas/leasing
+  - contentinfo [ref=e66]:
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - link "29 Broadway, 25th Floor New York, New York 10006" [ref=e69] [cursor=pointer]:
+          - /url: https://www.google.com/maps/place/29+Broadway+25th+Floor,+New+York,+NY+10006/@40.7060265,-74.0134122,855m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c25a1146bc3d57:0xb0c60eecf1c1ce7!8m2!3d40.7060265!4d-74.0134122!16s%2Fg%2F11sv991_b6?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D
+          - text: 29 Broadway, 25th FloorNew York, New York 10006
+        - link "212-994-0260" [ref=e70] [cursor=pointer]:
+          - /url: tel:+12129940260
+      - paragraph [ref=e73]:
+        - text: Copyright © 2025. Cornicello, Tendler & Baumel-Cornicello, LLP. All Rights Reserved |
+        - link "Privacy Policy" [ref=e74] [cursor=pointer]:
+          - /url: /privacy-policy
+        - text: "|"
+        - link "Disclaimer" [ref=e75] [cursor=pointer]:
+          - /url: /disclaimer
+        - text: "|"
+        - link "Accessibility Statement" [ref=e76] [cursor=pointer]:
+          - /url: /accessibility-statement

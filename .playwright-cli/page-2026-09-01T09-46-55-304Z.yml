@@ -1,0 +1,98 @@
+- generic [active] [ref=f2e1]:
+  - main [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - heading "Contact" [level=1] [ref=f2e5]
+      - img "Contact Hero Image" [ref=f2e7]
+    - form "form" [ref=f2e12]:
+      - generic [ref=f2e13]:
+        - textbox "First Name" [ref=f2e14]:
+          - /placeholder: ""
+        - generic: First Name
+      - generic [ref=f2e15]:
+        - textbox "Last Name" [ref=f2e16]:
+          - /placeholder: ""
+        - generic [ref=f2e18]:
+          - generic [ref=f2e19]:
+            - link [ref=f2e20] [cursor=pointer]:
+              - /url: /
+              - img "CTBC logo" [ref=f2e21]
+            - button "burger" [ref=f2e22] [cursor=pointer]
+          - navigation [ref=f2e23]:
+            - list [ref=f2e25]:
+              - listitem [ref=f2e26]:
+                - link "Attorneys" [ref=f2e28] [cursor=pointer]:
+                  - /url: /attorneys
+                - list [ref=f2e30]:
+                  - listitem [ref=f2e31]:
+                    - link "- Susan Baumel-Cornicello" [ref=f2e32] [cursor=pointer]:
+                      - /url: /attorneys/susan-baumel-cornicello
+                  - listitem [ref=f2e33]:
+                    - link "- Anthony J. Cornicello" [ref=f2e34] [cursor=pointer]:
+                      - /url: /attorneys/anthony-j-cornicello
+                  - listitem [ref=f2e35]:
+                    - link "- David B. Tendler" [ref=f2e36] [cursor=pointer]:
+                      - /url: /attorneys/david-tendler
+                  - listitem [ref=f2e37]:
+                    - link "- Frederick E. Park" [ref=f2e38] [cursor=pointer]:
+                      - /url: /attorneys/frederick-e-park
+                  - listitem [ref=f2e39]:
+                    - link "- Scott Greenblatt" [ref=f2e40] [cursor=pointer]:
+                      - /url: /attorneys/scott-greenblatt
+                  - listitem [ref=f2e41]:
+                    - link "- Jessica L. Lalehzar" [ref=f2e42] [cursor=pointer]:
+                      - /url: /attorneys/jessica-l-lalehzar
+              - listitem [ref=f2e43]:
+                - link "Practice Area" [ref=f2e45] [cursor=pointer]:
+                  - /url: /practice-areas
+                - list [ref=f2e47]:
+                  - listitem [ref=f2e48]:
+                    - link "- Administrative Proceedings Rent Regulations & Due Diligence" [ref=f2e49] [cursor=pointer]:
+                      - /url: /practice-areas/administrative-proceedings-rent-regulations-due-diligence
+                  - listitem [ref=f2e50]:
+                    - link "- Litigation" [ref=f2e51] [cursor=pointer]:
+                      - /url: /practice-areas/litigation
+                  - listitem [ref=f2e52]:
+                    - link "- Leasing" [ref=f2e53] [cursor=pointer]:
+                      - /url: /practice-areas/leasing
+              - listitem [ref=f2e54]:
+                - link "About Us" [ref=f2e56] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=f2e57]:
+                - link "Contact" [ref=f2e59] [cursor=pointer]:
+                  - /url: /contact
+        - generic: Last Name
+      - generic [ref=f2e60]:
+        - textbox "Email" [ref=f2e61]:
+          - /placeholder: ""
+        - generic: Email
+      - generic [ref=f2e62]:
+        - textbox "Phone" [ref=f2e63]:
+          - /placeholder: ""
+        - generic: Phone
+      - generic [ref=f2e64]:
+        - textbox "Message" [ref=f2e65]:
+          - /placeholder: ""
+        - generic: Your Message
+      - button "Submit" [ref=f2e66] [cursor=pointer]
+    - iframe [ref=f2e72]:
+      - link "Open in Maps (opens in new tab)" [ref=f3e4] [cursor=pointer]:
+        - /url: about:invalid#zClosurez
+        - text: Open in Maps
+  - contentinfo [ref=f2e73]:
+    - generic [ref=f2e74]:
+      - generic [ref=f2e75]:
+        - link "29 Broadway, 25th Floor New York, New York 10006" [ref=f2e76] [cursor=pointer]:
+          - /url: https://www.google.com/maps/place/29+Broadway+25th+Floor,+New+York,+NY+10006/@40.7060265,-74.0134122,855m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c25a1146bc3d57:0xb0c60eecf1c1ce7!8m2!3d40.7060265!4d-74.0134122!16s%2Fg%2F11sv991_b6?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D
+          - text: 29 Broadway, 25th FloorNew York, New York 10006
+        - link "212-994-0260" [ref=f2e77] [cursor=pointer]:
+          - /url: tel:+12129940260
+      - paragraph [ref=f2e80]:
+        - text: Copyright © 2025. Cornicello, Tendler & Baumel-Cornicello, LLP. All Rights Reserved |
+        - link "Privacy Policy" [ref=f2e81] [cursor=pointer]:
+          - /url: /privacy-policy
+        - text: "|"
+        - link "Disclaimer" [ref=f2e82] [cursor=pointer]:
+          - /url: /disclaimer
+        - text: "|"
+        - link "Accessibility Statement" [ref=f2e83] [cursor=pointer]:
+          - /url: /accessibility-statement

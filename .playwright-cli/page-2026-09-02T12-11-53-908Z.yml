@@ -1,0 +1,516 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e5]
+      - generic [ref=e467]:
+        - generic [ref=e468]:
+          - navigation "Main" [ref=e469]:
+            - list [ref=e470]:
+              - listitem [ref=e471]:
+                - button "Our Services" [ref=e472]
+              - listitem [ref=e475]:
+                - button "About Us" [ref=e476]
+              - listitem [ref=e479]:
+                - link "Contact Us" [ref=e480]:
+                  - /url: /contact/
+          - generic [ref=e481]:
+            - link "Tell Us About Your Case" [ref=e482] [cursor=pointer]:
+              - /url: /contact/
+            - generic [ref=e508] [cursor=pointer]:
+              - 'img "Rating: 4.8 out of 5" [ref=e509]':
+                - generic [ref=e510]: "4.8"
+              - generic [ref=e567]: (109)
+        - generic [ref=e568]:
+          - button "Back to the menu" [ref=e569] [cursor=pointer]
+          - list [ref=e572]:
+            - listitem [ref=e573]:
+              - button "Estate Planning" [ref=e574] [cursor=pointer]
+            - listitem [ref=e576]:
+              - button "Probate & Estate Administration" [ref=e577] [cursor=pointer]
+            - listitem [ref=e579]:
+              - button "Estate & Trust Litigation" [ref=e580] [cursor=pointer]
+            - listitem [ref=e582]:
+              - button "Real Estate Litigation" [ref=e583] [cursor=pointer]
+        - generic [ref=e585]:
+          - button "Back to the menu" [ref=e586] [cursor=pointer]
+          - list [ref=e589]:
+            - listitem [ref=e590]:
+              - link "About Our Firm" [ref=e591] [cursor=pointer]:
+                - /url: /about-us/
+            - listitem [ref=e592]:
+              - link "Areas We Serve" [ref=e593] [cursor=pointer]:
+                - /url: /areas-we-serve/
+            - listitem [ref=e594]:
+              - link "Blog" [ref=e595] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=e596]:
+              - link "Careers" [ref=e597] [cursor=pointer]:
+                - /url: /careers/
+        - generic [ref=e598]:
+          - button "Back to the menu" [ref=e599] [cursor=pointer]
+          - list [ref=e602]:
+            - listitem [ref=e603]:
+              - generic [ref=e604]: Wills
+            - listitem [ref=e605]:
+              - link "Revocable Trusts" [ref=e606] [cursor=pointer]:
+                - /url: /revocable-trust-lawyers-md/
+            - listitem [ref=e607]:
+              - generic [ref=e608]: Power of Attorney
+            - listitem [ref=e609]:
+              - generic [ref=e610]: Healthcare Power of Attorney
+            - listitem [ref=e611]:
+              - generic [ref=e612]: Advance Medical Directive
+            - listitem [ref=e613]:
+              - generic [ref=e614]: Asset Protection Planning
+            - listitem [ref=e615]:
+              - generic [ref=e616]: Special Needs Planning
+            - listitem [ref=e617]:
+              - generic [ref=e618]: Elder Law
+          - link "View All Estate Planning" [ref=e619]:
+            - /url: /estate-planning-lawyers-md/
+        - generic [ref=e621]:
+          - button "Back to the menu" [ref=e622] [cursor=pointer]
+          - list [ref=e625]:
+            - listitem [ref=e626]:
+              - link "Probate Administration" [ref=e627] [cursor=pointer]:
+                - /url: /probate-administration-lawyers-md/
+            - listitem [ref=e628]:
+              - link "Probate Litigation" [ref=e629] [cursor=pointer]:
+                - /url: /probate-litigation-lawyers-md/
+            - listitem [ref=e630]:
+              - generic [ref=e631]: Trust Administration
+            - listitem [ref=e632]:
+              - generic [ref=e633]: Medicaid Asset Protection
+            - listitem [ref=e634]:
+              - generic [ref=e635]: Probate Without a Will
+          - link "View All Probate & Estate" [ref=e636]:
+            - /url: /probate-estate-administration-lawyers-md/
+        - generic [ref=e638]:
+          - button "Back to the menu" [ref=e639] [cursor=pointer]
+          - list [ref=e642]:
+            - listitem [ref=e643]:
+              - generic [ref=e644]: Will Contests
+            - listitem [ref=e645]:
+              - generic [ref=e646]: Trust Disputes
+            - listitem [ref=e647]:
+              - generic [ref=e648]: Fiduciary Litigation
+            - listitem [ref=e649]:
+              - generic [ref=e650]: Breach of Fiduciary Duty
+            - listitem [ref=e651]:
+              - generic [ref=e652]: Contested Guardianships
+            - listitem [ref=e653]:
+              - generic [ref=e654]: Inheritance Disputes
+            - listitem [ref=e655]:
+              - generic [ref=e656]: Claims Against an Estate
+          - link "View All Estate & Trust Litigation" [ref=e657]:
+            - /url: /estate-and-trust-litigation-lawyers-md/
+        - generic [ref=e659]:
+          - button "Back to the menu" [ref=e660] [cursor=pointer]
+          - list [ref=e663]:
+            - listitem [ref=e664]:
+              - generic [ref=e665]: Easement Disputes
+            - listitem [ref=e666]:
+              - generic [ref=e667]: Adverse Possession
+            - listitem [ref=e668]:
+              - generic [ref=e669]: Partition Actions
+            - listitem [ref=e670]:
+              - generic [ref=e671]: Zoning Violation Disputes
+            - listitem [ref=e672]:
+              - generic [ref=e673]: Real Estate & Property Use
+            - listitem [ref=e674]:
+              - generic [ref=e675]: Quiet Title Actions
+            - listitem [ref=e676]:
+              - generic [ref=e677]: Boundary Disputes
+            - listitem [ref=e678]:
+              - generic [ref=e679]: Ownership Disputes
+            - listitem [ref=e680]:
+              - generic [ref=e681]: Title Issues
+          - link "View All Real Estate Litigation" [ref=e682]:
+            - /url: /real-estate-litigation-lawyers-md/
+      - generic [ref=e6]:
+        - link "Call (301) 627-1000" [ref=e7] [cursor=pointer]:
+          - /url: tel:+13012728825
+        - button "Close menu" [expanded] [ref=e684] [cursor=pointer]
+  - main [ref=e14]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - heading "Maryland Trust, Estate & Probate Lawyers" [level=1] [ref=e21]
+        - paragraph [ref=e24]:
+          - generic [ref=e25]: Serving Families, Fiduciaries, Beneficiaries
+          - generic [ref=e26]:
+            - text: "& Property Owners"
+            - emphasis [ref=e27]: Since 1976
+      - generic [ref=e28]:
+        - link "Tell Us Your Situation" [ref=e29] [cursor=pointer]:
+          - /url: /contact/
+        - generic [ref=e706] [cursor=pointer]:
+          - 'img "Rating: 4.8 out of 5" [ref=e707]':
+            - generic [ref=e708]: "4.8"
+          - generic [ref=e765]: (109)
+    - generic [ref=e37]:
+      - img "America's Most Honored Professionals 2019 — Ralph W. Powers, Jr." [ref=e39]
+      - img "Martindale-Hubbell Peer Rated for Ethical Standards and Legal Ability, 2024" [ref=e41]
+      - img "Avvo Rating 9.1 Top Attorney — Zachary William Worshtil" [ref=e43]
+      - img "Martindale-Hubbell highest possible rating in both legal ability and ethical standards — Ralph W. Powers, Jr." [ref=e45]
+      - img "Lawyers.com AV Preeminent rating — Ralph W. Powers, Jr." [ref=e47]
+      - img "Bar Register of Preeminent Lawyers" [ref=e49]
+      - link [ref=e51] [cursor=pointer]:
+        - /url: https://www.bestlawyers.com/lawyers/zachary-worshtil/368941
+        - img "Best Lawyers - Lawyer Logo" [ref=e52]
+      - generic:
+        - link "Best Lawyers - Lawyer Logo":
+          - /url: https://www.bestlawyers.com/lawyers/zachary-worshtil/368941
+          - img "Best Lawyers - Lawyer Logo"
+      - link [ref=e70] [cursor=pointer]:
+        - /url: https://www.bestlawyers.com/lawyers/zachary-worshtil/368941
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - img "Powers & Worshtil attorneys at work" [ref=e80]
+        - generic [ref=e81]:
+          - 'heading "Powers & Worshtil: Proven Leadership and Authority" [level=2] [ref=e82]'
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - heading "Decades of Experience" [level=3] [ref=e87]
+              - paragraph [ref=e88]: For many years, we have remained dedicated to providing trusted representation across estate planning, probate administration, trust litigation, and real property matters.
+            - separator [ref=e89]
+            - generic [ref=e90]:
+              - heading "Maryland Judicial Insight" [level=3] [ref=e93]
+              - paragraph [ref=e94]: Our deep roots in the Maryland court system give every client an insider advantage. We are AV-rated, peer-reviewed, and consistently recognized among the Best Lawyers in America.
+            - separator [ref=e95]
+            - generic [ref=e96]:
+              - heading "Complex Matters For Every Stage" [level=3] [ref=e99]
+              - paragraph [ref=e100]: From drafting your first will to litigating a contested inheritance, we handle the full arc of estate law. As your legal needs evolve, we evolve with you.
+      - link "More About Our Law Firm" [ref=e101] [cursor=pointer]:
+        - /url: /about-us/
+    - generic [ref=e104]:
+      - heading "Proven Results in Complex Disputes" [level=2] [ref=e106]
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - separator [ref=e111]
+            - separator [ref=e113]
+          - generic [ref=e114]:
+            - heading "$2.4M Estate Restored After Contested Will" [level=3] [ref=e115]
+            - paragraph [ref=e116]: A new will signed three weeks before death redirected the entire estate to a third party. We proved undue influence in the Orphans' Court and restored the original distribution.
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - separator [ref=e119]
+            - separator [ref=e121]
+          - generic [ref=e122]:
+            - heading "Real Property Litigation" [level=3] [ref=e123]
+            - paragraph [ref=e124]: A co-heir refused to sell or contribute to maintenance costs. We filed a partition action, secured a fair valuation, and protected our client's full share of the property.
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - separator [ref=e127]
+            - separator [ref=e129]
+          - generic [ref=e130]:
+            - heading "Trustee Removed. $800K Returned" [level=3] [ref=e131]
+            - paragraph [ref=e132]: A corporate trustee was draining a special needs trust through excessive fees. We petitioned for removal, forced an audit, and recovered misappropriated funds for the beneficiaries.
+      - generic [ref=e133]:
+        - button "Previous case" [ref=e134] [cursor=pointer]
+        - button "Next case" [ref=e135] [cursor=pointer]
+    - generic [ref=e137]:
+      - heading "Cases We Help With" [level=2] [ref=e138]
+      - list [ref=e140]:
+        - listitem [ref=e141]:
+          - heading [level=3] [ref=e142]:
+            - button "Estate Administration & Probate Law" [ref=e143] [cursor=pointer]
+        - listitem [ref=e146]:
+          - heading [level=3] [ref=e147]:
+            - button "Estate & Trust Litigation" [ref=e148] [cursor=pointer]
+        - listitem [ref=e151]:
+          - heading [level=3] [ref=e152]:
+            - button "Estate Planning" [ref=e153] [cursor=pointer]
+        - listitem [ref=e156]:
+          - heading [level=3] [ref=e157]:
+            - button "Real Property Litigation" [ref=e158] [cursor=pointer]
+    - generic [ref=e166]:
+      - heading "Looking for an Effective Way Forward? Let’s define your path." [level=2] [ref=e167]:
+        - generic [ref=e168]: Looking for an Effective Way Forward?
+        - emphasis [ref=e170]: Let’s define your path.
+      - generic [ref=e171]:
+        - link "Schedule Your Case Review" [ref=e172] [cursor=pointer]:
+          - /url: /contact/
+        - generic [ref=e175]:
+          - generic [ref=e176]: Receive a same-day response
+          - link "(301) 272-8825" [ref=e463]:
+            - /url: tel:+13012728825
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - generic [ref=e787] [cursor=pointer]:
+          - 'img "Rating: 4.8 out of 5" [ref=e788]':
+            - generic [ref=e789]: "4.8"
+          - generic [ref=e846]: (109)
+        - 'heading "Featured Reviews: What Our Maryland Clients Value Most" [level=2] [ref=e185]'
+      - generic [ref=e464]:
+        - button "Previous review" [disabled] [ref=e186]
+        - region "Carousel" [ref=e861]:
+          - generic [ref=e864]:
+            - generic [ref=e868]:
+              - generic [ref=e877]:
+                - generic [ref=e878]: AI-Generated Summary
+                - generic [ref=e880]: Based on 109 Google reviews
+              - generic [ref=e882]:
+                - 'img "Rating: 4.8 out of 5" [ref=e883]'
+                - generic [ref=e940]:
+                  - generic [ref=e941]: Strongest praise centers on estate planning, wills, trusts, probate, and estate administration.
+                  - generic [ref=e945]: Reviewers repeatedly mention clear explanations, patience, and timely answers to questions.
+                  - generic [ref=e949]: The staff is often described as friendly, responsive, efficient, and easy to work with.
+            - generic [ref=e956]:
+              - generic [ref=e957]:
+                - link "View on Google" [ref=e958]:
+                  - /url: https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25KVlpXdDRPSE5yY0d4dmMzVm9SbkJYZUhCM2JVRRAB!2m1!1s0x0:0x9b58cdcfd80a4453!3m1!1s2@1:CAIQACodChtycF9oOnJVZWt4OHNrcGxvc3VoRnBXeHB3bUE%7C%7C
+                - generic [ref=e980]:
+                  - link "Review by T Willett" [ref=e981]:
+                    - /url: https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25KVlpXdDRPSE5yY0d4dmMzVm9SbkJYZUhCM2JVRRAB!2m1!1s0x0:0x9b58cdcfd80a4453!3m1!1s2@1:CAIQACodChtycF9oOnJVZWt4OHNrcGxvc3VoRnBXeHB3bUE%7C%7C
+                    - generic [ref=e982]: T Willett
+                    - img "Verified Customer" [ref=e983]
+                  - generic [ref=e987]: 12 hours ago
+              - generic [ref=e992]:
+                - 'img "Rating: 5.0 out of 5" [ref=e993]'
+                - generic [ref=e1052]:
+                  - generic [ref=e1053]: I’m extremely grateful to Mr. Powers and Mr. Wilt for the outstanding representation they provided throughout my case. It was a complex and challenging matter, and they handled it with professionalism, dedication, and persistence every step of the way. I truly appreciated their guidance, preparation, attention to detail, and commitment to protecting my interests. I couldn’t be more thankful for their hard work and the successful outcome they achieved. I highly recommend them and the Powers & Worshtil, P.C. firm.
+                  - button "Read more" [ref=e1054] [cursor=pointer]
+        - button "Next review" [ref=e187] [cursor=pointer]
+      - generic [ref=e188]: View More
+    - blockquote [ref=e193]: “We help clients make sound decisions during life’s most important moments.”
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - heading "Your Team" [level=2] [ref=e197]
+        - paragraph [ref=e198]: At Powers & Worshtil, every client works directly with an experienced attorney from the first consultation to the final resolution. Two partners, one associate, and a commitment that your case is never passed down the chain.
+      - list [ref=e199]:
+        - listitem [ref=e200]:
+          - generic [ref=e201]:
+            - img "Zachary W. Worshtil, Managing Partner" [ref=e202]
+            - generic [ref=e204]:
+              - link [ref=e205]:
+                - /url: /about-us/zachary-w-worshtil/
+                - heading "Zachary W. Worshtil" [level=3] [ref=e206] [cursor=pointer]
+              - paragraph [ref=e207]: Managing Partner
+          - list [ref=e209]:
+            - listitem [ref=e210]: 19 years of legal experience
+            - listitem [ref=e211]: Member of the Trial Court Judicial Nominating Commission
+            - listitem [ref=e212]: Court-Appointed Mediator and Standing Examiner
+            - listitem [ref=e213]: Best Lawyers in America® (2026)
+          - separator [ref=e214]
+        - listitem [ref=e215]:
+          - generic [ref=e216]:
+            - img "Ralph W. Powers, Jr., Partner" [ref=e217]
+            - generic [ref=e219]:
+              - link [ref=e220]:
+                - /url: /about-us/ralph-w-powers-jr/
+                - heading "Ralph W. Powers, Jr." [level=3] [ref=e221] [cursor=pointer]
+              - paragraph [ref=e222]: Partner
+          - list [ref=e224]:
+            - listitem [ref=e225]: 52 years of legal experience
+            - listitem [ref=e226]: Former member of the Trial Court Judicial Nomination Commission
+            - listitem [ref=e227]: AV Preeminent rated attorney
+          - separator [ref=e228]
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - img "Evan Wilt, Associate Attorney" [ref=e232]
+          - generic [ref=e234]:
+            - link [ref=e235]:
+              - /url: /about-us/evan-wilt/
+              - heading "Evan Wilt" [level=3] [ref=e236] [cursor=pointer]
+            - paragraph [ref=e237]: Associate Attorney
+        - generic [ref=e239]:
+          - img "Crystal Brady, Of Counsel" [ref=e240]
+          - generic [ref=e242]:
+            - link [ref=e243]:
+              - /url: /about-us/crystal-brady/
+              - heading "Crystal Brady" [level=3] [ref=e244] [cursor=pointer]
+            - paragraph [ref=e245]: Of Counsel
+        - generic [ref=e247]:
+          - img "Kerry Fowler, Litigation Paralegal" [ref=e248]
+          - generic [ref=e250]:
+            - link [ref=e251]:
+              - /url: /about-us/kerry-fowler/
+              - heading "Kerry Fowler" [level=3] [ref=e252] [cursor=pointer]
+            - paragraph [ref=e253]: Litigation Paralegal
+        - generic [ref=e255]:
+          - img "Robin Hynson, Probate Paralegal" [ref=e256]
+          - generic [ref=e258]:
+            - link [ref=e259]:
+              - /url: /about-us/robin-hynson/
+              - heading "Robin Hynson" [level=3] [ref=e260] [cursor=pointer]
+            - paragraph [ref=e261]: Probate Paralegal
+        - generic [ref=e263]:
+          - img "Kayli Burch, Executive Assistant and Office Administrator" [ref=e264]
+          - generic [ref=e266]:
+            - link [ref=e267]:
+              - /url: /about-us/kayli-burch/
+              - heading "Kayli Burch" [level=3] [ref=e268] [cursor=pointer]
+            - paragraph [ref=e269]: Executive Assistant and Office Administrator
+        - generic [ref=e271]:
+          - img "Brittnee Fowler, Intake Coordinator" [ref=e272]
+          - generic [ref=e274]:
+            - link [ref=e275]:
+              - /url: /about-us/brittnee-fowler/
+              - heading "Brittnee Fowler" [level=3] [ref=e276] [cursor=pointer]
+            - paragraph [ref=e277]: Intake Coordinator
+        - generic [ref=e279]:
+          - img "Destiny Johnson, Legal Administrative Assistant" [ref=e280]
+          - generic [ref=e282]:
+            - link [ref=e283]:
+              - /url: /about-us/destiny-johnson/
+              - heading "Destiny Johnson" [level=3] [ref=e284] [cursor=pointer]
+            - paragraph [ref=e285]: Legal Administrative Assistant
+        - generic [ref=e287]:
+          - img "Kamryn Greene, Law Clerk" [ref=e288]
+          - generic [ref=e290]:
+            - link [ref=e291]:
+              - /url: /about-us/kamryn-greene/
+              - heading "Kamryn Greene" [level=3] [ref=e292] [cursor=pointer]
+            - paragraph [ref=e293]: Law Clerk
+      - generic [ref=e295]:
+        - button "Previous team member" [ref=e296] [cursor=pointer]
+        - button "Next team member" [ref=e297] [cursor=pointer]
+      - link "Meet Our Team" [ref=e298] [cursor=pointer]:
+        - /url: /about-us/
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - heading "Where We Serve" [level=2] [ref=e304]
+        - paragraph [ref=e305]: From our primary hub in Prince George's County, we serve as a boutique Maryland law firm for clients throughout the region.
+      - generic [ref=e306]:
+        - list [ref=e307]:
+          - listitem [ref=e308]:
+            - generic [ref=e310]: Bowie
+          - listitem [ref=e311]:
+            - generic [ref=e313]: Laurel
+          - listitem [ref=e314]:
+            - link "Bethesda" [ref=e316]:
+              - /url: https://pandwlaw.com/areas-we-serve/bethesda/
+          - listitem [ref=e317]:
+            - generic [ref=e319]: College Park
+          - listitem [ref=e320]:
+            - generic [ref=e322]: Greenbelt
+          - listitem [ref=e323]:
+            - generic [ref=e325]: Hyattsville
+        - list [ref=e326]:
+          - listitem [ref=e327]:
+            - link "Rockville" [ref=e329]:
+              - /url: https://pandwlaw.com/areas-we-serve/rockville/
+          - listitem [ref=e330]:
+            - generic [ref=e332]: Ellicott City
+          - listitem [ref=e333]:
+            - generic [ref=e335]: Annapolis
+          - listitem [ref=e336]:
+            - generic [ref=e338]: Prince Frederick
+          - listitem [ref=e339]:
+            - generic [ref=e341]: La Plata
+      - img "Map of the Maryland communities Powers & Worshtil serves" [ref=e342]
+    - generic [ref=e345]:
+      - generic [ref=e346]:
+        - heading "Whatever Stage You're At, Start With a Conversation" [level=2] [ref=e347]
+        - paragraph [ref=e348]: Complex estate matters don't resolve themselves, and the right guidance at the right moment makes all the difference. Tell us about your situation, and Powers & Worshtil will help you take the next step.
+      - generic [ref=e350]:
+        - generic [ref=e351]:
+          - status
+          - list
+        - form "Contact form" [ref=e352]:
+          - generic [ref=e353]:
+            - text: Company website
+            - textbox [ref=e354]
+          - generic [ref=e355]:
+            - generic: First Name *
+            - textbox "First Name *" [ref=e357]:
+              - /placeholder: ​
+          - generic [ref=e358]:
+            - generic: Last Name *
+            - textbox "Last Name *" [ref=e360]:
+              - /placeholder: ​
+          - generic [ref=e361]:
+            - generic: Phone *
+            - textbox "Phone *" [ref=e363]:
+              - /placeholder: ​
+          - generic [ref=e364]:
+            - generic: Email *
+            - textbox "Email *" [ref=e366]:
+              - /placeholder: ​
+          - generic [ref=e367]:
+            - generic: Choose Practice Area
+            - generic [ref=e369]:
+              - combobox
+              - button "Choose Practice Area Choose Practice Area" [ref=e370] [cursor=pointer]:
+                - generic [ref=e371]: Choose Practice Area
+          - generic [ref=e374]:
+            - generic: "Tell us more about your situation:"
+            - textbox "Tell us more about your situation:" [ref=e376]:
+              - /placeholder: ​
+          - generic [ref=e377]:
+            - button "Schedule Your Case Review" [ref=e378] [cursor=pointer]
+            - generic [ref=e381]:
+              - generic [ref=e382]: Receive a same-day response
+              - link "(301) 272-8825" [ref=e465]:
+                - /url: tel:+13012728825
+    - generic [ref=e387]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e388]
+      - list [ref=e389]:
+        - listitem [ref=e390]:
+          - heading [level=3] [ref=e391]:
+            - button "What should I do when I lose a loved one?" [expanded] [ref=e392] [cursor=pointer]
+          - generic "What should I do when I lose a loved one?" [ref=e395]:
+            - paragraph [ref=e396]: First, take a breath. Then, secure the original will, gather financial account statements, and avoid distributing any assets until legal obligations are confirmed. Contact an estate attorney early, as even a brief consultation can prevent costly mistakes down the road.
+        - listitem [ref=e397]:
+          - heading [level=3] [ref=e398]:
+            - button "What happens if someone dies without a Will in Maryland?" [ref=e399] [cursor=pointer]
+        - listitem [ref=e402]:
+          - heading [level=3] [ref=e403]:
+            - button "How long does the probate process take?" [ref=e404] [cursor=pointer]
+        - listitem [ref=e407]:
+          - heading [level=3] [ref=e408]:
+            - button "What should I do if I suspect a will is being improperly handled?" [ref=e409] [cursor=pointer]
+        - listitem [ref=e412]:
+          - heading [level=3] [ref=e413]:
+            - button "What is the difference between a will and a trust?" [ref=e414] [cursor=pointer]
+  - contentinfo [ref=e417]:
+    - generic [ref=e419]:
+      - link [ref=e420]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e421]
+      - generic [ref=e422]:
+        - generic [ref=e423]:
+          - heading "Main Office:" [level=2] [ref=e424]
+          - generic [ref=e425]: Prince George's County 5415 Water Street Upper Marlboro, MD 20772
+        - generic [ref=e426]:
+          - heading "By Appointment Only:" [level=2] [ref=e427]
+          - generic [ref=e428]: "Montgomery County 10605 Concord St #440 Kensington, MD 20895"
+        - generic [ref=e429]:
+          - heading "Contact Us" [level=2] [ref=e430]
+          - link "(301) 272-8825" [ref=e466]:
+            - /url: tel:+13012728825
+        - generic [ref=e434]:
+          - heading "Social Media" [level=2] [ref=e435]
+          - list [ref=e436]:
+            - listitem [ref=e437]:
+              - link "Facebook" [ref=e438]:
+                - /url: https://www.facebook.com/The-Law-Office-of-Ralph-W-Powers-Jr-PC-100359312522194/
+            - listitem [ref=e440]:
+              - link "LinkedIn" [ref=e441]:
+                - /url: https://www.linkedin.com/company/pandwlaw
+        - generic [ref=e443]:
+          - heading "Useful Resources" [level=2] [ref=e444]
+          - list [ref=e445]:
+            - listitem [ref=e446]:
+              - link "Blog" [ref=e447]:
+                - /url: https://pandwlaw.com/blog/
+            - listitem [ref=e448]:
+              - link "Careers" [ref=e449]:
+                - /url: https://pandwlaw.com/careers/
+      - generic [ref=e450]:
+        - separator [ref=e451]
+        - list [ref=e452]:
+          - listitem [ref=e453]:
+            - generic [ref=e454]: AI Info Page
+    - generic [ref=e456]:
+      - paragraph [ref=e457]: Copyright © 2026 Powers & Worshtil, P.C. All Rights Reserved
+      - paragraph [ref=e458]:
+        - link "Powered by Grow Law Marketing Agency" [ref=e459]:
+          - /url: https://growlaw.co/
+  - iframe [ref=e462]:
+    - generic [ref=f2e6]:
+      - text: protected by
+      - strong [ref=f2e7]: reCAPTCHA

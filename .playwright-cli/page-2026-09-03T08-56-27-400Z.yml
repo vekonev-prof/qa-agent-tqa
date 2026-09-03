@@ -1,0 +1,186 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e5]
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - generic [ref=e10]: Receive a same-day response
+            - link "(301) 627-1000" [ref=e11] [cursor=pointer]:
+              - /url: tel:+13016271000
+          - link "Get a Consultation" [ref=e14] [cursor=pointer]:
+            - /url: /contact/
+        - navigation "Main" [ref=e17]:
+          - list [ref=e18]:
+            - listitem [ref=e19]:
+              - button "Our Services" [ref=e20]
+            - listitem [ref=e23]:
+              - button "About Us" [ref=e24]
+            - listitem [ref=e27]:
+              - link "Contact Us" [ref=e28] [cursor=pointer]:
+                - /url: /contact/
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - navigation "Breadcrumb" [ref=e33]:
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - link "Powers & Worshtil, P.C." [ref=e36] [cursor=pointer]:
+              - /url: https://pandwlaw.com/
+            - text: /
+          - listitem [ref=e37]: Areas We Serve
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - heading "Areas We Serve Across Maryland" [level=1] [ref=e41]
+          - paragraph [ref=e42]: Wherever a case begins in Maryland, Powers & Worshtil brings the same direct access to attorneys and deep courtroom experience to every client. See the communities Powers & Worshtil serves and the local courts where its attorneys regularly appear.
+        - link "Get a Consultation" [ref=e44] [cursor=pointer]:
+          - /url: /contact/
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "Prince George's County" [level=2] [ref=e54]
+          - paragraph [ref=e55]: Prince George's County is home to the firm's primary office in Upper Marlboro, located right next to the county courthouse. Our exceptional attorneys appear before the Orphans' Court and Circuit Court regularly, an advantage that carries over to every case filed in the county.
+          - list [ref=e56]:
+            - listitem [ref=e57]: Upper Marlboro
+            - listitem [ref=e58]: Bowie
+            - listitem [ref=e59]: Laurel
+            - listitem [ref=e60]: College Park
+            - listitem [ref=e61]: Greenbelt
+            - listitem [ref=e62]: Hyattsville
+        - generic [ref=e63]:
+          - heading "Montgomery County" [level=2] [ref=e64]
+          - paragraph [ref=e65]: Powers & Worshtil maintains a Montgomery County office by appointment to reach clients in Bethesda, Rockville, and the surrounding communities. As the firm expands its presence in the county, Montgomery County clients gain the same direct access to elite counsel, all from the convenience of our local Upper Marlboro office.
+          - list [ref=e66]:
+            - listitem [ref=e67]:
+              - link "Bethesda" [ref=e68] [cursor=pointer]:
+                - /url: https://pandwlaw.com/areas-we-serve/bethesda/
+            - listitem [ref=e69]:
+              - link "Rockville" [ref=e70] [cursor=pointer]:
+                - /url: https://pandwlaw.com/areas-we-serve/rockville/
+            - listitem [ref=e71]: Kensington
+        - generic [ref=e72]:
+          - heading "Anne Arundel County" [level=2] [ref=e73]
+          - paragraph [ref=e74]: From Annapolis to the surrounding waterfront communities, Powers & Worshtil handles estate planning, probate administration, and property disputes for Anne Arundel County clients.
+          - list [ref=e75]:
+            - listitem [ref=e76]: Annapolis
+        - generic [ref=e77]:
+          - heading "Howard County" [level=2] [ref=e78]
+          - paragraph [ref=e79]: Powers & Worshtil represents Howard County clients in Ellicott City and the surrounding area, handling matters that range from routine estate planning to contested litigation.
+          - list [ref=e80]:
+            - listitem [ref=e81]: Ellicott City
+        - generic [ref=e82]:
+          - heading "Calvert County" [level=2] [ref=e83]
+          - paragraph [ref=e84]: Powers & Worshtil represents Calvert County clients in Prince Frederick and the surrounding communities, handling estate planning, probate administration, and property matters for families throughout the county.
+          - list [ref=e85]:
+            - listitem [ref=e86]: Prince Frederick
+        - generic [ref=e87]:
+          - heading "Charles County" [level=2] [ref=e88]
+          - paragraph [ref=e89]: Powers & Worshtil serves Charles County clients in La Plata and the surrounding areas, guiding families through estate planning, probate administration, and litigation matters from filing to resolution.
+          - list [ref=e90]:
+            - listitem [ref=e91]: La Plata
+        - generic [ref=e92]:
+          - heading "St. Mary's County" [level=2] [ref=e93]
+          - paragraph [ref=e94]: Powers & Worshtil extends the same direct attorney access to families across St. Mary's County, handling estate planning, probate administration, and property matters for clients throughout the county.
+      - generic [ref=e95]:
+        - heading "We Are Ready, Wherever You Are" [level=2] [ref=e96]
+        - paragraph [ref=e97]: No matter which Maryland county a case starts in, Powers & Worshtil responds within hours, not days.
+        - generic [ref=e98]:
+          - link "Schedule Your Case Review" [ref=e99] [cursor=pointer]:
+            - /url: /contact/
+          - generic [ref=e102]:
+            - generic [ref=e103]: Receive a same-day response
+            - link "(301) 627-1000" [ref=e104] [cursor=pointer]:
+              - /url: tel:+13016271000
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - heading "Let's Talk About Your Case" [level=2] [ref=e111]
+        - paragraph [ref=e112]: The experienced attorneys at Powers & Worshtil see every new client message personally.
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - status
+          - list
+        - form "Contact form" [ref=e116]:
+          - generic [ref=e117]:
+            - text: Company website
+            - textbox [ref=e118]
+          - generic [ref=e119]:
+            - generic: First Name *
+            - textbox "First Name *" [ref=e121]:
+              - /placeholder: ​
+          - generic [ref=e122]:
+            - generic: Last Name *
+            - textbox "Last Name *" [ref=e124]:
+              - /placeholder: ​
+          - generic [ref=e125]:
+            - generic: Phone *
+            - textbox "Phone *" [ref=e127]:
+              - /placeholder: ​
+          - generic [ref=e128]:
+            - generic: Email *
+            - textbox "Email *" [ref=e130]:
+              - /placeholder: ​
+          - generic [ref=e131]:
+            - generic: Choose Practice Area
+            - generic [ref=e133]:
+              - combobox
+              - button "Choose Practice Area Choose Practice Area" [ref=e134] [cursor=pointer]:
+                - generic [ref=e135]: Choose Practice Area
+          - generic [ref=e138]:
+            - generic: "Tell us more about your situation:"
+            - textbox "Tell us more about your situation:" [ref=e140]:
+              - /placeholder: ​
+          - generic [ref=e141]:
+            - button "Schedule Your Case Review" [ref=e142] [cursor=pointer]
+            - generic [ref=e145]:
+              - generic [ref=e146]: Receive a same-day response
+              - link "(301) 627-1000" [ref=e147] [cursor=pointer]:
+                - /url: tel:+13016271000
+  - contentinfo [ref=e150]:
+    - generic [ref=e152]:
+      - link [ref=e153] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e154]
+      - generic [ref=e155]:
+        - generic [ref=e156]:
+          - heading "Main Office:" [level=2] [ref=e157]
+          - generic [ref=e158]: Prince George's County 5415 Water Street Upper Marlboro, MD 20772
+        - generic [ref=e159]:
+          - heading "By Appointment Only:" [level=2] [ref=e160]
+          - generic [ref=e161]: "Montgomery County 10605 Concord St #440 Kensington, MD 20895"
+        - generic [ref=e162]:
+          - heading "Contact Us" [level=2] [ref=e163]
+          - link "(301) 627-1000" [ref=e164] [cursor=pointer]:
+            - /url: tel:+13016271000
+        - generic [ref=e167]:
+          - heading "Social Media" [level=2] [ref=e168]
+          - list [ref=e169]:
+            - listitem [ref=e170]:
+              - link "Facebook" [ref=e171] [cursor=pointer]:
+                - /url: https://www.facebook.com/The-Law-Office-of-Ralph-W-Powers-Jr-PC-100359312522194/
+            - listitem [ref=e173]:
+              - link "LinkedIn" [ref=e174] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pandwlaw
+        - generic [ref=e176]:
+          - heading "Useful Resources" [level=2] [ref=e177]
+          - list [ref=e178]:
+            - listitem [ref=e179]:
+              - link "Blog" [ref=e180] [cursor=pointer]:
+                - /url: https://pandwlaw.com/blog/
+            - listitem [ref=e181]:
+              - link "Careers" [ref=e182] [cursor=pointer]:
+                - /url: https://pandwlaw.com/careers/
+      - generic [ref=e183]:
+        - separator [ref=e184]
+        - list [ref=e185]:
+          - listitem [ref=e186]:
+            - generic [ref=e187]: AI Info Page
+    - generic [ref=e189]:
+      - paragraph [ref=e190]: Copyright © 2026 Powers & Worshtil, P.C. All Rights Reserved
+      - paragraph [ref=e191]:
+        - link "Powered by Grow Law Marketing Agency" [ref=e192] [cursor=pointer]:
+          - /url: https://growlaw.co/
+  - iframe [ref=e195]:
+    - generic [ref=f3e6]:
+      - text: protected by
+      - strong [ref=f3e7]: reCAPTCHA

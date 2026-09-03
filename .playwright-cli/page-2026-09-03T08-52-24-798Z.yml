@@ -1,0 +1,256 @@
+- generic [active] [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - link [ref=f12e4] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=f12e5]
+      - generic [ref=f12e7]:
+        - generic [ref=f12e8]:
+          - generic [ref=f12e9]:
+            - generic [ref=f12e10]: Receive a same-day response
+            - link "(301) 627-1000" [ref=f12e11] [cursor=pointer]:
+              - /url: tel:+13016271000
+          - link "Get a Consultation" [ref=f12e14] [cursor=pointer]:
+            - /url: /contact/
+        - navigation "Main" [ref=f12e17]:
+          - list [ref=f12e18]:
+            - listitem [ref=f12e19]:
+              - button "Our Services" [ref=f12e20]
+            - listitem [ref=f12e23]:
+              - button "About Us" [ref=f12e24]
+            - listitem [ref=f12e27]:
+              - link "Contact Us" [ref=f12e28] [cursor=pointer]:
+                - /url: /contact/
+  - main [ref=f12e29]:
+    - generic [ref=f12e31]:
+      - heading "What Happens to a Child’s Inheritance When a Parent Dies Intestate in Maryland?" [level=1] [ref=f12e32]
+      - paragraph [ref=f12e33]:
+        - generic [ref=f12e34]: September 3, 2026
+        - generic [ref=f12e35]:
+          - text: By
+          - link "Zachary W. Worshtil" [ref=f12e36] [cursor=pointer]:
+            - /url: /about-us/zachary-w-worshtil/
+    - navigation "Breadcrumb" [ref=f12e37]:
+      - list [ref=f12e38]:
+        - listitem [ref=f12e39]:
+          - link "Powers & Worshtil, P.C." [ref=f12e40] [cursor=pointer]:
+            - /url: https://pandwlaw.com/
+          - text: /
+        - listitem [ref=f12e41]:
+          - link "Blog" [ref=f12e42] [cursor=pointer]:
+            - /url: https://pandwlaw.com/blog/
+          - text: /
+        - listitem [ref=f12e43]: What Happens to a Child’s Inheritance When a Parent Dies Intestate in Maryland?
+    - generic [ref=f12e46]:
+      - generic [ref=f12e47]:
+        - navigation "Table of contents" [ref=f12e48]:
+          - heading "Table of Contents" [level=2] [ref=f12e49]
+          - list [ref=f12e50]:
+            - listitem [ref=f12e51]:
+              - link "1. Intestate Succession Basics" [ref=f12e52] [cursor=pointer]:
+                - /url: "#intestate-succession-basics"
+            - listitem [ref=f12e53]:
+              - link "2. Children’s Inheritance Rights When a Parent Dies Intestate in Maryland" [ref=f12e54] [cursor=pointer]:
+                - /url: "#children-s-inheritance-rights-when-a-parent-dies-intestate-in-maryland"
+            - listitem [ref=f12e55]:
+              - link "3. How Children Receive Their Inheritance" [ref=f12e56] [cursor=pointer]:
+                - /url: "#how-children-receive-their-inheritance"
+            - listitem [ref=f12e57]:
+              - link "4. Important Considerations Regarding Children and Intestacy" [ref=f12e58] [cursor=pointer]:
+                - /url: "#important-considerations-regarding-children-and-intestacy"
+            - listitem [ref=f12e59]:
+              - link "5. Why a Will Is Still Crucial" [ref=f12e60] [cursor=pointer]:
+                - /url: "#why-a-will-is-still-crucial"
+            - listitem [ref=f12e61]:
+              - link "6. Have Questions About Intestate Succession? Contact Powers & Worshtil, P.C." [ref=f12e62] [cursor=pointer]:
+                - /url: "#have-questions-about-intestate-succession-contact-powers-worshtil-p-c"
+        - generic [ref=f12e63]:
+          - paragraph [ref=f12e64]: Losing a parent hits hard, and then paperwork and court rules show up right when you are grieving. Questions about who gets what can spark stress, especially if there is no will in place. At Powers & Worshtil, P.C., we have helped families in Prince George’s County, the DC Metro Area, and Southern Maryland resolve these issues for more than four decades.
+          - paragraph [ref=f12e65]: "Our goal here is simple: give you clear information about children’s inheritance rights when a parent dies without a will in Maryland, for educational purposes only, not legal advice for your exact situation."
+        - generic [ref=f12e66]:
+          - heading "Intestate Succession Basics" [level=2] [ref=f12e67]
+          - paragraph [ref=f12e68]:
+            - text: “Intestate” means someone died without a valid will, which triggers Maryland’s intestacy rules in
+            - link "Md. Code, Estates and Trusts, § 3–101" [ref=f12e69] [cursor=pointer]:
+              - /url: https://law.justia.com/codes/maryland/estates-and-trusts/title-3/subtitle-1/section-3-101/
+            - text: . These rules tell the court who inherits and how much, using a set order of priority. The process applies to probate assets, and the court supervises distribution to ensure it complies with the statute.
+          - paragraph [ref=f12e70]: Intestacy uses a family-based formula, not personal wishes. Spouses and children come first, then parents, siblings, and more distant relatives. Even when a will exists, people who would qualify as heirs under intestacy law still count as “interested persons,” so they receive notices about the estate.
+        - generic [ref=f12e71]:
+          - heading "Children’s Inheritance Rights When a Parent Dies Intestate in Maryland" [level=2] [ref=f12e72]
+          - paragraph [ref=f12e73]: A child’s share depends on whether the parent left a spouse and whether the children are minors or adults. The Maryland rules also consider whether the surviving spouse is the children’s parent. The result is a few common patterns, which we explain below.
+          - paragraph [ref=f12e74]: The chart below summarizes the usual shares. It is a quick guide; if a detail here does not match your facts, the statute controls.
+          - heading "If There Is No Surviving Spouse" [level=3] [ref=f12e75]
+          - paragraph [ref=f12e76]: Children inherit everything in equal shares when there is no surviving spouse, under Md. Code, Estates and Trusts § 3–103. If a child died earlier and left descendants, that branch typically takes that child’s share by representation. This method keeps fairness among family lines.
+          - heading "If There Is a Surviving Spouse and Minor Children" [level=3] [ref=f12e77]
+          - paragraph [ref=f12e78]: When a spouse and at least one minor child survive, the spouse receives one-half of the intestate estate, and the children share the other half, per § 3–102(b). The split protects young children while also supporting the surviving spouse. That balance reflects Maryland’s policy choices, not the parents’ personal wishes.
+          - heading "If There Is a Surviving Spouse and Adult Children (Who Are Also the Spouse’s Children)" [level=3] [ref=f12e79]
+          - paragraph [ref=f12e80]: If all children are adults and also children of the surviving spouse, the spouse inherits the entire estate. In that case, the children do not inherit directly under intestacy. Distribution to children could still occur later if the spouse chooses to share or has estate plans of their own.
+          - heading "If There Is a Surviving Spouse and Adult Children (Who Are Not Descendants of the Surviving Spouse)" [level=3] [ref=f12e81]
+          - paragraph [ref=f12e82]: Where at least one adult child is not also the spouse’s descendant, the spouse takes the first $100,000 plus one-half of what remains, and the children receive the rest, under § 3–102(c). This rule recognizes blended families and aims for a practical split. Real numbers matter here, so an estate inventory becomes very important.
+          - paragraph [ref=f12e83]: Here is a short recap you can save. It captures the core ideas about shares that impact children under Maryland law.
+          - list [ref=f12e84]:
+            - listitem [ref=f12e85]: No spouse, children split everything equally.
+            - listitem [ref=f12e86]: Spouse with a minor child, 50 percent to spouse, 50 percent to children.
+            - listitem [ref=f12e87]: If a spouse has only adult children, the spouse gets all.
+            - listitem [ref=f12e88]: Spouse with an adult child from outside the marriage, spouse gets $100,000 plus half, children split the balance.
+          - paragraph [ref=f12e89]: Other facts can shift timing or method of distribution, such as debts, expenses, or a child predeceasing with descendants. Good records help the personal representative apply the statute correctly. If a dispute crops up, the Orphans’ Court can address it.
+        - generic [ref=f12e90]:
+          - heading "How Children Receive Their Inheritance" [level=2] [ref=f12e91]
+          - paragraph [ref=f12e92]: Probate is the court process that gathers assets, pays valid debts and taxes, and then transfers what is left to the heirs or beneficiaries. A personal representative is appointed by the Register of Wills or Orphans’ Court to handle this work. Even with a will, probate still applies to probate property unless it qualifies for small estate procedures.
+          - paragraph [ref=f12e93]: Probate property means assets titled only in the decedent’s name with no beneficiary. Non-probate assets pass by contract or title and usually skip the estate. That split changes who gets paid first, and how quickly children receive funds.
+          - paragraph [ref=f12e94]: "Common non-probate transfers include items like these. Each one follows its own paperwork and timeline:"
+          - list [ref=f12e95]:
+            - listitem [ref=f12e96]: Life insurance with a named beneficiary, including children or a trust for them.
+            - listitem [ref=f12e97]: Retirement accounts with payable-on-death designations.
+            - listitem [ref=f12e98]: Joint accounts with right of survivorship.
+            - listitem [ref=f12e99]: Assets titled in a revocable trust.
+          - paragraph [ref=f12e100]: "Here is a simple path many Maryland estates follow. Timelines vary, but these steps show the flow from start to finish:"
+          - list [ref=f12e101]:
+            - listitem [ref=f12e102]: Open the estate with the Register of Wills in the county where the decedent lived.
+            - listitem [ref=f12e103]: Appointment of the personal representative, plus issuance of Letters of Administration.
+            - listitem [ref=f12e104]: Notice to interested persons, including heirs under intestacy, and to creditors.
+            - listitem [ref=f12e105]: An inventory and information report that lists probate and non-probate assets.
+            - listitem [ref=f12e106]: Payment of valid debts, taxes, and expenses, then distributions under the statute.
+            - listitem [ref=f12e107]: Final accounting and closing of the estate.
+          - paragraph [ref=f12e108]: If a child is under 18, Maryland courts usually require a custodian, guardian of property, or trustee to hold that child’s share. A will or trust can solve this in advance with clear instructions. Without that plan, the court process still gets the assets to the child, just with more oversight.
+        - generic [ref=f12e109]:
+          - heading "Important Considerations Regarding Children and Intestacy" [level=2] [ref=f12e110]
+          - paragraph [ref=f12e111]: Family structures vary, and the law tries to keep rules clear and predictable. The points below often come up when sorting out whether a child inherits. Small documents, like birth certificates or court orders, can make a big difference.
+          - heading "Adopted Children" [level=3] [ref=f12e112]
+          - paragraph [ref=f12e113]: Adopted children inherit just like biological children under Md. Code, Estates and Trusts, § 1–207. Legal adoption establishes the parent-child relationship for inheritance purposes. That status controls, not biology.
+          - heading "Foster Children and Stepchildren" [level=3] [ref=f12e114]
+          - paragraph [ref=f12e115]: Foster children and stepchildren do not inherit under intestacy by default, per § 1–205(b). A will or trust can provide for them, or a formal adoption can create inheritance rights. Families often use a will to add these loved ones directly.
+          - heading "Illegitimate Children" [level=3] [ref=f12e116]
+          - paragraph [ref=f12e117]: Children born outside of marriage can inherit from a parent, but proof of parentage might be required. Paternity can be shown in different ways, such as a court order, genetic testing, or certain acknowledgments. Sorting this out early helps the personal representative make correct distributions and avoid delays.
+        - generic [ref=f12e118]:
+          - heading "Why a Will Is Still Crucial" [level=2] [ref=f12e119]
+          - paragraph [ref=f12e120]: Maryland’s formula is a backstop, not a plan. A will lets you choose who receives your property, in the amounts and at the times that match your values. That freedom matters for blended families, unmarried partners, and anyone with special goals.
+          - paragraph [ref=f12e121]: "With a will, you can do things intestacy cannot, such as:"
+          - list [ref=f12e122]:
+            - listitem [ref=f12e123]: Leave a gift to grandchildren, including those born after you sign, through careful wording.
+            - listitem [ref=f12e124]: Provide for stepchildren, foster children, or a close family friend who feels like kin.
+            - listitem [ref=f12e125]: Set up a trust for a minor child, a child with disabilities, or a young adult who needs time to mature.
+            - listitem [ref=f12e126]: Support a school, faith group, or charity that means a lot to your family.
+          - paragraph [ref=f12e127]: You will also name your personal representative, which helps avoid fights over who should serve. Add powers of attorney and health care documents, and your family gets a full plan that works in life and after. Small steps now can spare your loved ones extra stress later.
+        - generic [ref=f12e128]:
+          - heading "Have Questions About Intestate Succession? Contact Powers & Worshtil, P.C." [level=2] [ref=f12e129]
+          - paragraph [ref=f12e130]:
+            - text: We help families across Prince George’s County and the DC suburbs with probate, estate administration, and planning that actually fits how they live. If you want steady guidance or need help with an open estate, call us at
+            - link "(301) 627-1000." [ref=f12e131] [cursor=pointer]:
+              - /url: tel:+13016271000
+            - text: You can also reach our team through our
+            - link "website" [ref=f12e132] [cursor=pointer]:
+              - /url: /contact/
+            - text: ", and we will respond promptly. We are dedicated to practical solutions that protect your family and honor your loved one’s wishes."
+        - generic [ref=f12e133]:
+          - heading "Weighing Your Options? We Can Help." [level=2] [ref=f12e134]
+          - generic [ref=f12e135]:
+            - link "Schedule Your Case Review" [ref=f12e136] [cursor=pointer]:
+              - /url: /contact/
+            - link "Receive a same-day response (301) 627-1000" [ref=f12e139] [cursor=pointer]:
+              - /url: tel:+13016271000
+              - generic [ref=f12e140]:
+                - generic [ref=f12e141]: Receive a same-day response
+                - text: (301) 627-1000
+        - generic [ref=f12e142]:
+          - img "Zachary W. Worshtil" [ref=f12e143]
+          - generic [ref=f12e144]:
+            - generic [ref=f12e145]:
+              - heading [level=3] [ref=f12e146]:
+                - link "Zachary W. Worshtil" [ref=f12e147] [cursor=pointer]:
+                  - /url: /about-us/zachary-w-worshtil/
+              - paragraph [ref=f12e148]: Managing Partner
+            - paragraph [ref=f12e149]: Zachary W. Worshtil is a partner at Powers & Worshtil, P.C., where he represents individuals and families in matters involving estate administration, estate and trust litigation, and estate planning. He is known for his thorough, solutions-oriented approach and his ability to guide clients through complex legal and financial issues with clarity and care.
+      - generic [ref=f12e151]:
+        - generic [ref=f12e152]:
+          - heading "Questions About Your Case?" [level=2] [ref=f12e153]
+          - paragraph [ref=f12e154]: Every estate, deed, and probate matter turns on its own facts. Tell us what you are dealing with, and our Maryland attorneys will explain your options and the next step to take.
+        - generic [ref=f12e155]:
+          - link "Get a Free Consultation" [ref=f12e156] [cursor=pointer]:
+            - /url: /contact/
+          - link "Receive a same-day response (301) 627-1000" [ref=f12e159] [cursor=pointer]:
+            - /url: tel:+13016271000
+            - generic [ref=f12e160]:
+              - generic [ref=f12e161]: Receive a same-day response
+              - text: (301) 627-1000
+    - generic [ref=f12e162]:
+      - generic [ref=f12e163]:
+        - heading "Similar Posts" [level=2] [ref=f12e164]
+        - generic [ref=f12e166]:
+          - article [ref=f12e167]:
+            - heading [level=3] [ref=f12e169]:
+              - link "Should I Give My Home to My Child or Add His or Her Name to the Deed?" [ref=f12e170] [cursor=pointer]:
+                - /url: https://pandwlaw.com/blog/should-i-give-my-home-to-my-child-or-add-his-or-her-name-to-the-deed/
+            - paragraph [ref=f12e171]:
+              - generic [ref=f12e172]: August 31, 2026
+              - generic [ref=f12e173]:
+                - text: By
+                - link "Zachary W. Worshtil" [ref=f12e174] [cursor=pointer]:
+                  - /url: /about-us/zachary-w-worshtil/
+          - article [ref=f12e175]:
+            - heading [level=3] [ref=f12e177]:
+              - 'link "Durable vs. Limited POA in Maryland: Choosing the Right Level of Control" [ref=f12e178] [cursor=pointer]':
+                - /url: https://pandwlaw.com/blog/durable-vs-limited-poa-in-maryland/
+            - paragraph [ref=f12e179]:
+              - generic [ref=f12e180]: August 31, 2026
+              - generic [ref=f12e181]:
+                - text: By
+                - link "Zachary W. Worshtil" [ref=f12e182] [cursor=pointer]:
+                  - /url: /about-us/zachary-w-worshtil/
+          - article [ref=f12e183]:
+            - heading [level=3] [ref=f12e185]:
+              - link "8 Examples of Executor Misconduct in Estate Cases" [ref=f12e186] [cursor=pointer]:
+                - /url: https://pandwlaw.com/blog/executor-misconduct-examples/
+            - paragraph [ref=f12e187]:
+              - generic [ref=f12e188]: August 31, 2026
+              - generic [ref=f12e189]:
+                - text: By
+                - link "Zachary W. Worshtil" [ref=f12e190] [cursor=pointer]:
+                  - /url: /about-us/zachary-w-worshtil/
+      - generic:
+        - button "Previous post" [ref=f12e191] [cursor=pointer]
+        - button "Next post" [ref=f12e192] [cursor=pointer]
+  - contentinfo [ref=f12e193]:
+    - generic [ref=f12e195]:
+      - link [ref=f12e196] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=f12e197]
+      - generic [ref=f12e198]:
+        - generic [ref=f12e199]:
+          - heading "Main Office:" [level=2] [ref=f12e200]
+          - generic [ref=f12e201]: Prince George's County 5415 Water Street Upper Marlboro, MD 20772
+        - generic [ref=f12e202]:
+          - heading "By Appointment Only:" [level=2] [ref=f12e203]
+          - generic [ref=f12e204]: "Montgomery County 10605 Concord St #440 Kensington, MD 20895"
+        - generic [ref=f12e205]:
+          - heading "Contact Us" [level=2] [ref=f12e206]
+          - link "(301) 627-1000" [ref=f12e207] [cursor=pointer]:
+            - /url: tel:+13016271000
+        - generic [ref=f12e210]:
+          - heading "Social Media" [level=2] [ref=f12e211]
+          - list [ref=f12e212]:
+            - listitem [ref=f12e213]:
+              - link "Facebook" [ref=f12e214] [cursor=pointer]:
+                - /url: https://www.facebook.com/The-Law-Office-of-Ralph-W-Powers-Jr-PC-100359312522194/
+            - listitem [ref=f12e216]:
+              - link "LinkedIn" [ref=f12e217] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pandwlaw
+        - generic [ref=f12e219]:
+          - heading "Useful Resources" [level=2] [ref=f12e220]
+          - list [ref=f12e221]:
+            - listitem [ref=f12e222]:
+              - link "Blog" [ref=f12e223] [cursor=pointer]:
+                - /url: https://pandwlaw.com/blog/
+            - listitem [ref=f12e224]:
+              - link "Careers" [ref=f12e225] [cursor=pointer]:
+                - /url: https://pandwlaw.com/careers/
+      - generic [ref=f12e226]:
+        - separator [ref=f12e227]
+        - list [ref=f12e228]:
+          - listitem [ref=f12e229]:
+            - generic [ref=f12e230]: AI Info Page
+    - generic [ref=f12e232]:
+      - paragraph [ref=f12e233]: Copyright © 2026 Powers & Worshtil, P.C. All Rights Reserved
+      - paragraph [ref=f12e234]:
+        - link "Powered by Grow Law Marketing Agency" [ref=f12e235] [cursor=pointer]:
+          - /url: https://growlaw.co/

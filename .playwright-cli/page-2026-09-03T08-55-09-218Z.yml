@@ -1,0 +1,144 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - link [ref=f7e4]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=f7e5]
+      - generic [ref=f7e6]:
+        - link "Call (301) 627-1000" [ref=f7e7] [cursor=pointer]:
+          - /url: tel:+13016271000
+        - button "Open menu" [ref=f7e9] [cursor=pointer]
+  - main [ref=f7e14]:
+    - generic [ref=f7e15]:
+      - navigation "Breadcrumb" [ref=f7e16]:
+        - list [ref=f7e17]:
+          - listitem [ref=f7e18]:
+            - link "Powers & Worshtil, P.C." [ref=f7e19]:
+              - /url: https://pandwlaw.com/
+            - text: /
+          - listitem [ref=f7e20]: Contact Us
+      - generic [ref=f7e22]:
+        - generic [ref=f7e23]:
+          - heading "Ready to Get Started? Let's Talk." [level=1] [ref=f7e24]
+          - paragraph [ref=f7e25]: We’re here to help you. To schedule an initial consultation, please contact us at 301-627-1000 or complete the form below.
+          - generic [ref=f7e26]: POWERS & WORSHTIL, P.C. 5415 Water Street Upper Marlboro, MD 20772
+        - generic [ref=f7e28]:
+          - generic [ref=f7e29]:
+            - status
+            - list
+          - form "Contact form" [ref=f7e30]:
+            - generic [ref=f7e31]:
+              - text: Company website
+              - textbox [ref=f7e32]
+            - generic [ref=f7e33]:
+              - generic: First Name *
+              - textbox "First Name *" [ref=f7e35]:
+                - /placeholder: ​
+            - generic [ref=f7e36]:
+              - generic: Last Name *
+              - textbox "Last Name *" [ref=f7e38]:
+                - /placeholder: ​
+            - generic [ref=f7e39]:
+              - generic: Phone *
+              - textbox "Phone *" [ref=f7e41]:
+                - /placeholder: ​
+            - generic [ref=f7e42]:
+              - generic: Email *
+              - textbox "Email *" [ref=f7e44]:
+                - /placeholder: ​
+            - generic [ref=f7e45]:
+              - generic: Choose Practice Area
+              - generic [ref=f7e47]:
+                - combobox
+                - button "Choose Practice Area Choose Practice Area" [ref=f7e48] [cursor=pointer]:
+                  - generic [ref=f7e49]: Choose Practice Area
+            - generic [ref=f7e52]:
+              - generic: "Tell us more about your situation:"
+              - textbox "Tell us more about your situation:" [ref=f7e54]:
+                - /placeholder: ​
+            - generic [ref=f7e55]:
+              - button "Schedule Your Case Review" [ref=f7e56] [cursor=pointer]
+              - generic [ref=f7e59]:
+                - generic [ref=f7e60]: Receive a same-day response
+                - link "(301) 627-1000" [ref=f7e61]:
+                  - /url: tel:+13016271000
+    - generic [ref=f7e66]:
+      - generic [ref=f7e67]:
+        - heading "Where We Serve" [level=2] [ref=f7e68]
+        - paragraph [ref=f7e69]: From our primary hub in Prince George's County, we serve as a boutique Maryland law firm for clients throughout the region.
+      - generic [ref=f7e70]:
+        - list [ref=f7e71]:
+          - listitem [ref=f7e72]:
+            - generic [ref=f7e74]: Bowie
+          - listitem [ref=f7e75]:
+            - generic [ref=f7e77]: Laurel
+          - listitem [ref=f7e78]:
+            - link "Bethesda" [ref=f7e80]:
+              - /url: https://pandwlaw.com/areas-we-serve/bethesda/
+          - listitem [ref=f7e81]:
+            - generic [ref=f7e83]: College Park
+          - listitem [ref=f7e84]:
+            - generic [ref=f7e86]: Greenbelt
+          - listitem [ref=f7e87]:
+            - generic [ref=f7e89]: Hyattsville
+        - list [ref=f7e90]:
+          - listitem [ref=f7e91]:
+            - link "Rockville" [ref=f7e93]:
+              - /url: https://pandwlaw.com/areas-we-serve/rockville/
+          - listitem [ref=f7e94]:
+            - generic [ref=f7e96]: Ellicott City
+          - listitem [ref=f7e97]:
+            - generic [ref=f7e99]: Annapolis
+          - listitem [ref=f7e100]:
+            - generic [ref=f7e102]: Prince Frederick
+          - listitem [ref=f7e103]:
+            - generic [ref=f7e105]: La Plata
+      - img "Map of the Maryland communities Powers & Worshtil serves" [ref=f7e106]
+  - contentinfo [ref=f7e107]:
+    - generic [ref=f7e109]:
+      - link [ref=f7e110]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=f7e111]
+      - generic [ref=f7e112]:
+        - generic [ref=f7e113]:
+          - heading "Main Office:" [level=2] [ref=f7e114]
+          - generic [ref=f7e115]: Prince George's County 5415 Water Street Upper Marlboro, MD 20772
+        - generic [ref=f7e116]:
+          - heading "By Appointment Only:" [level=2] [ref=f7e117]
+          - generic [ref=f7e118]: "Montgomery County 10605 Concord St #440 Kensington, MD 20895"
+        - generic [ref=f7e119]:
+          - heading "Contact Us" [level=2] [ref=f7e120]
+          - link "(301) 627-1000" [ref=f7e121]:
+            - /url: tel:+13016271000
+        - generic [ref=f7e124]:
+          - heading "Social Media" [level=2] [ref=f7e125]
+          - list [ref=f7e126]:
+            - listitem [ref=f7e127]:
+              - link "Facebook" [ref=f7e128]:
+                - /url: https://www.facebook.com/The-Law-Office-of-Ralph-W-Powers-Jr-PC-100359312522194/
+            - listitem [ref=f7e130]:
+              - link "LinkedIn" [ref=f7e131]:
+                - /url: https://www.linkedin.com/company/pandwlaw
+        - generic [ref=f7e133]:
+          - heading "Useful Resources" [level=2] [ref=f7e134]
+          - list [ref=f7e135]:
+            - listitem [ref=f7e136]:
+              - link "Blog" [ref=f7e137]:
+                - /url: https://pandwlaw.com/blog/
+            - listitem [ref=f7e138]:
+              - link "Careers" [ref=f7e139]:
+                - /url: https://pandwlaw.com/careers/
+      - generic [ref=f7e140]:
+        - separator [ref=f7e141]
+        - list [ref=f7e142]:
+          - listitem [ref=f7e143]:
+            - generic [ref=f7e144]: AI Info Page
+    - generic [ref=f7e146]:
+      - paragraph [ref=f7e147]: Copyright © 2026 Powers & Worshtil, P.C. All Rights Reserved
+      - paragraph [ref=f7e148]:
+        - link "Powered by Grow Law Marketing Agency" [ref=f7e149]:
+          - /url: https://growlaw.co/
+  - iframe [ref=f7e152]:
+    - generic [ref=f8e6]:
+      - text: protected by
+      - strong [ref=f8e7]: reCAPTCHA

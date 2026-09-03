@@ -1,0 +1,301 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - list [ref=e5]:
+      - listitem [ref=e6]: "Emergency Service: 24/7/365"
+      - listitem [ref=e7]
+      - listitem [ref=e8]: Financing Options Available
+      - listitem [ref=e9]
+      - listitem [ref=e10]: Free Estimates Within 1 Hour
+    - navigation "Primary" [ref=e11]:
+      - generic [ref=e12]:
+        - link "N1 Services — home" [ref=e13] [cursor=pointer]:
+          - /url: https://n1serves.com/
+        - generic "Site menu" [ref=e363]:
+          - list [ref=e364]:
+            - listitem [ref=e365]:
+              - group [ref=e366]:
+                - generic "Our Services" [ref=e367] [cursor=pointer]
+                - text: → → →
+            - listitem [ref=e370]:
+              - link "Preventive Maintenance" [ref=e371] [cursor=pointer]:
+                - /url: /lees-summit-preventive-maintenance/
+            - listitem [ref=e372]:
+              - link "Reviews" [ref=e373] [cursor=pointer]:
+                - /url: /reviews/
+          - generic [ref=e374]:
+            - link "Available 24/7 (816) 791-7125" [ref=e375] [cursor=pointer]:
+              - /url: tel:+18167917125
+              - generic [ref=e379]:
+                - generic [ref=e380]: Available 24/7
+                - generic [ref=e381]: (816) 791-7125
+            - link "Request Service" [ref=e382] [cursor=pointer]:
+              - /url: /contact/
+  - main [ref=e19]:
+    - region [ref=e20]:
+      - img "N1 Services service truck" [ref=e25]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - paragraph [ref=e29]:
+            - generic [ref=e33]: Kansas City Metro Area Home Services Provider
+          - generic [ref=e34]:
+            - heading "N1 Services – Your All-in-One Solution" [level=1] [ref=e35]:
+              - generic [ref=e36]: N1 Services –
+              - generic [ref=e37]: Your All-in-One Solution
+            - paragraph [ref=e38]: Serving Lee's Summit, Raytown, Blue Springs, and the KC Metro East — 24/7
+        - generic [ref=e39]:
+          - link "Request Service" [ref=e40] [cursor=pointer]:
+            - /url: /contact/
+          - link "(816) 791-7125" [ref=e44] [cursor=pointer]:
+            - /url: tel:+18167917125
+      - list [ref=e49]:
+        - listitem [ref=e50]:
+          - generic [ref=e51]: HVAC
+        - listitem [ref=e52]:
+          - generic [ref=e53]: Plumbing
+        - listitem [ref=e54]:
+          - generic [ref=e55]: Electrical
+    - region "Why choose N1 Services" [ref=e56]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - paragraph [ref=e61]:
+            - generic [ref=e62]: "4.9"
+          - paragraph [ref=e63]:
+            - text: "183"
+            - button "Google reviews" [ref=e64] [cursor=pointer]
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: 50+ Years
+          - paragraph [ref=e67]: of Combined Experience
+        - generic [ref=e68]:
+          - paragraph [ref=e69]: Master Licensed
+          - paragraph [ref=e70]: Mechanical & Electrical Pros
+        - generic [ref=e71]:
+          - paragraph [ref=e72]: 0% APR
+          - paragraph [ref=e73]: Financing Available
+    - region [ref=e74]:
+      - generic [ref=e75]:
+        - heading "How We Help Your Home" [level=2] [ref=e76]
+        - tablist "Service categories" [ref=e77]:
+          - tab "HVAC" [selected] [ref=e78] [cursor=pointer]
+          - tab "Electrical" [ref=e80] [cursor=pointer]
+          - tab "Plumbing" [ref=e82] [cursor=pointer]
+          - tab "Preventive Maintenance Plans" [ref=e84] [cursor=pointer]
+        - tabpanel "HVAC" [ref=e86]:
+          - generic [ref=e87]:
+            - img "HVAC technician servicing a home heating and cooling system" [ref=e89]
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - heading "HVAC" [level=3] [ref=e94]
+                - paragraph [ref=e95]: Heating and cooling done right, the first time. From emergency repairs and full system replacements to commercial RTU service and zoning upgrades, we'll get you ready for anything Kansas City's weather throws at you.
+              - generic [ref=e96]:
+                - generic [ref=e97]:
+                  - list [ref=e98]:
+                    - listitem [ref=e99]:
+                      - link "Heating Installation" [ref=e101] [cursor=pointer]:
+                        - /url: /lees-summit-heating-installation/
+                    - listitem [ref=e102]:
+                      - link "Heating Replacement" [ref=e104] [cursor=pointer]:
+                        - /url: /lees-summit-heating-repair-replacement/
+                    - listitem [ref=e105]:
+                      - link "Air Conditioning Repairs" [ref=e107] [cursor=pointer]:
+                        - /url: /lees-summit-air-conditioning-repairs/
+                    - listitem [ref=e108]:
+                      - link "Air Conditioning Installation" [ref=e110] [cursor=pointer]:
+                        - /url: /lees-summit-air-conditioning-installation/
+                    - listitem [ref=e111]:
+                      - link "Air Conditioning Replacement" [ref=e113] [cursor=pointer]:
+                        - /url: /lees-summit-air-conditioning-replacement/
+                    - listitem [ref=e114]:
+                      - link "Emergency HVAC Service" [ref=e116] [cursor=pointer]:
+                        - /url: /lees-summit-emergency-hvac-service/
+                  - list [ref=e117]:
+                    - listitem [ref=e118]:
+                      - link "Commercial HVAC Systems — RTUs & AHUs" [ref=e120] [cursor=pointer]:
+                        - /url: /lees-summit-commercial-hvac-systems/
+                    - listitem [ref=e121]:
+                      - link "HVAC Zoning Systems" [ref=e123] [cursor=pointer]:
+                        - /url: /lees-summit-hvac-zoning-systems/
+                    - listitem [ref=e124]:
+                      - link "Boilers" [ref=e126] [cursor=pointer]:
+                        - /url: /lees-summit-boilers-servicing/
+                    - listitem [ref=e127]:
+                      - link "Geothermal Systems" [ref=e129] [cursor=pointer]:
+                        - /url: /lees-summit-geothermal-systems/
+                    - listitem [ref=e130]:
+                      - link "Ductless Mini-Split Systems" [ref=e132] [cursor=pointer]:
+                        - /url: /lees-summit-ductless-mini-split-systems/
+                - link "Explore HVAC Services" [ref=e133] [cursor=pointer]:
+                  - /url: /lees-summit-hvac-services/
+    - region [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - heading "Featured Reviews from Kansas City Metro Homeowners" [level=2] [ref=e142]
+          - generic [ref=e143]:
+            - generic [ref=e145]: "4.9"
+            - img "Rated 4.9 out of 5" [ref=e146]
+            - link "Read our 183 reviews" [ref=e152] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/rMPCJAQh3gRaNydw8
+        - link "See All Reviews" [ref=e154] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/rMPCJAQh3gRaNydw8
+    - generic [ref=e159]:
+      - heading "The N1 Process" [level=2] [ref=e160]
+      - list [ref=e161]:
+        - listitem [ref=e162]:
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - paragraph [ref=e166]: step 01
+              - heading "Call or Book Online" [level=3] [ref=e167]
+            - paragraph [ref=e168]: A real person answers, usually in under 60 seconds. Tell us what's going on and we'll dispatch the right tech.
+        - listitem [ref=e169]:
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - paragraph [ref=e173]: step 02
+              - heading "Same-Day Arrival" [level=3] [ref=e174]
+            - paragraph [ref=e175]: Don't wait days for someone to show up. Our team can schedule same-day appointments.
+        - listitem [ref=e176]:
+          - generic [ref=e178]:
+            - generic [ref=e179]:
+              - paragraph [ref=e180]: step 03
+              - heading "Upfront Flat-Rate Quote" [level=3] [ref=e181]
+            - paragraph [ref=e182]: Our pricing is simple, no surprise line items, no random fees.
+        - listitem [ref=e183]:
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - paragraph [ref=e187]: step 04
+              - heading "Done Right, Guaranteed" [level=3] [ref=e188]
+            - paragraph [ref=e189]: We back our work with a written guarantee — on time, within budget, and done well. Not satisfied? We'll come back.
+      - generic [ref=e190]:
+        - link "Request Service" [ref=e191] [cursor=pointer]:
+          - /url: /contact/
+        - link "Available 24/7 (816) 791-7125" [ref=e195] [cursor=pointer]:
+          - /url: tel:+18167917125
+          - generic [ref=e396]:
+            - generic [ref=e397]: Available 24/7
+            - generic [ref=e398]: (816) 791-7125
+    - region [ref=e202]:
+      - generic [ref=e203]:
+        - figure "Will Grauberger Founder, N1 Services" [ref=e204]:
+          - img "Will Grauberger, Founder of N1 Services" [ref=e206]
+          - generic [ref=e208]:
+            - generic [ref=e209]: Will Grauberger
+            - generic [ref=e213]: Founder, N1 Services
+        - generic [ref=e215]:
+          - heading "A Team That's Built For You" [level=2] [ref=e216]
+          - generic [ref=e217]:
+            - paragraph [ref=e218]: "N1 Services was founded by Will Grauberger, who spent years in the HVAC industry and saw how often homeowners were underserved by contractors lacking accountability and expertise. The company was built around doing things the right way: with professionalism, technical knowledge, and long-term customer trust."
+            - paragraph [ref=e219]: That level of expertise is what sets N1 apart. When you call us, you're not getting a generalist who learned on the job. You're getting a company built by someone who has spent a career doing this at the highest level.
+    - generic [ref=e221]:
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - heading "Proudly Serving the Kansas City Metro East & Southeast" [level=2] [ref=e225]
+          - paragraph [ref=e226]: We're based in Raytown, MO, and provide HVAC, electrical, and plumbing services to residential and select commercial customers throughout the eastern and southeastern Kansas City metro. Our service area is built around communities where we can respond fast, serve well, and build long-term relationships with homeowners who value quality.
+        - generic [ref=e227]:
+          - paragraph [ref=e228]: "Primary Service Areas:"
+          - list [ref=e229]:
+            - listitem [ref=e230]:
+              - generic [ref=e231]: Lee's Summit
+            - listitem [ref=e233]:
+              - generic [ref=e234]: Raytown
+            - listitem [ref=e236]:
+              - generic [ref=e237]: Blue Springs
+            - listitem [ref=e239]:
+              - generic [ref=e240]: Pleasant Hill
+            - listitem [ref=e242]:
+              - generic [ref=e243]: Lake Winnebago
+            - listitem [ref=e245]:
+              - generic [ref=e246]: Lake Lotawana
+            - listitem [ref=e248]:
+              - generic [ref=e249]: Grain Valley
+            - listitem [ref=e251]:
+              - generic [ref=e252]: Independence
+            - listitem [ref=e254]:
+              - generic [ref=e255]: Greenwood
+            - listitem [ref=e257]:
+              - generic [ref=e258]: Kansas City (East)
+            - listitem [ref=e260]:
+              - generic [ref=e261]: Oak Grove
+            - listitem [ref=e263]:
+              - generic [ref=e264]: Lone Jack
+      - generic [ref=e266]:
+        - img "Map of the Kansas City metro service area" [ref=e267]
+        - generic [ref=e268]:
+          - paragraph [ref=e269]: Headquarters
+          - paragraph [ref=e270]: 11647 E State Rte 350, Raytown, MO 64138
+        - generic [ref=e271]: Kansas City
+        - generic [ref=e273]: Raytown
+        - generic [ref=e276]: Blue Springs
+        - generic [ref=e279]: Grain Valley
+        - generic [ref=e282]: Lee's Summit
+        - generic [ref=e285]: Pleasant Hill
+        - generic [ref=e288]: Lake Winnebago
+        - generic [ref=e291]: Lake Lotawana
+    - region [ref=e294]:
+      - generic [ref=e295]:
+        - generic [ref=e296]:
+          - heading "Ready to Schedule? We're Ready for You." [level=2] [ref=e297]:
+            - generic [ref=e298]: Ready to Schedule?
+            - generic [ref=e299]: We're Ready for You.
+          - paragraph [ref=e300]: Whether it's an emergency repair, a planned upgrade, or a maintenance plan enrollment — N1 Services is available 24/7 with under-one-hour response. Get your free estimate today, with no pressure and no obligation.
+          - list [ref=e301]:
+            - listitem [ref=e302]:
+              - generic [ref=e304]: Free consultation
+            - listitem [ref=e305]:
+              - generic [ref=e307]: Upfront pricing
+            - listitem [ref=e308]:
+              - generic [ref=e310]: Quality Guaranteed
+        - generic [ref=e311]:
+          - paragraph [ref=e313]: "Emergency Service: 24/7/365"
+          - generic [ref=e314]:
+            - link "Request Service" [ref=e315] [cursor=pointer]:
+              - /url: /contact/
+            - paragraph [ref=e319]:
+              - link "(816) 791-7125" [ref=e322] [cursor=pointer]:
+                - /url: tel:+18167917125
+  - contentinfo [ref=e323]:
+    - generic [ref=e324]:
+      - link "N1 Services" [ref=e325] [cursor=pointer]:
+        - /url: https://n1serves.com/
+        - img "N1 Services" [ref=e326]
+      - generic [ref=e327]:
+        - generic [ref=e328]:
+          - generic [ref=e329]:
+            - heading "Our Address" [level=2] [ref=e330]
+            - generic [ref=e331]:
+              - link "11647 E State Rte 350, Raytown, MO 64138" [ref=e333] [cursor=pointer]:
+                - /url: https://maps.google.com/?q=11647+E+State+Rte+350,+Raytown,+MO+64138
+              - link "(816) 791-7125" [ref=e335] [cursor=pointer]:
+                - /url: tel:+18167917125
+          - generic [ref=e336]:
+            - heading "Contact Us" [level=2] [ref=e337]
+            - generic [ref=e338]:
+              - paragraph [ref=e340]:
+                - strong [ref=e341]: Office Hours
+                - text: "Mon - Fri: 8 AM - 5 PM Sat - Sun: Closed"
+              - paragraph [ref=e342]: "Emergency Service: 24/7/365"
+          - generic [ref=e343]:
+            - heading "Links" [level=2] [ref=e344]
+            - list [ref=e345]:
+              - listitem [ref=e346]:
+                - link "Contact Us" [ref=e347] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=e348]:
+                - link "Financing" [ref=e349] [cursor=pointer]:
+                  - /url: /financing/
+              - listitem [ref=e350]:
+                - link "Careers" [ref=e351] [cursor=pointer]:
+                  - /url: /apply/
+              - listitem [ref=e352]:
+                - link "Promotions" [ref=e353] [cursor=pointer]:
+                  - /url: /promotions/
+              - listitem [ref=e354]:
+                - link "Privacy Policy" [ref=e355] [cursor=pointer]:
+                  - /url: /privacy-policy/
+              - listitem [ref=e356]:
+                - link "AI Info" [ref=e357] [cursor=pointer]:
+                  - /url: /ai-info/
+        - separator [ref=e358]
+        - generic [ref=e359]:
+          - paragraph [ref=e360]: Copyright © 2026 N1 Services, LLC. All Rights Reserved.
+          - paragraph [ref=e361]:
+            - text: Made by
+            - link "Comrade Digital Marketing Agency" [ref=e362] [cursor=pointer]:
+              - /url: https://comradeweb.com/

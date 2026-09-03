@@ -1,0 +1,5 @@
+[   17045ms] ReferenceError: Can't find variable: grecaptcha
+    at unknown (https://pandwlaw.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js:1:483)
+[   17051ms] [ERROR] Failed to load resource: Failure when receiving data from the peer @ https://www.google.com/recaptcha/api.js?render=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn:0
+[   17840ms] [WARNING] window.styleMedia is a deprecated draft version of window.matchMedia API, and it will be removed in the future. @ :0
+[   38328ms] [WARNING] reviews-arrows: Elfsight swiper never appeared within 20000ms — nav stays inert. @ https://pandwlaw.com/wp-content/themes/pwl/assets/main-DGmuBej4.js:1

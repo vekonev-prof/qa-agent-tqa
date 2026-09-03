@@ -1,0 +1,132 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e463]
+      - generic [ref=e465]:
+        - generic [ref=e466]
+        - navigation "Main" [ref=e475]
+  - main [ref=e14]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - heading "Maryland Trust, Estate & Probate Lawyers" [level=1] [ref=e21]
+        - paragraph [ref=e24]
+      - link "Tell Us Your Situation" [ref=e29] [cursor=pointer]:
+        - /url: /contact/
+    - generic [ref=e37]:
+      - img "America's Most Honored Professionals 2019 — Ralph W. Powers, Jr." [ref=e39]
+      - img "Martindale-Hubbell Peer Rated for Ethical Standards and Legal Ability, 2024" [ref=e41]
+      - img "Avvo Rating 9.1 Top Attorney — Zachary William Worshtil" [ref=e43]
+      - img "Martindale-Hubbell highest possible rating in both legal ability and ethical standards — Ralph W. Powers, Jr." [ref=e45]
+      - img "Lawyers.com AV Preeminent rating — Ralph W. Powers, Jr." [ref=e47]
+      - img "Bar Register of Preeminent Lawyers" [ref=e49]
+      - link "Best Lawyers - Lawyer Logo" [ref=e51] [cursor=pointer]:
+        - /url: https://www.bestlawyers.com/lawyers/zachary-worshtil/368941
+        - img "Best Lawyers - Lawyer Logo" [ref=e52]
+      - link "Best Lawyers - Lawyer Logo" [ref=e54] [cursor=pointer]:
+        - /url: https://www.bestlawyers.com/lawyers/zachary-worshtil/368941
+        - img "Best Lawyers - Lawyer Logo" [ref=e55]
+      - link [ref=e70] [cursor=pointer]:
+        - /url: https://www.bestlawyers.com/lawyers/zachary-worshtil/368941
+      - link [ref=e73] [cursor=pointer]:
+        - /url: https://www.bestlawyers.com/lawyers/zachary-worshtil/368941
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - img "Powers & Worshtil attorneys at work" [ref=e80]
+        - generic [ref=e81]
+      - link "More About Our Law Firm" [ref=e101] [cursor=pointer]:
+        - /url: /about-us/
+    - generic [ref=e104]:
+      - heading "Proven Results in Complex Disputes" [level=2] [ref=e106]
+      - generic [ref=e108]:
+        - generic [ref=e109]
+        - generic [ref=e117]
+        - generic [ref=e125]
+      - generic [ref=e133]:
+        - button "Previous case" [ref=e134] [cursor=pointer]
+        - button "Next case" [ref=e135] [cursor=pointer]
+    - generic [ref=e137]:
+      - heading "Cases We Help With" [level=2] [ref=e138]
+      - generic [ref=e139]:
+        - list [ref=e140]
+        - img "Maryland estate administration and probate lawyer reviewing documents with a client" [ref=e162]
+    - generic [ref=e166]:
+      - heading "Looking for an Effective Way Forward? Let’s define your path." [level=2] [ref=e167]:
+        - generic [ref=e168]: Looking for an Effective Way Forward?
+        - emphasis [ref=e170]: Let’s define your path.
+      - generic [ref=e171]:
+        - link "Schedule Your Case Review" [ref=e172] [cursor=pointer]:
+          - /url: /contact/
+        - generic [ref=e175]
+    - generic [ref=e181]:
+      - 'heading "Featured Reviews: What Our Maryland Clients Value Most" [level=2] [ref=e185]'
+      - generic:
+        - button "Previous review" [disabled] [ref=e186]
+        - button "Next review" [ref=e187] [cursor=pointer]
+      - generic [ref=e188]: View More
+    - blockquote [ref=e193]: “We help clients make sound decisions during life’s most important moments.”
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - heading "Your Team" [level=2] [ref=e197]
+        - paragraph [ref=e198]: At Powers & Worshtil, every client works directly with an experienced attorney from the first consultation to the final resolution. Two partners, one associate, and a commitment that your case is never passed down the chain.
+      - list [ref=e199]:
+        - listitem [ref=e200]
+        - listitem [ref=e215]
+      - generic [ref=e230]:
+        - generic [ref=e231]
+        - generic [ref=e239]
+        - generic [ref=e247]
+        - generic [ref=e255]
+        - generic [ref=e263]
+        - generic [ref=e271]
+        - generic [ref=e279]
+        - generic [ref=e287]
+      - generic [ref=e295]:
+        - button "Previous team member" [ref=e296] [cursor=pointer]
+        - button "Next team member" [ref=e297] [cursor=pointer]
+      - link "Meet Our Team" [ref=e298] [cursor=pointer]:
+        - /url: /about-us/
+    - generic [ref=e300]:
+      - img "Map of the Maryland communities Powers & Worshtil serves" [ref=e488]
+      - generic [ref=e302]:
+        - generic [ref=e303]
+        - generic [ref=e306]
+    - generic [ref=e345]:
+      - generic [ref=e346]:
+        - heading "Whatever Stage You're At, Start With a Conversation" [level=2] [ref=e347]
+        - paragraph [ref=e348]: Complex estate matters don't resolve themselves, and the right guidance at the right moment makes all the difference. Tell us about your situation, and Powers & Worshtil will help you take the next step.
+      - generic [ref=e350]:
+        - generic [ref=e351]
+        - form "Contact form" [ref=e352]
+    - generic [ref=e387]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e388]
+      - list [ref=e389]:
+        - listitem [ref=e390]
+        - listitem [ref=e397]
+        - listitem [ref=e402]
+        - listitem [ref=e407]
+        - listitem [ref=e412]
+  - contentinfo [ref=e417]:
+    - generic [ref=e419]:
+      - link "Powers & Worshtil, P.C." [ref=e420] [cursor=pointer]:
+        - /url: https://pandwlaw.com/
+        - img "Powers & Worshtil, P.C." [ref=e421]
+      - generic [ref=e422]:
+        - generic [ref=e423]
+        - generic [ref=e426]
+        - generic [ref=e429]
+        - generic [ref=e434]
+        - generic [ref=e443]
+      - generic [ref=e450]:
+        - separator [ref=e451]
+        - list [ref=e452]
+    - generic [ref=e456]:
+      - paragraph [ref=e457]: Copyright © 2026 Powers & Worshtil, P.C. All Rights Reserved
+      - paragraph [ref=e458]:
+        - link "Powered by Grow Law Marketing Agency" [ref=e459] [cursor=pointer]:
+          - /url: https://growlaw.co/
+  - iframe [ref=e462]:
+    - generic [ref=f3e6]:
+      - text: protected by
+      - strong [ref=f3e7]: reCAPTCHA

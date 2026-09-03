@@ -1,0 +1,34 @@
+[    1507ms] [WARNING] window.styleMedia is a deprecated draft version of window.matchMedia API, and it will be removed in the future. @ :0
+[    2628ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.google.com/recaptcha/api2/pat?k=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn:0
+[    4247ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://www.google.com/recaptcha/api2/clr?k=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn:0
+[   10066ms] [ERROR] Refused to execute https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17873098123/?random=1788351354723&cv=11&fst=1788351354723&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68v1v9114180359z89248052774za20gzb9248052774zd9248052774xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776795~118897920~118897930~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fpandwlaw.com%2Fareas-we-serve%2Frockville%2F&rcb=11&frm=0&tiba=Rockville%20Trust%2C%20Estate%20%26%20Probate%20Lawyers%20%7C%20Powers%20%26%20Worshtil&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1125432351.1788351354&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4 as script because "X-Content-Type-Options: nosniff" was given and its Content-Type is not a script MIME type. @ :0
+[   10369ms] Blocked a frame with origin "https://pandwlaw.com" from accessing a frame with origin "https://www.google.com". Protocols, domains, and ports must match.
+    at Yi (https://scripts.clarity.ms/0.8.69/clarity.js:2:31716)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:24029)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:6515)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:5535)
+    at Promise (:1:11)
+    at $n (https://scripts.clarity.ms/0.8.69/clarity.js:2:5295)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:53949)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:6515)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:5535)
+    at Promise (:1:11)
+    at $n (https://scripts.clarity.ms/0.8.69/clarity.js:2:5295)
+    at Ir (https://scripts.clarity.ms/0.8.69/clarity.js:2:52641)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:52580)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:6515)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:5535)
+    at Promise (:1:11)
+    at $n (https://scripts.clarity.ms/0.8.69/clarity.js:2:5295)
+    at Yr (https://scripts.clarity.ms/0.8.69/clarity.js:2:53739)
+    at start (https://scripts.clarity.ms/0.8.69/clarity.js:2:71017)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:59426)
+    at forEach (:1:11)
+    at Mo (https://scripts.clarity.ms/0.8.69/clarity.js:2:63159)
+    at Oo (https://scripts.clarity.ms/0.8.69/clarity.js:2:63840)
+    at unknown (https://scripts.clarity.ms/0.8.69/clarity.js:2:74399)
+    at global code (https://scripts.clarity.ms/0.8.69/clarity.js:2:74402)
+[   21997ms] [WARNING] reviews-arrows: Elfsight swiper never appeared within 20000ms — nav stays inert. @ https://pandwlaw.com/wp-content/themes/pwl/assets/main-wXO6Lvfu.js:1
+[ 3604848ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.google.com/recaptcha/api2/pat?k=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn:0
+[ 8949584ms] [ERROR] Failed to load resource: Could not resolve hostname @ https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn&co=aHR0cHM6Ly9wYW5kd2xhdy5jb206NDQz&hl=en&v=ox8dsmiqR62P1bqhciWOn7Fg&size=invisible&anchor-ms=20000&execute-ms=30000&cb=1w51h5tymb7z:0
+[ 8958044ms] [ERROR] Failed to load resource: Could not resolve hostname @ https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn&co=aHR0cHM6Ly9wYW5kd2xhdy5jb206NDQz&hl=en&v=ox8dsmiqR62P1bqhciWOn7Fg&size=invisible&anchor-ms=20000&execute-ms=30000&cb=8rewq5kbo9d1:0

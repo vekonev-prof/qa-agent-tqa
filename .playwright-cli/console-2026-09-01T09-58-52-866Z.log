@@ -1,0 +1,4 @@
+[     377ms] TypeError: Cannot set properties of null (setting 'textContent')
+    at https://ctbclaw.com/attorneys/susan-baumel-cornicello:724:45
+[   22973ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://ctbc.mystagingsite.xyz/wp-content/uploads/2020/12/placeholder.png:0
+[   22974ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://ctbc.mystagingsite.xyz/wp-content/uploads/2020/12/phone-call.png:0

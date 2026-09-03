@@ -1,0 +1,4 @@
+https://pandwlaw.com/ | https://www.figma.com/design/e9ORcxABruHo5Tv2lq5QCB/PWL?node-id=1-319&p=f&t=6CqaWslCLs2UUaD7-0
+Правки: [UX] в меню у ссылки на contact us - добавить поинтер
+[rich-results] Article, устранить жёлтые ворнинги на странице https://pandwlaw.com/about-us/zachary-w-worshtil/ https://i.vgy.me/rFjCoI.png
+[PN] 3012843012 встречается этот номер в коде на странице https://pandwlaw.com/blog/child-inheritance-without-will/ заменить на (301) 627-1000

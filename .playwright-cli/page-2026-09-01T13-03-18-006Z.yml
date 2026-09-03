@@ -1,0 +1,167 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - list [ref=f5e5]:
+      - listitem [ref=f5e6]: "Emergency Service: 24/7/365"
+      - listitem [ref=f5e7]
+      - listitem [ref=f5e8]: Financing Options Available
+      - listitem [ref=f5e9]
+      - listitem [ref=f5e10]: Free Estimates Within 1 Hour
+    - navigation "Primary" [ref=f5e11]:
+      - generic [ref=f5e12]:
+        - link "N1 Services — home" [ref=f5e13] [cursor=pointer]:
+          - /url: https://n1serves.com/
+        - generic "Site menu" [ref=f5e14]:
+          - list [ref=f5e15]:
+            - listitem [ref=f5e16]:
+              - group [ref=f5e17]:
+                - generic "Our Services" [ref=f5e18] [cursor=pointer]
+                - text: → → →
+            - listitem [ref=f5e21]:
+              - link "Preventive Maintenance" [ref=f5e22] [cursor=pointer]:
+                - /url: /lees-summit-preventive-maintenance/
+            - listitem [ref=f5e23]:
+              - link "Reviews" [ref=f5e24] [cursor=pointer]:
+                - /url: /reviews/
+          - generic [ref=f5e25]:
+            - link "Available 24/7 (816) 791-7125" [ref=f5e26] [cursor=pointer]:
+              - /url: tel:+18167917125
+              - generic [ref=f5e30]:
+                - generic [ref=f5e31]: Available 24/7
+                - generic [ref=f5e32]: (816) 791-7125
+            - link "Request Service" [ref=f5e33] [cursor=pointer]:
+              - /url: /contact/
+  - main [ref=f5e37]:
+    - region [ref=f5e38]:
+      - img "N1 Services electrician performing an electrical repair in a Lee's Summit home" [ref=f5e42]
+      - generic [ref=f5e44]:
+        - generic [ref=f5e45]:
+          - paragraph [ref=f5e46]:
+            - generic [ref=f5e50]: Lee's Summit Reviews
+          - generic [ref=f5e51]:
+            - heading "What Lee's Summit Homeowners Say." [level=1] [ref=f5e52]:
+              - generic [ref=f5e53]: What Lee's Summit
+              - generic [ref=f5e54]: Homeowners Say.
+            - paragraph [ref=f5e55]: 4.9 stars across 160 Google reviews - HVAC, electrical, and plumbing across the KC Metro East
+        - generic [ref=f5e56]:
+          - link "Request Service" [ref=f5e57] [cursor=pointer]:
+            - /url: /contact/
+          - link "(816) 791-7125" [ref=f5e61] [cursor=pointer]:
+            - /url: tel:+18167917125
+    - region "Why choose N1 Services" [ref=f5e66]:
+      - generic [ref=f5e69]:
+        - generic [ref=f5e70]:
+          - paragraph [ref=f5e71]:
+            - generic [ref=f5e72]: "4.9"
+          - paragraph [ref=f5e73]:
+            - text: "183"
+            - button "Google reviews" [ref=f5e74] [cursor=pointer]
+        - generic [ref=f5e76]:
+          - paragraph [ref=f5e77]: 50+ Years
+          - paragraph [ref=f5e78]: of Combined Experience
+        - generic [ref=f5e80]:
+          - paragraph [ref=f5e81]: Master Licensed
+          - paragraph [ref=f5e82]: Mechanical & Electrical Pros
+        - generic [ref=f5e84]:
+          - paragraph [ref=f5e85]: 0% APR
+          - paragraph [ref=f5e86]: Financing Available
+    - navigation "Breadcrumb" [ref=f5e88]:
+      - list [ref=f5e89]:
+        - listitem [ref=f5e90]:
+          - link "N1 Services" [ref=f5e91] [cursor=pointer]:
+            - /url: https://n1serves.com/
+        - listitem [ref=f5e92]:
+          - generic [ref=f5e93]: /
+        - listitem [ref=f5e94]:
+          - generic [ref=f5e95]: Reviews
+    - region [ref=f5e96]:
+      - generic [ref=f5e98]:
+        - heading "All Our Google Reviews From Lee's Summit Homeowners" [level=2] [ref=f5e99]
+        - generic [ref=f5e100]:
+          - generic [ref=f5e102]: "4.9"
+          - img "Rated 4.9 out of 5" [ref=f5e103]
+          - link "Read our 183 reviews" [ref=f5e109] [cursor=pointer]:
+            - /url: https://maps.app.goo.gl/rMPCJAQh3gRaNydw8
+    - region [ref=f5e111]:
+      - generic [ref=f5e112]:
+        - figure "Will Grauberger Founder, N1 Services" [ref=f5e113]:
+          - img "Will Grauberger, Founder of N1 Services" [ref=f5e115]
+          - generic [ref=f5e117]:
+            - generic [ref=f5e118]: Will Grauberger
+            - generic [ref=f5e122]: Founder, N1 Services
+        - generic [ref=f5e124]:
+          - heading "Why Lee's Summit Homeowners Choose N1 Services" [level=2] [ref=f5e125]
+          - generic [ref=f5e126]:
+            - paragraph [ref=f5e127]: We're not a call center routing your job to whoever is available. N1 Services was founded by Will Grauberger — a 15-year industry veteran and former Director of Technical Service and Training who oversaw $60M in equipment support across four states. That standard of diagnosis and technical quality is what every N1 technician is trained to.
+            - paragraph [ref=f5e128]: We find the actual problem, not just the most convenient one to fix. Every repair comes with clear communication, honest recommendations, and a written satisfaction guarantee.
+            - paragraph [ref=f5e129]: We're also genuinely local. Raytown is minutes from Lee's Summit. When something in your home stops working, proximity matters — we don't route calls to a regional dispatch center 45 minutes away.
+    - region [ref=f5e130]:
+      - generic [ref=f5e131]:
+        - generic [ref=f5e132]:
+          - heading "Ready to Experience It Yourself? Call N1 Services Now." [level=2] [ref=f5e133]:
+            - generic [ref=f5e134]: Ready to Experience It Yourself?
+            - generic [ref=f5e135]: Call N1 Services Now.
+          - paragraph [ref=f5e136]: HVAC, electrical, and plumbing in Lee's Summit. Real person answers. Done right, guaranteed - that's what the reviews keep saying.
+          - list [ref=f5e137]:
+            - listitem [ref=f5e138]:
+              - generic [ref=f5e140]: 160 Google reviews, 4.9-star average
+            - listitem [ref=f5e141]:
+              - generic [ref=f5e143]: Licensed pros - HVAC, electrical, plumbing
+            - listitem [ref=f5e144]:
+              - generic [ref=f5e146]: Written satisfaction guarantee
+        - generic [ref=f5e147]:
+          - paragraph [ref=f5e149]: 4.9 Stars on Google
+          - generic [ref=f5e150]:
+            - link "Request Service" [ref=f5e151] [cursor=pointer]:
+              - /url: /contact/
+            - paragraph [ref=f5e155]:
+              - link "(816) 791-7125" [ref=f5e158] [cursor=pointer]:
+                - /url: tel:+18167917125
+  - contentinfo [ref=f5e159]:
+    - generic [ref=f5e160]:
+      - link "N1 Services" [ref=f5e161] [cursor=pointer]:
+        - /url: https://n1serves.com/
+        - img "N1 Services" [ref=f5e162]
+      - generic [ref=f5e163]:
+        - generic [ref=f5e164]:
+          - generic [ref=f5e165]:
+            - heading "Our Address" [level=2] [ref=f5e166]
+            - generic [ref=f5e167]:
+              - link "11647 E State Rte 350, Raytown, MO 64138" [ref=f5e169] [cursor=pointer]:
+                - /url: https://maps.google.com/?q=11647+E+State+Rte+350,+Raytown,+MO+64138
+              - link "(816) 791-7125" [ref=f5e171] [cursor=pointer]:
+                - /url: tel:+18167917125
+          - generic [ref=f5e172]:
+            - heading "Contact Us" [level=2] [ref=f5e173]
+            - generic [ref=f5e174]:
+              - paragraph [ref=f5e176]:
+                - strong [ref=f5e177]: Office Hours
+                - text: "Mon - Fri: 8 AM - 5 PM Sat - Sun: Closed"
+              - paragraph [ref=f5e178]: "Emergency Service: 24/7/365"
+          - generic [ref=f5e179]:
+            - heading "Links" [level=2] [ref=f5e180]
+            - list [ref=f5e181]:
+              - listitem [ref=f5e182]:
+                - link "Contact Us" [ref=f5e183] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=f5e184]:
+                - link "Financing" [ref=f5e185] [cursor=pointer]:
+                  - /url: /financing/
+              - listitem [ref=f5e186]:
+                - link "Careers" [ref=f5e187] [cursor=pointer]:
+                  - /url: /apply/
+              - listitem [ref=f5e188]:
+                - link "Promotions" [ref=f5e189] [cursor=pointer]:
+                  - /url: /promotions/
+              - listitem [ref=f5e190]:
+                - link "Privacy Policy" [ref=f5e191] [cursor=pointer]:
+                  - /url: /privacy-policy/
+              - listitem [ref=f5e192]:
+                - link "AI Info" [ref=f5e193] [cursor=pointer]:
+                  - /url: /ai-info/
+        - separator [ref=f5e194]
+        - generic [ref=f5e195]:
+          - paragraph [ref=f5e196]: Copyright © 2026 N1 Services, LLC. All Rights Reserved.
+          - paragraph [ref=f5e197]:
+            - text: Made by
+            - link "Comrade Digital Marketing Agency" [ref=f5e198] [cursor=pointer]:
+              - /url: https://comradeweb.com/
