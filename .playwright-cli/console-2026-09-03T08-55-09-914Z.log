@@ -1,5 +1,0 @@
-[    1418ms] [WARNING] window.styleMedia is a deprecated draft version of window.matchMedia API, and it will be removed in the future. @ :0
-[    7612ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.google.com/recaptcha/api2/pat?k=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn:0
-[   10145ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://www.google.com/recaptcha/api2/clr?k=6LfAVKEtAAAAAB6VeK5cshmVxIsIPE643vpMcFmn:0
-[   21801ms] [WARNING] reviews-arrows: Elfsight swiper never appeared within 20000ms — nav stays inert. @ https://pandwlaw.com/wp-content/themes/pwl/assets/main-DGmuBej4.js:1
-[   34163ms] [ERROR] Failed to load resource: Timeout was reached @ https://www.googletagmanager.com/gtm.js?id=GTM-M4CX4R7N:0

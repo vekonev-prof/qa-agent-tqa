@@ -1,4 +1,0 @@
-[    1185ms] TypeError: Cannot set properties of null (setting 'textContent')
-    at https://ctbclaw.com/contact:1001:45
-[   23765ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://ctbc.mystagingsite.xyz/wp-content/uploads/2020/12/placeholder.png:0
-[   23766ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://ctbc.mystagingsite.xyz/wp-content/uploads/2020/12/phone-call.png:0

@@ -1,3 +1,0 @@
-[    1606ms] [WARNING] window.styleMedia is a deprecated draft version of window.matchMedia API, and it will be removed in the future. @ :0
-[  329945ms] [ERROR] Beacon API cannot load https://b.clarity.ms/collect. Timeout was reached @ :0
-[  329945ms] [ERROR] Failed to load resource: Timeout was reached @ https://b.clarity.ms/collect:0
