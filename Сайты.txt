@@ -1,7 +1,0 @@
-https://example.com | https://www.figma.com/file/abcd1234/Project-Name | DEV
-
-Правки:
--
-
-Комментарии:
--
