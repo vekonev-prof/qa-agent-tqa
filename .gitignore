@@ -1,11 +1,12 @@
-# временные файлы
+# временные папки Playwright (снапшоты, консоль-логи)
+.playwright/
 .playwright-cli/
-*.log
-*.json
-!package.json
 
 # отчёты
 report.txt
+*.log
+*.json
+!package.json
 
 # системные файлы
 .DS_Store
@@ -15,11 +16,7 @@ Thumbs.db
 .env
 *.env
 
-# Временные папки Playwright
-.playwright/
-.playwright-cli/
-
-# Изображения (скриншоты, иконки и т.п.)
+# Изображения (скриншоты багов, иконки и т.п.) — папку screenshots/ сохраняем пустой в репо
 *.png
 *.jpg
 *.jpeg
@@ -28,6 +25,7 @@ Thumbs.db
 *.ico
 *.svg
 *.webp
+!screenshots/.gitkeep
 
 # YAML-файлы (снапшоты, конфиги, если они не нужны в репозитории)
 *.yaml
