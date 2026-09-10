@@ -1,0 +1,8 @@
+file:///C:/Users/Dev/Desktop/qa-agent-by-vlad/eval/fixture-site/index.html | | DEV
+
+Лендинги:
+- file:///C:/Users/Dev/Desktop/qa-agent-by-vlad/eval/fixture-site/landing.html
+
+Комментарии:
+- Это тестовая фикстура для eval, не реальный клиентский сайт. Второй язык (es/index.html) — доступен по ссылке "Español" в шапке index.html, проверь его как обычную вторую языковую версию (см. CLAUDE.md, "Мультиязычные сайты").
+- services.html — вторая страница того же сайта (тот же тип шаблона, что и index.html), доступна по ссылке "Moving Services" в шапке.

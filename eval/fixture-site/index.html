@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reliable Moving Co — Professional Moving Services in New York</title>
+<meta name="description" content="Reliable Moving Co offers professional moving services across New York. Get a free quote today.">
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; }
+  header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 12px; }
+  .icon-btn { border: none; background: #eee; font-size: 18px; padding: 6px 10px; cursor: pointer; }
+  form div { margin-bottom: 10px; }
+  label.required::after { content: " *"; color: red; }
+  #success-msg { display: none; color: green; font-weight: bold; }
+  .calc-line { display: flex; justify-content: space-between; max-width: 300px; }
+</style>
+</head>
+<body>
+
+<header>
+  <strong>Reliable Moving Co</strong>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="services.html">Moving Services</a> |
+    <a href="es/index.html">Español</a>
+  </nav>
+  <span>Call us: <a href="tel:+15555550100">+1 (555) 555-0100</a></span>
+  <!-- ADA-only issue: icon-only control, no discernible text / aria-label, but fully functional -->
+  <button class="icon-btn" onclick="this.parentElement.style.opacity=0.5">✕</button>
+</header>
+
+<h1>Professional Moving Services in New York</h1>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+
+<p>Reliable Moving Co has helped thousands of New York families and businesses relocate safely and on schedule since 2010.</p>
+
+<h2>Moving Cost Estimator</h2>
+<div>
+  <label for="miles">Distance (miles):</label>
+  <input type="number" id="miles" value="20" min="0">
+  <button onclick="calculate()">Calculate</button>
+</div>
+<div id="calc-result" style="margin-top:10px;">
+  <div class="calc-line"><span>Base rate:</span><span id="calc-base">$50</span></div>
+  <div class="calc-line"><span>Distance charge:</span><span id="calc-distance">$40</span></div>
+  <div class="calc-line" style="font-weight:bold;"><span>Total:</span><span id="calc-total">$115</span></div>
+</div>
+
+<h2>Get a Free Quote</h2>
+<form id="quote-form" onsubmit="handleSubmit(event)">
+  <div>
+    <label class="required" for="fname">First Name</label>
+    <input type="text" id="fname" name="fname">
+  </div>
+  <div>
+    <label class="required" for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" required>
+  </div>
+  <div>
+    <label class="required" for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label class="required" for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" required>
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea id="message" name="message"></textarea>
+  </div>
+  <button type="submit">Submit</button>
+  <div id="success-msg">Thank you! We'll contact you soon.</div>
+</form>
+
+<footer>
+  <p>&copy; 2026 Reliable Moving Co. All rights reserved.</p>
+</footer>
+
+<script>
+  // Intentional real console error from the site's own script (must be caught by technical-checks).
+  console.error("Uncaught TypeError: Cannot read properties of undefined (reading 'price') at estimator.js:42");
+
+  // Intentional third-party telemetry noise (must be silently filtered, not reported).
+  // Reproduced as a direct console.error (not a live fetch) so the fixture behaves
+  // identically regardless of network conditions/engine running it.
+  console.error("Failed to load resource: the server responded with a status of 403 () @ https://beacon.cdn-nitrooptimize.io/collect?evt=pageview");
+
+  function calculate() {
+    var miles = Number(document.getElementById('miles').value) || 0;
+    var distanceCharge = miles * 2;
+    var displayedTotal = 50 + distanceCharge + 25; // hidden +25 fudge, not shown in breakdown -> arithmetic mismatch
+    document.getElementById('calc-base').textContent = '$50';
+    document.getElementById('calc-distance').textContent = '$' + distanceCharge;
+    document.getElementById('calc-total').textContent = '$' + displayedTotal;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    // Intentional: no fetch/XHR at all — pure visual "success" with zero network request.
+    document.getElementById('success-msg').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
