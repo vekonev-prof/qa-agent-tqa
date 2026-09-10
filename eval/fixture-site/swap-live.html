@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reliable Moving Co — Free Estimate (LIVE)</title>
+<meta name="description" content="Reliable Moving Co — get a free estimate. Call now for immediate assistance.">
+</head>
+<body>
+
+<header>
+  <strong>Reliable Moving Co</strong>
+  <!-- Intentional: href starts mismatched with aria-label, then a script "completes the swap"
+       after a delay and corrects href to match. Simulates a call-tracking swap script that
+       hasn't finished initializing yet at the moment the page first renders. -->
+  <a class="mobile-call-icon" href="tel:+15555550199" aria-label="Call (555) 555-0100">📞 (555) 555-0100</a>
+</header>
+
+<h1>Free Moving Estimate — Call Now</h1>
+<p>Reliable Moving Co — get your free estimate today.</p>
+
+<footer>
+  <p>&copy; 2026 Reliable Moving Co. All rights reserved.</p>
+</footer>
+
+<script>
+  // Intentional: a broken call-tracking swap script (own vendor script, not third-party noise) —
+  // must be caught by default on LIVE now (technical-checks §7 "Отработка свопа").
+  console.error("Uncaught TypeError: swap is not a function at callrail.js:17");
+
+  // Simulates the swap script finishing initialization ~3s after page load and correcting
+  // the number so it matches the aria-label. If checked immediately, this looks like a bug;
+  // if checked after waiting (per the rule), it is not.
+  setTimeout(function () {
+    document.querySelector('.mobile-call-icon').setAttribute('href', 'tel:+15555550100');
+  }, 3000);
+</script>
+
+</body>
+</html>

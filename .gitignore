@@ -26,4 +26,4 @@ Thumbs.db
 Сайты.txt
 
 # локальные результаты прогонов eval-фикстуры (см. eval/README.md) — не для репозитория
-eval/last-run-report.txt
+eval/last-run-report*.txt
