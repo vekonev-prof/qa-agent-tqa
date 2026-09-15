@@ -21,6 +21,7 @@
   <nav>
     <a href="index.html">Home</a> |
     <a href="services.html">Moving Services</a> |
+    <a href="team.html">Our Team</a> |
     <a href="es/index.html">Español</a>
   </nav>
   <span>Call us: <a href="tel:+15555550100">+1 (555) 555-0100</a></span>
@@ -50,6 +51,8 @@
 
 <h2>Get a Free Quote</h2>
 <form id="quote-form" onsubmit="handleSubmit(event)">
+  <!-- Intentional: hidden technical template marker, shared with a visually different form on services.html -->
+  <input type="hidden" name="_form_template" value="TPL-QUOTE-01">
   <div>
     <label class="required" for="fname">First Name</label>
     <input type="text" id="fname" name="fname">
@@ -76,6 +79,13 @@
 
 <footer>
   <p>&copy; 2026 Reliable Moving Co. All rights reserved.</p>
+  <!-- Intentional: non-lead-generating form (newsletter) — must still get the light one-submission protocol, not be skipped entirely -->
+  <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+    <label for="newsletter-email">Subscribe to our newsletter</label>
+    <input type="email" id="newsletter-email" name="email" required>
+    <button type="submit">Subscribe</button>
+    <div id="newsletter-success" style="display:none;color:green;">Subscribed!</div>
+  </form>
 </footer>
 
 <script>
@@ -100,6 +110,16 @@
     e.preventDefault();
     // Intentional: no fetch/XHR at all — pure visual "success" with zero network request.
     document.getElementById('success-msg').style.display = 'block';
+  }
+
+  function handleNewsletterSubmit(e) {
+    e.preventDefault();
+    // Real network request (unlike the quote-form above) so technical verification has something to find.
+    fetch('https://example.invalid/newsletter-subscribe', {
+      method: 'POST',
+      body: JSON.stringify({ email: document.getElementById('newsletter-email').value })
+    }).catch(function () {});
+    document.getElementById('newsletter-success').style.display = 'block';
   }
 </script>
 

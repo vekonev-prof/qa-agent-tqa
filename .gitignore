@@ -2,6 +2,9 @@
 .playwright/
 .playwright-cli/
 
+# служебные маркеры сабмитов форм для координации параллельных агентов (см. form-submit-checks) — только на время одного прогона
+.form-submissions/
+
 # отчёты и логи прогонов агента
 report.txt
 *.log
