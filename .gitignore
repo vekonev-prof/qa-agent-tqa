@@ -17,9 +17,8 @@ Thumbs.db
 .env
 *.env
 
-# скриншоты багов — сама папка коммитится пустой (.gitkeep), файлы в ней нет
+# скриншоты багов (в рабочей папке каждого сайта — {домен}/screenshots/)
 *.png
-!screenshots/.gitkeep
 
 # снапшоты страниц Playwright (yml/yaml)
 *.yaml

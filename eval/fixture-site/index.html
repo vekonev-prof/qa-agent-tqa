@@ -4,6 +4,43 @@
 <meta charset="UTF-8">
 <title>Reliable Moving Co — Professional Moving Services in New York</title>
 <meta name="description" content="Reliable Moving Co offers professional moving services across New York. Get a free quote today.">
+<!-- Intentional: duplicated LocalBusiness block (copy-paste bug) — Schema Шаг 1 must catch this as a
+     block-level duplicate before checking field correctness. Also intentionally missing `sameAs`
+     despite the footer having the client's own real social links below — agency-obligatory field. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Reliable Moving Co",
+  "telephone": "+15555550100",
+  "url": "https://reliablemovingco-eval.invalid",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Example Ave",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10001",
+    "addressCountry": "US"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Reliable Moving Co",
+  "telephone": "+15555550100",
+  "url": "https://reliablemovingco-eval.invalid",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Example Ave",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10001",
+    "addressCountry": "US"
+  }
+}
+</script>
 <style>
   body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; }
   header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 12px; }
@@ -79,6 +116,13 @@
 
 <footer>
   <p>&copy; 2026 Reliable Moving Co. All rights reserved.</p>
+  <!-- Intentional rel/nofollow misapplication (technical-checks §5), both directions in one place:
+       - Facebook is the client's OWN profile → should be dofollow (no nofollow), but wrongly has one.
+       - The state movers registry is an external government resource → should be nofollow, but wrongly has none. -->
+  <p>
+    Follow us: <a href="https://facebook.com/reliablemovingco-eval" target="_blank" rel="nofollow noopener noreferrer">Facebook</a>
+    | Verify our license: <a href="https://dmv.ny.gov/movers-registry-example" target="_blank" rel="noopener noreferrer">NY State Movers Registry</a>
+  </p>
   <!-- Intentional: non-lead-generating form (newsletter) — must still get the light one-submission protocol, not be skipped entirely -->
   <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
     <label for="newsletter-email">Subscribe to our newsletter</label>
