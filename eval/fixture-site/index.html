@@ -94,6 +94,16 @@
   <div class="calc-line" style="font-weight:bold;"><span>Total:</span><span id="calc-total">$115</span></div>
 </div>
 
+<!-- Intentional (2026-09-18): reviews widget that lazily injects its own Product/Review/AggregateRating
+     JSON-LD ~2s after load (mimicking a real async reviews widget like Elfsight/Trustpilot). If the agent
+     extracts JSON-LD right after navigation without scrolling to/waiting for this widget, it will only see
+     the two duplicated LocalBusiness blocks above and will incorrectly conclude "Product/Review/AggregateRating
+     missing" on index.html. Ground truth: NOT a bug — technical-checks §9 requires waiting for the reviews
+     widget to finish loading before drawing that conclusion; the Product schema below is complete and valid
+     once it appears. -->
+<h2>What Our Customers Say</h2>
+<div id="reviews-widget">Loading reviews…</div>
+
 <h2>Get a Free Quote</h2>
 <form id="quote-form" onsubmit="handleSubmit(event)">
   <!-- Intentional: hidden technical template marker, shared with a visually different form on services.html -->
@@ -148,6 +158,33 @@
   // Reproduced as a direct console.error (not a live fetch) so the fixture behaves
   // identically regardless of network conditions/engine running it.
   console.error("Failed to load resource: the server responded with a status of 403 () @ https://beacon.cdn-nitrooptimize.io/collect?evt=pageview");
+
+  // Intentional (2026-09-18): simulates a real async reviews widget (Elfsight/Trustpilot-style) —
+  // renders visible content AND injects its Product/Review/AggregateRating JSON-LD only after a delay,
+  // not on initial page load. See the comment above #reviews-widget for what this tests.
+  setTimeout(function () {
+    document.getElementById('reviews-widget').innerHTML =
+      '&#9733;&#9733;&#9733;&#9733;&#9733; 4.9/5 — "Fast, careful, and friendly crew." — Dana K.';
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Residential Moving Service",
+      "review": {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Dana K." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "128",
+        "reviewCount": "128"
+      }
+    });
+    document.body.appendChild(script);
+  }, 2000);
 
   function calculate() {
     var miles = Number(document.getElementById('miles').value) || 0;
