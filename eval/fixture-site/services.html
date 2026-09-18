@@ -33,6 +33,24 @@
   <li>Local &amp; long-distance transport</li>
 </ul>
 
+<!-- Intentional: a visible FAQ accordion not mentioned anywhere in nav/menu — must be discovered
+     via a proactive interactive-elements inventory (CLAUDE.md Шаг 3.2), not by accident. The second
+     item's onclick references a nonexistent panel id ("faq-2-answr" instead of "faq-2") — clicking it
+     does nothing, a silent bug only visible if the agent actually clicks each item, not just confirms
+     the accordion exists. Also intentional: no FAQPage JSON-LD for this visible Q&A block — per the
+     agency's FAQPage rule this is NOT a bug, only a recommendation to add it. -->
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq('faq-1')">Do you offer packing services?</button>
+    <div id="faq-1-panel" class="faq-answer" style="display:none;">Yes, full packing and unpacking services are included.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq('faq-2-answr')">Do you provide moving insurance?</button>
+    <div id="faq-2-panel" class="faq-answer" style="display:none;">Yes, basic coverage is included with every move.</div>
+  </div>
+</div>
+
 <h2>Request a Callback</h2>
 <!-- Intentional: visually different form (different heading/CTA, no email field labeled), but shares the same
      hidden technical template marker as the "Get a Free Quote" form on index.html — must be recognized as the
@@ -68,6 +86,10 @@
 </form>
 
 <script>
+  function toggleFaq(id) {
+    var panel = document.getElementById(id + '-panel');
+    if (panel) panel.style.display = (panel.style.display === 'none') ? 'block' : 'none';
+  }
   function handleCallbackSubmit(e) {
     e.preventDefault();
     fetch('https://example.invalid/callback-request', { method: 'POST' }).catch(function () {});

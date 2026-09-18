@@ -6,7 +6,11 @@
 <meta name="description" content="Reliable Moving Co offers professional moving services across New York. Get a free quote today.">
 <!-- Intentional: duplicated LocalBusiness block (copy-paste bug) — Schema Шаг 1 must catch this as a
      block-level duplicate before checking field correctness. Also intentionally missing `sameAs`
-     despite the footer having the client's own real social links below — agency-obligatory field. -->
+     despite the footer having the client's own real social links below — agency-obligatory field.
+     Also intentional (multilingual Schema adaptation): `inLanguage` uses the bare language code
+     ("en") instead of the full regional code ("en-US") the agency requires, and `knowsLanguage`
+     lists only English even though the site has a real Spanish version (es/index.html) — should
+     list every language the site supports, e.g. ["en-US", "es-US"]. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -14,6 +18,8 @@
   "name": "Reliable Moving Co",
   "telephone": "+15555550100",
   "url": "https://reliablemovingco-eval.invalid",
+  "inLanguage": "en",
+  "knowsLanguage": ["en-US"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "123 Example Ave",
@@ -31,6 +37,8 @@
   "name": "Reliable Moving Co",
   "telephone": "+15555550100",
   "url": "https://reliablemovingco-eval.invalid",
+  "inLanguage": "en",
+  "knowsLanguage": ["en-US"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "123 Example Ave",
