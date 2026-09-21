@@ -7,7 +7,7 @@
 1. **Ворнинги от Rich-results** — красные и жёлтые нужно фиксить (у нас нет доступа к самому валидатору Google Rich Results Test — см. §9 SKILL.md, работаем по списку полей ниже вручную).
 2. **Ничего не должно дублироваться — ни блоки, ни элементы массивов, ни значения внутри них.** Это не мелкая техническая неряшливость: Google расценивает избыточное/манипулятивное дублирование как переспам и может понизить сайт в выдаче — любой найденный дубль фиксируется как баг без исключений (см. Шаг 1 в §9 SKILL.md — там же уровни: дубль блока целиком / дубль элемента массива / дубль значения там, где ожидаются разные значения, например один и тот же адрес вместо разных офисов). **Дублирование типа разметки в валидаторе обычно НЕ означает дублирование в исходном коде** — частая причина: сам валидатор так интерпретирует структуру. Если увидел дубль — зафиксируй как находку как есть, не пытайся сам определить, будет ли это видно после рендера.
 3. **Данные должны быть релевантны ИМЕННО этому сайту** — сверяй каждое поле разметки с тем, что реально на странице, а не только имя компании. Это два разных случая: (а) данные от другого проекта-донора (чужое название/продукт/локация — не заменили при копировании) и (б) данные технически «свои», но неполные/устаревшие относительно контента этой же страницы (например, разметка перечисляет меньше офисов, чем реально указано в футере) — оба баги.
-4. **Разметка компактна — отдельно от дублирования.** Дубль — это повтор одного и того же; раздутость — это добавление посторонних данных, не относящихся к типу разметки. Оба — самостоятельные типы багов, ищи оба, не только один.
+4. **Разметка компактна — отдельно от дублирования.** Дубль — это повтор одного и того же; раздутость — это добавление посторонних данных, не относящихся к типу разметки (например, `ProfilePage`/`Article` не должны тянуть в себя вообще все данные о человеке/статье, только свои поля — см. также раздел `WebPage` ниже, там частый в реальных проектах случай именно этого типа). Оба — самостоятельные типы багов, ищи оба, не только один.
 5. **Placeholder-URL вида `example.com` в значениях ключей — не баг на этапе Интермед QA** (наш обычный сценарий: DEV-сайт до публичного запуска). Такие URL часто динамически подставляются на реальные при лонче, а до этого момента по ним нельзя пройти и проверить разметку (у поисковых роботов нет доступа к непубличному сайту). Не путай это с реальным багом (случайно оставленным чужим доменом в проекте, который НЕ является служебным placeholder'ом типа `example.com`/`test.com`).
 6. **Три фазы проверки разметки в общей практике агентства** — наш агент покрывает только первую:
    - **Интермед QA (наш скоуп)** — разметка проверяется в ОТРЕНДЕРЕННОМ коде (не в исходном!), вручную по списку обязательных/рекомендованных полей ниже — реального валидатора Rich-Results у агента нет.
@@ -71,7 +71,7 @@
   "geo": { "@type": "GeoCoordinates", "latitude": "41.589142", "longitude": "-87.6720712" },
   "sameAs": ["https://twitter.com/test", "https://www.linkedin.com/company/...", "https://www.facebook.com/..."],
   "review": [ /* см. раздел Review ниже */ ],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": 5, "reviewCount": 11 }
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": 5, "ratingCount": 11, "reviewCount": 11 }
 }
 ```
 
@@ -80,6 +80,72 @@
 Используется, когда у сайта несколько офисов/локаций. Структура: главный `LocalBusiness` (со своими name/url/priceRange/logo/image/telephone/sameAs/address/geo/openingHours/contactPoint) + массив `department`, где каждый элемент — тоже `LocalBusiness` (свой `@id`/name/url/priceRange/logo/image/telephone/sameAs/address/geo/openingHours/contactPoint) для конкретной локации. `review`/`aggregateRating` — на верхнем уровне, не на каждом department отдельно.
 
 **`name`+`address` обязательны у каждого department так же, как у обычного одиночного LocalBusiness** — это не отдельное правило, а то же самое базовое требование, просто применённое к вложенному объекту того же типа. `address` у department обязан быть СВОИМ (разные локации физически не могут иметь один адрес). Само поле `name` обязательно в любом случае — но его конкретное значение (совпадает ли оно с материнской компанией дословно, или уточняется под конкретный офис) ничем не подтверждено сверх единственного примера ниже, где оба уровня называются одинаково («HagEstad Law Group, PLLC») — не утверждай здесь общее правило сверх этого одного наблюдения, просто сверяй `name` конкретного department с тем, что реально написано для этой локации на сайте.
+
+Пример (2 локации — структура применима к любому числу; `review`/`aggregateRating` только на верхнем уровне, `telephone`/`address` у каждого department обязаны быть уникальными, а не задублированы между локациями — см. Шаг 1 «дубль значения» в §9 SKILL.md):
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://example-movers.com/#organization",
+  "url": "https://example-movers.com/",
+  "logo": "https://example-movers.com/logo.png",
+  "name": "Example Movers",
+  "image": ["https://example-movers.com/hero.jpg"],
+  "telephone": "+12132235593",
+  "priceRange": "$$",
+  "sameAs": ["https://www.facebook.com/ExampleMovers", "https://www.instagram.com/example.movers"],
+  "review": [ /* см. раздел Review ниже */ ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "ratingCount": 8399, "reviewCount": 8399 },
+  "department": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://example-movers.com/#location-north-hollywood",
+      "name": "Example Movers — North Hollywood",
+      "url": "https://example-movers.com/ca/north-hollywood-movers/",
+      "logo": "https://example-movers.com/logo.png",
+      "image": ["https://example-movers.com/hero.jpg"],
+      "telephone": "+12132235593",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7241 Lankershim Blvd",
+        "addressLocality": "North Hollywood",
+        "addressRegion": "CA",
+        "postalCode": "91605",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": "34.2024827", "longitude": "-118.3880364" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "22:00" }
+      ],
+      "contactPoint": { "@type": "ContactPoint", "telephone": "+12132235593", "contactType": "customer service" }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://example-movers.com/#location-glendale",
+      "name": "Example Movers — Glendale",
+      "url": "https://example-movers.com/ca/glendale-movers/",
+      "logo": "https://example-movers.com/logo.png",
+      "image": ["https://example-movers.com/hero.jpg"],
+      "telephone": "+13108681733",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "201 N Brand Blvd Suite 200",
+        "addressLocality": "Glendale",
+        "addressRegion": "CA",
+        "postalCode": "91203",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": "34.148302", "longitude": "-118.2553817" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "22:00" }
+      ],
+      "contactPoint": { "@type": "ContactPoint", "telephone": "+13108681733", "contactType": "customer service" }
+    }
+  ]
+}
+```
 
 ## WebSite
 
@@ -99,6 +165,37 @@
     "target": "https://example.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
+}
+```
+
+## WebPage — стандарт Google/schema.org, не мнение агентства
+
+**У этого раздела другой источник, чем у остальных типов в файле.** По LocalBusiness/Product/BlogPosting и т.п. у агентства есть собственная SEO-стратегия сверх Google-минимума («агентство-обязательные» поля) — по `WebPage` такой позиции у агентства нет, здесь просто применяется стандарт Google/schema.org напрямую, без надстройки. Источники (проверены напрямую перед добавлением, не по памяти):
+- [Google Search Gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery) — **`WebPage` в этой галерее не значится вовсе.** У него нет своего rich-result фичи (в отличие от подтипов `ProfilePage`/`QAPage`, у которых есть отдельные гайды — они уже описаны отдельными разделами этого файла). Поэтому у Google просто нет страницы вида «обязательные поля для WebPage» — сравнивать не с чем.
+- [schema.org/WebPage](https://schema.org/WebPage) — собственный словарь типа (см. список полей ниже) + наследование от `CreativeWork`/`Thing`.
+- [Google — общие правила структурированных данных](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) — раз готового списка полей нет, критерий «что можно, а что раздутость» здесь не про конкретные поля, а про политику: разметка обязана быть **правдивым отражением содержимого страницы** («true representation of the page content»), не может описывать то, **чего нет в видимой части страницы** («content that is not visible to readers of the page»), и не может включать **нерелевантные/не относящиеся к фокусу страницы данные** («irrelevant... content unrelated to the focus of a page»). Избыточные данные, даже технически валидные, Google прямо называет риском ручных санкций.
+
+**Собственные поля `WebPage`** (по schema.org): `breadcrumb`, `lastReviewed`, `mainContentOfPage`, `primaryImageOfPage`, `relatedLink`, `reviewedBy`, `significantLink`, `speakable`, `specialty`. Плюс базовые поля `Thing` (`name`, `url`, `description`, `image`) и практически значимые поля `CreativeWork` (`inLanguage`, `datePublished`, `dateModified`, `isPartOf`, `author`, `mainEntity`) — `CreativeWork` формально даёт гораздо больше полей, но большинство из них не имеют смысла для обычной страницы сайта, добавляй только то, что реально относится к содержимому этой конкретной страницы (см. правило раздутости ниже).
+
+**Раздутость для `WebPage` — три конкретных признака, все баги:**
+- **Поля не про фокус ЭТОЙ страницы, а про бизнес/продукт/локацию в целом** — `review`, `aggregateRating`, `openingHours`/`openingHoursSpecification`, `telephone`, `priceRange`, `department` и подобное. Формально это валидные свойства `CreativeWork`/`Thing` (schema.org не запрещает), но напрямую нарушают политику Google выше («irrelevant... unrelated to the focus of a page») — это поля `LocalBusiness`/`Product`, не про саму страницу, даже если значения в них корректны.
+- **Данные, которых нет в видимой части страницы** — прямое нарушение «content that is not visible to readers of the page»: если поле описывает что-то, чего пользователь не увидит на этой странице, ему не место в `WebPage`.
+- **Полная вложенная копия ДРУГОГО блока вместо лёгкой `@id`-ссылки** — например, `isPartOf` или `breadcrumb` содержат не короткую ссылку вида `{"@id": "https://example.com/#website"}`, а вложенный ПОЛНЫЙ объект `WebSite`/`BreadcrumbList` со всеми его полями, при этом ТЕ ЖЕ данные уже есть отдельным top-level блоком на этой же странице. Это не просто раздутость — это ещё и дубль данных по смыслу правила из Шага 1 общих принципов выше (то же самое встречается на странице дважды), фиксируй оба аспекта.
+
+Пример (компактный, без раздутости):
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://example-movers.com/ca/glendale-movers/#webpage",
+  "url": "https://example-movers.com/ca/glendale-movers/",
+  "name": "Movers in Glendale, CA | Example Movers",
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": "https://example-movers.com/#website" },
+  "breadcrumb": { "@id": "https://example-movers.com/ca/glendale-movers/#breadcrumb" },
+  "primaryImageOfPage": { "@id": "https://example-movers.com/ca/glendale-movers/#primaryimage" },
+  "datePublished": "2026-01-10T00:00:00+00:00",
+  "dateModified": "2026-08-13T14:26:24+00:00"
 }
 ```
 
