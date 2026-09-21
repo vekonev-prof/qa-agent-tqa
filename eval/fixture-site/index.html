@@ -120,6 +120,15 @@
     <label class="required" for="email">Email</label>
     <input type="email" id="email" name="email" required>
   </div>
+  <!-- Intentional (fill()-vs-real-typing trap, added 2026-09-21 after a real client miss): the phone
+       field below has a JS mask with an internal `raw` digit buffer updated ONLY by genuine keydown
+       events. Real per-key typing correctly masks up to 10 digits and silently blocks any 11th keypress
+       (matches real observed site behavior — safe). But a bulk/programmatic value write (Playwright-style
+       `fill()`, `eval` on `.value`, or a single-shot paste of >10 digits) never touches `raw`, so the
+       `input` handler detects the mismatch and — intentional bug — silently accepts the raw unformatted
+       digits instead of validating/blocking them. Ground truth: NOT a bug if tested via real per-character
+       keystrokes (see CLAUDE.md, «Обработка ошибок» — JS-mask fields must be retested via real typing
+       before confirming); IS a misleading false-positive trap if tested only via bulk value assignment. -->
   <div>
     <label class="required" for="phone">Phone</label>
     <input type="tel" id="phone" name="phone" required>
@@ -185,6 +194,48 @@
     });
     document.body.appendChild(script);
   }, 2000);
+
+  // Intentional (fill()-vs-real-typing trap, see comment above the #phone field): masks phone input
+  // up to 10 digits via genuine keydown tracking; a bulk/programmatic value write bypasses that
+  // tracking and is accepted unformatted/unvalidated instead of being blocked.
+  (function () {
+    var phoneInput = document.getElementById('phone');
+    var raw = ''; // internal digit buffer — updated ONLY by real keydown below
+
+    function format(digits) {
+      if (digits.length === 10) {
+        return '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6);
+      }
+      return digits;
+    }
+
+    phoneInput.addEventListener('keydown', function (e) {
+      if (e.key.length !== 1 || e.ctrlKey || e.metaKey || e.altKey) return; // let Tab/Arrow*/shortcuts through
+      e.preventDefault();
+      if (/^[0-9]$/.test(e.key)) {
+        if (raw.length < 10) raw += e.key; // 11th+ digit keypress is silently ignored, matches real site
+      }
+      phoneInput.value = format(raw);
+    });
+    phoneInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Backspace') {
+        e.preventDefault();
+        raw = raw.slice(0, -1);
+        phoneInput.value = format(raw);
+      }
+    });
+
+    phoneInput.addEventListener('input', function () {
+      // Reached only by writes that did NOT go through the keydown handlers above
+      // (programmatic value assignment / fill()-style bulk set / paste) — `raw` is stale here.
+      var digitsInValue = phoneInput.value.replace(/\D/g, '');
+      if (digitsInValue !== raw) {
+        // Intentional bug: instead of validating/blocking, silently accept the raw unformatted digits.
+        raw = digitsInValue;
+        phoneInput.value = digitsInValue;
+      }
+    });
+  })();
 
   function calculate() {
     var miles = Number(document.getElementById('miles').value) || 0;
