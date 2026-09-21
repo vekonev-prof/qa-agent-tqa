@@ -120,15 +120,23 @@
     <label class="required" for="email">Email</label>
     <input type="email" id="email" name="email" required>
   </div>
-  <!-- Intentional (fill()-vs-real-typing trap, added 2026-09-21 after a real client miss): the phone
-       field below has a JS mask with an internal `raw` digit buffer updated ONLY by genuine keydown
-       events. Real per-key typing correctly masks up to 10 digits and silently blocks any 11th keypress
-       (matches real observed site behavior — safe). But a bulk/programmatic value write (Playwright-style
-       `fill()`, `eval` on `.value`, or a single-shot paste of >10 digits) never touches `raw`, so the
-       `input` handler detects the mismatch and — intentional bug — silently accepts the raw unformatted
-       digits instead of validating/blocking them. Ground truth: NOT a bug if tested via real per-character
-       keystrokes (see CLAUDE.md, «Обработка ошибок» — JS-mask fields must be retested via real typing
-       before confirming); IS a misleading false-positive trap if tested only via bulk value assignment. -->
+  <!-- Intentional (real-typing-vs-paste-vs-fill() trap, added 2026-09-21 after a real client miss): the
+       phone field below has a JS mask with an internal `raw` digit buffer updated ONLY by genuine
+       keydown events. Three input methods behave differently on purpose:
+       - Real per-key typing beyond 10 digits: the 11th+ keypress is silently blocked (preventDefault),
+         value stays safely masked — matches real observed site behavior.
+       - A bulk write of a NORMAL-length number (<=10 digits) — e.g. a real Ctrl+V paste of an
+         already-valid number, or any other one-shot value write of that length — is reformatted
+         correctly too. Testing paste alone with a normal-length number will NOT surface the bug.
+       - Intentional bug: ONLY a bulk write of an OVER-LENGTH number (>10 digits) — via a real paste of
+         too many digits, `fill()`, or `eval` on `.value` — slips through unformatted/unvalidated, because
+         `raw` was never incremented for it. This is the actual boundary case, and it's specific to length,
+         not to "any non-keyboard input method" in general.
+       Ground truth: NOT a bug if the over-length boundary case was tested via real per-character typing
+       (safely capped) — testing only a normal-length paste, or only typing, won't surface this on its own;
+       the trap requires testing the boundary case specifically, and via more than one realistic input
+       method, before concluding real user behavior differs from a bulk-write test (see CLAUDE.md,
+       «Обработка ошибок»). -->
   <div>
     <label class="required" for="phone">Phone</label>
     <input type="tel" id="phone" name="phone" required>
@@ -195,9 +203,10 @@
     document.body.appendChild(script);
   }, 2000);
 
-  // Intentional (fill()-vs-real-typing trap, see comment above the #phone field): masks phone input
-  // up to 10 digits via genuine keydown tracking; a bulk/programmatic value write bypasses that
-  // tracking and is accepted unformatted/unvalidated instead of being blocked.
+  // Intentional (real-typing-vs-paste-vs-fill() trap, see comment above the #phone field): masks phone
+  // input up to 10 digits via genuine keydown tracking; only an OVER-LENGTH bulk write (paste or
+  // fill()/eval of >10 digits) bypasses that tracking and is accepted unformatted/unvalidated — a
+  // normal-length bulk write (e.g. paste of a valid number) is still reformatted correctly.
   (function () {
     var phoneInput = document.getElementById('phone');
     var raw = ''; // internal digit buffer — updated ONLY by real keydown below
@@ -226,11 +235,22 @@
     });
 
     phoneInput.addEventListener('input', function () {
-      // Reached only by writes that did NOT go through the keydown handlers above
-      // (programmatic value assignment / fill()-style bulk set / paste) — `raw` is stale here.
+      // Reached only by writes that did NOT go through the keydown handlers above — a REAL paste
+      // (Ctrl+V) fires a native `input` event exactly like this too, not just fill()/eval — `raw` is
+      // stale in both cases.
       var digitsInValue = phoneInput.value.replace(/\D/g, '');
-      if (digitsInValue !== raw) {
-        // Intentional bug: instead of validating/blocking, silently accept the raw unformatted digits.
+      if (digitsInValue === raw) return;
+      if (digitsInValue.length <= 10) {
+        // A normal-length bulk write (e.g. a real paste of an already-valid number) is reformatted
+        // correctly — matches the real site, where pasting a properly-sized number works fine. This
+        // is NOT the bug: testing paste alone with a normal number won't surface it.
+        raw = digitsInValue;
+        phoneInput.value = format(raw);
+      } else {
+        // Intentional bug: ONLY an over-length (>10 digit) bulk write slips past unformatted/unvalidated.
+        // This is the specific boundary case where capped real typing (safe, see keydown above) and an
+        // over-length paste/fill() genuinely diverge — the general "avoid fill()" caution isn't enough on
+        // its own, the edge case has to be tested via more than one real input method to catch this.
         raw = digitsInValue;
         phoneInput.value = digitsInValue;
       }
