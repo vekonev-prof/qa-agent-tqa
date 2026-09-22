@@ -15,7 +15,7 @@
 .form-submissions/
 
 # отчёты и логи прогонов агента
-report.txt
+report.md
 *.log
 
 # системные файлы ОС
