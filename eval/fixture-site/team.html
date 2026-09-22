@@ -36,6 +36,34 @@
 <h2>Need Help Right Now?</h2>
 <p>General support line: <a href="tel:+15555550175">+1 (555) 555-0175</a></p>
 
+<!-- Intentional (2026-09-22, real client miss on bestcaliforniamovers.com): a horizontally-scrollable
+     badge carousel where the last card's bounding rect extends past the visible viewport on first paint.
+     A naive geometry-only check (getBoundingClientRect().right > viewport width) flags this as "content
+     cut off" — but the container is deliberately overflow-x:auto and scrollWidth > clientWidth, so the
+     "BBB" card is fully reachable and undamaged after scrolling the row. Ground truth: NOT a bug if the
+     agent scrolls the container (el.scrollLeft = el.scrollWidth) and confirms the card renders intact —
+     only a bug if content is unreachable through scrolling (see CLAUDE.md, "Обработка ошибок", технический
+     сигнал ≠ подтверждённый баг). -->
+<h2>Certifications</h2>
+<div class="badge-row" style="display:flex; gap:12px; overflow-x:auto; width:320px; white-space:nowrap;">
+  <div class="badge" style="flex:0 0 auto; width:140px; border:1px solid #ccc; padding:10px;">Google 5.0★</div>
+  <div class="badge" style="flex:0 0 auto; width:140px; border:1px solid #ccc; padding:10px;">Facebook 5.0★</div>
+  <div class="badge" style="flex:0 0 auto; width:140px; border:1px solid #ccc; padding:10px;">BBB A+</div>
+</div>
+
+<!-- Intentional (2026-09-22, real client confusion on bestcaliforniamovers.com, technical-checks §5):
+     three independent rel/target categories in one place, testing all three at once.
+     1. "Get Directions" — client's OWN Google Maps location: target="_blank" is correct, but per the
+        rule it must NOT have noopener/noreferrer. Absence here is CORRECT, not a missing-attribute bug.
+     2. "See Our Services" — an INTERNAL link (services.html, not a downloadable file) wrongly has
+        target="_blank" at all — should have none. This is the target-axis bug (Major).
+     3. "Moving Industry Association" — a genuine external, non-client resource with target="_blank" but
+        NO rel at all — missing noopener/noreferrer here is a real tab-nabbing risk (Critical, target axis). -->
+<h2>Find Us</h2>
+<p><a href="https://maps.google.com/?q=Reliable+Moving+Co+123+Example+Ave+New+York" target="_blank">Get Directions</a></p>
+<p><a href="services.html" target="_blank">See Our Services</a></p>
+<p><a href="https://movingindustryassociation-eval.invalid/members" target="_blank">Moving Industry Association</a> (member since 2015)</p>
+
 <footer>
   <p>&copy; 2026 Reliable Moving Co. All rights reserved.</p>
 </footer>
