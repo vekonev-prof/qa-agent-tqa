@@ -2,6 +2,15 @@
 .playwright/
 .playwright-cli/
 
+# автогенерируется самой утилитой playwright-cli (playwright-cli install --skills) — версия
+# документации меняется вместе с версией самого playwright-cli на конкретной машине, это не
+# логика агента, поддерживать в репозитории смысла нет
+.claude/skills/playwright-cli/
+
+# личный конфиг Claude Code для MCP-серверов конкретной машины (например, Figma MCP,
+# см. Readme.md шаг 7) — создаётся командой `claude mcp add`, не для репозитория
+.mcp.json
+
 # служебные маркеры сабмитов форм для координации параллельных агентов (см. form-submit-checks) — только на время одного прогона
 .form-submissions/
 
