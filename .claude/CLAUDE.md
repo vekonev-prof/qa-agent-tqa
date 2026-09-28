@@ -157,11 +157,13 @@ date -u -d '+3 hours' +"%Y-%m-%d %H:%M UTC+3"
    - **Этот же список переиспользуется позже в `figma-compare`**, если понадобится найти конкретный узел для сравнения по имени, — не запрашивай его повторно за тот же прогон.
 
 ### Шаг 2 — Открытие страниц
+**Всегда используй именованную сессию `playwright-cli` (`-s=<имя>`), никогда `default`.** На некоторых окружениях сессия `default` не изолирована между параллельными процессами/агентами на одной машине и может пересечься с чужой уже открытой страницей (реальный случай, пойманный при параллельном eval-регресс-прогоне — один агент открыл `default` и получил чужую страницу от другого процесса). Называй сессию осмысленно под контекст (`-s=desktop`, `-s=mobile`, `-s=tablet`, `-s=throttle-test` и т.п.) и используй то же имя для `close` в конце.
+
 Для каждой выбранной страницы открой:
 ```bash
-PLAYWRIGHT_MCP_VIEWPORT_SIZE=1920,1080 playwright-cli open <URL> --browser=chrome
-PLAYWRIGHT_MCP_VIEWPORT_SIZE=390,844 playwright-cli open <URL> --browser=webkit
-PLAYWRIGHT_MCP_VIEWPORT_SIZE=768,1024 playwright-cli open <URL> --browser=webkit
+PLAYWRIGHT_MCP_VIEWPORT_SIZE=1920,1080 playwright-cli -s=desktop open <URL> --browser=chrome
+PLAYWRIGHT_MCP_VIEWPORT_SIZE=390,844 playwright-cli -s=mobile open <URL> --browser=webkit
+PLAYWRIGHT_MCP_VIEWPORT_SIZE=768,1024 playwright-cli -s=tablet open <URL> --browser=webkit
 ```
 **Десктоп и мобилка открываются на одном и том же наборе страниц из выборки Шага 1 — без исключений.** Недопустимо проверять десктоп по всей выборке, а мобилку — только на одной-двух «показательных» страницах: если страница попала в выборку, она открывается в обоих разрешениях. Экономия токенов на мобильном проходе достигается через `find`/`snapshot --depth=4` (см. ниже) и через пункты `content-checks`/`technical-checks`, помеченные «только на десктопе» (см. следующий абзац) — а не через сокращение самой мобильной выборки страниц.
 
