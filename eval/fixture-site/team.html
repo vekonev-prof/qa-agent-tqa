@@ -67,9 +67,43 @@
 <p><a href="services.html" target="_blank">See Our Services</a></p>
 <p><a href="https://movingindustryassociation-eval.invalid/members" target="_blank">Moving Industry Association</a> (member since 2015)</p>
 
+<!-- Intentional (2026-09-24, добавлено по итогам обсуждения с пользователем реального прогона на
+     bestcaliforniamovers.com): лид-генерирующая форма с "голым" числовым техническим ID (в стиле
+     Contact Form 7 — только число, без текстового имени платформы внутри самого значения), не имеющая
+     ничего общего с TPL-QUOTE-01 выше. Тестирует ветку "число → добавь префикс платформы" алгоритма
+     детерминированного имени файла-маркера (form-submit-checks, "Координация между параллельными
+     агентами"). Ожидаемое имя файла-маркера: cf7-884.json (не 884.json, не wpcf7-884.json, не любой
+     другой вариант). -->
+<h2>Have Questions About Our Team?</h2>
+<form id="team-contact-form" onsubmit="handleTeamContactSubmit(event)">
+  <input type="hidden" name="_wpcf7" value="884">
+  <div>
+    <label for="team-contact-email">Your Email *</label>
+    <input type="email" id="team-contact-email" name="email" required>
+  </div>
+  <div>
+    <label for="team-contact-message">Message</label>
+    <textarea id="team-contact-message" name="message"></textarea>
+  </div>
+  <button type="submit">Send</button>
+  <div id="team-contact-success" style="display:none;color:green;">Thanks — we'll be in touch!</div>
+</form>
+
 <footer>
   <p>&copy; 2026 Reliable Moving Co. All rights reserved.</p>
 </footer>
+
+<script>
+  function handleTeamContactSubmit(e) {
+    e.preventDefault();
+    // Real network request so technical verification has something to find.
+    fetch('https://example.invalid/team-contact-submit', {
+      method: 'POST',
+      body: JSON.stringify({ email: document.getElementById('team-contact-email').value })
+    }).catch(function () {});
+    document.getElementById('team-contact-success').style.display = 'block';
+  }
+</script>
 
 </body>
 </html>

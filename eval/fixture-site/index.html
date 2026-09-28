@@ -57,6 +57,13 @@
   label.required::after { content: " *"; color: red; }
   #success-msg { display: none; color: green; font-weight: bold; }
   .calc-line { display: flex; justify-content: space-between; max-width: 300px; }
+  /* Intentional (2026-09-24): tablet-only (768x1024 WebKit) layout bug — narrow band that does NOT
+     affect mobile (390, below this range, default flex applies) or desktop (1920, above this range,
+     default flex applies). At exactly this viewport width, nav is pulled up and right, overlapping the
+     "Reliable Moving Co" logo text — a genuine visual defect only the dedicated tablet pass can catch. */
+  @media (min-width: 700px) and (max-width: 900px) {
+    header nav { position: relative; top: -22px; left: 180px; }
+  }
 </style>
 </head>
 <body>
