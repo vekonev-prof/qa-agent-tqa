@@ -1,5 +1,7 @@
 file:///C:/Users/Dev/Desktop/qa-agent-by-vlad/eval/fixture-site/index.html | | DEV
 
+Визуальный просмотр: да
+
 Лендинги:
 - file:///C:/Users/Dev/Desktop/qa-agent-by-vlad/eval/fixture-site/landing.html
 
