@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Fixture Form Edge Cases</title>
+<meta name="description" content="Eval fixture: lead form with whitespace-only name, +1 phone mask defect and low-contrast error text.">
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #111; color: #eee; }
+  main { max-width: 480px; margin: 0 auto; padding: 24px 16px; }
+  .field { position: relative; margin-bottom: 4px; }
+  label { display: block; font-size: 13px; margin-bottom: 4px; }
+  input, textarea { width: 100%; box-sizing: border-box; padding: 10px; background: #1c1c1c; color: #fff; border: 1px solid #555; }
+  /* validation text is tiny, dark red on the dark page, and hangs over the top edge of the next field */
+  .err { position: absolute; left: 0; bottom: -12px; font-size: 11px; color: #6b1010; z-index: 2; }
+  button { margin-top: 20px; background: #b8860b; color: #000; border: 0; padding: 12px 24px; font-size: 16px; }
+  #status { margin-top: 16px; font-weight: bold; }
+</style>
+</head>
+<body>
+<main>
+<h1>Contact Us</h1>
+<!-- Eval fixture for cases seen in a real client run. Lead-generating contact form, all four fields marked required.
+     Intentional defects:
+       (1) the "required" check is `!value`, so a First Name made of spaces passes and is sent;
+       (2) the phone mask treats a leading "1" (from "+1") as the first digit of the area code, so "+1 (555) 555-0105" becomes "(155) 555-5010";
+       (3) error text is dark red 11px on a dark background and overlaps the next field.
+     Success is always shown after a request attempt; the last payload is exposed in data-last-payload so the sent value can be read. -->
+<form id="lead" novalidate>
+  <div class="field"><label for="first_name">First Name *</label><input id="first_name" name="first_name" type="text" required><span class="err" hidden>This field is required</span></div>
+  <div class="field"><label for="last_name">Last Name *</label><input id="last_name" name="last_name" type="text" required><span class="err" hidden>This field is required</span></div>
+  <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" required pattern="\(\d{3}\) \d{3}-\d{4}" inputmode="tel" placeholder="(555) 555-5555"><span class="err" hidden>This field is required</span></div>
+  <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required><span class="err" hidden>This field is required</span></div>
+  <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="3"></textarea></div>
+  <button type="submit">Send Message</button>
+</form>
+<div id="status" role="status"></div>
+</main>
+<script>
+(function () {
+  var form = document.getElementById('lead');
+  var phone = document.getElementById('phone');
+  phone.addEventListener('input', function () {
+    // Intentional defect: a leading "1" is taken as a normal digit and the tenth digit is cut off.
+    var d = phone.value.replace(/\D/g, '').slice(0, 10), out = '';
+    if (d.length) out = '(' + d.slice(0, 3);
+    if (d.length >= 3) out += ') ' + d.slice(3, 6);
+    if (d.length >= 6) out += '-' + d.slice(6, 10);
+    phone.value = out;
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = true;
+    ['first_name', 'last_name', 'phone', 'email'].forEach(function (id) {
+      var el = document.getElementById(id), err = el.parentNode.querySelector('.err');
+      var bad = !el.value; // Intentional defect: no trim(), whitespace passes
+      if (id === 'phone' && el.value && !/^\(\d{3}\) \d{3}-\d{4}$/.test(el.value)) bad = true;
+      if (id === 'email' && el.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value)) bad = true;
+      err.hidden = !bad; if (bad) ok = false;
+    });
+    if (!ok) return;
+    var payload = { first_name: form.first_name.value, last_name: form.last_name.value, phone: form.phone.value, email: form.email.value, message: form.message.value };
+    form.setAttribute('data-last-payload', JSON.stringify(payload));
+    fetch('https://example.invalid/api/lead', { method: 'POST', body: JSON.stringify(payload) }).catch(function () {});
+    document.getElementById('status').textContent = 'THANK YOU! Your message has been submitted';
+  });
+})();
+</script>
+</body>
+</html>

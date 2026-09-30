@@ -1,4 +1,4 @@
-file:///C:/Users/Dev/Desktop/qa-agent-by-vlad/eval/fixture-site/swap-live.html | | LIVE
+eval/fixture-site/swap-live.html | | LIVE
 
 Визуальный просмотр: нет
 

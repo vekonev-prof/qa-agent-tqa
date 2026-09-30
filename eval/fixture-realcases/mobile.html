@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Results | Fixture Mobile Issues</title>
+<meta name="description" content="Eval fixture: mobile-only layout defects (breadcrumbs, sticky button, chat widget, footer link).">
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; color: #222; background: #fff; }
+  header { background: #111; color: #fff; padding: 14px 16px; font-weight: bold; }
+  .crumbs { display: flex; gap: 0; align-items: flex-start; padding: 12px 16px; background: #333; color: #fff; font-size: 13px; text-transform: uppercase; }
+  .crumbs .sep { margin: 0 12px; }
+  main { padding: 16px; max-width: 800px; }
+  main p { line-height: 1.5; }
+  footer { background: #222; color: #fff; padding: 24px 16px 4px; font-size: 14px; }
+  footer ul { list-style: none; padding: 0; }
+  footer li { margin: 6px 0; }
+  footer a.light { color: #fff; }
+  .powered { margin: 24px 0 0; }
+  .chat { position: fixed; right: 12px; bottom: 12px; background: #0a58ca; color: #fff; padding: 10px 14px; border-radius: 24px; font-size: 14px; z-index: 50; }
+  .sticky-cta { display: none; }
+  /* tablet and phone: the footer credit is right-aligned, right where the chat bubble sits */
+  @media (max-width: 768px) { .powered { text-align: right; } }
+  /* phone: the breadcrumb first item is squeezed into a narrow column and wraps to several lines, chevrons touch the text */
+  @media (max-width: 480px) {
+    .crumbs .first { width: 96px; }
+    .crumbs .sep { margin: 0; }
+    .sticky-cta { display: block; position: fixed; top: 170px; left: 16px; right: 16px; z-index: 40; background: #b8860b; color: #000; padding: 12px; text-align: center; font-family: Arial, sans-serif; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<header>The Law Office of Blake A. Poole &nbsp;|&nbsp; Menu</header>
+<nav class="crumbs" aria-label="breadcrumb"><span class="first">The Law Office of Blake A. Poole</span><span class="sep">&rsaquo;</span><span>Cases We Take</span><span class="sep">&rsaquo;</span><span>Case Results</span></nav>
+<a class="sticky-cta" href="#contact">Free consultation</a>
+<main>
+  <h1>Case Results</h1>
+  <p>Eval fixture page. It is long on purpose, so the page can be scrolled and the fixed elements can be seen over the content.</p>
+  <p>Our team reviews every matter individually and explains each option in plain language before any decision is made.</p>
+  <p>Results depend on the facts of each case. Past results do not guarantee a similar outcome in your matter.</p>
+  <p>We answer calls around the clock and can meet at the office, by phone or by video.</p>
+  <p>Every client receives a written plan with the next steps, the expected timeline and the people responsible.</p>
+  <p>Court dates, deadlines and paperwork are tracked by our staff, and you are reminded in time.</p>
+  <p>If your case involves several charges, we look at each one separately and at how they affect each other.</p>
+  <p>Some matters are resolved before a hearing; others go to trial. We prepare for both from the first day.</p>
+  <p>You can reach an attorney directly. No call centers, no scripts and no pressure to decide on the first call.</p>
+  <p>Initial consultations are free and confidential.</p>
+</main>
+<footer id="contact">
+  <strong>Quick links</strong>
+  <ul><li><a class="light" href="#">Blog</a></li><li><a class="light" href="#">Privacy Policy</a></li><li><a class="light" href="#">Disclaimer</a></li></ul>
+  <p class="powered">Developed by <a href="https://growlaw.co/" target="_blank" rel="noopener noreferrer nofollow">Grow Law Marketing Agency</a></p>
+</footer>
+<div class="chat">Chat with us</div>
+</body>
+</html>

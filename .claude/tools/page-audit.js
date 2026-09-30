@@ -94,6 +94,10 @@ async page => {
       altMissing: cap(imgs.filter(i => i.getAttribute('alt') === null).map(i => T((i.currentSrc || i.src).split('/').pop(), 50)), 10),
       altEmpty: imgs.filter(i => i.getAttribute('alt') === '').length,
       broken: cap(imgs.filter(i => i.complete && i.naturalWidth === 0 && (i.currentSrc || i.src)).map(i => T((i.currentSrc || i.src).split('/').pop(), 50)), 10),
+      // playwright-cli WebKit не декодирует AVIF: такие картинки здесь «битые» (naturalWidth 0), хотя в Chromium и на реальном Safari грузятся.
+      // Поэтому AVIF-картинки, битые в WebKit, считаем отдельно — это НЕ находка, пока их не проверят в Chromium (см. CLAUDE.md, «Обработка ошибок»).
+      brokenAvif: imgs.filter(i => i.complete && i.naturalWidth === 0 && /\.avif(\?|$)/i.test(i.currentSrc || i.src || '')).length,
+      engine: /Chrome|Chromium/.test(navigator.userAgent) ? 'chromium' : 'webkit-or-other',
       oversized: cap(imgs.filter(i => i.clientWidth > 0 && i.naturalWidth > 2 * i.clientWidth).map(i => ({ src: T((i.currentSrc || i.src).split('/').pop(), 40), natural: i.naturalWidth, shown: i.clientWidth })), 8),
       heavyOver150KB: cap(res.filter(r => r.encodedBodySize > 150 * 1024).map(r => ({ src: T(r.name.split('/').pop(), 40), kb: Math.round(r.encodedBodySize / 1024) })), 10),
     };

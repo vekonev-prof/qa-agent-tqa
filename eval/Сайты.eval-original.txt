@@ -1,0 +1,9 @@
+eval/fixture-migration/dev/index.html | ORIGINAL:eval/fixture-migration/original/index.html | DEV
+
+Визуальный просмотр: нет
+
+Комментарии:
+- Это тестовая фикстура для eval сверки с эталоном (`original-site-compare`), не реальный клиентский сайт. «Перенесённый» сайт (DEV) лежит в `eval/fixture-migration/dev/`, эталон (ORIGINAL) — в `eval/fixture-migration/original/`. Оцениваются ТОЛЬКО пункты сверки с эталоном (пункты 48–66 в `ground-truth.md`); остальные проверки чек-листа для этих страниц не оцениваются и их результат сверять не нужно.
+- Sitemap DEV: eval/fixture-migration/dev/sitemap.xml. Sitemap эталона: eval/fixture-migration/original/sitemap.xml.
+- Страницы DEV для сверки (файлы в той же папке `dev/`, что и index.html; путь относительно `dev/`): index.html, services/roof-repair.html, about.html, contact.html, blogs/storm-damage-guide.html. Соответствующие страницы эталона — те же пути в папке `original/`; блог эталона лежит по пути `blog/storm-damage-guide.html`.
+- Все страницы этого сайта — один шаблон, на каждом типе страниц сверяй по одной странице; выборка из пяти страниц выше уже сделана. Формы не сабмитить (форма фикстуры не отправляет запросов).

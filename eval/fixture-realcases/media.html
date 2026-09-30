@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Areas We Serve | Fixture Media</title>
+<meta name="description" content="Eval fixture: map in developer mode, an AVIF picture (tool limitation trap) and a genuinely missing image.">
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; color: #222; padding: 16px; max-width: 900px; }
+  .map { position: relative; width: 100%; max-width: 640px; height: 320px; background: #e5e3df; border: 1px solid #aaa; overflow: hidden; }
+  .map .gray { position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; margin: -60px 0 0 -60px; background: #8a8a8a; }
+  .map .wm { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,.35); font-size: 26px; font-weight: bold; transform: rotate(-20deg); text-align: center; }
+  .map .lab { position: absolute; font-size: 12px; color: #333; }
+  .cities { position: absolute; left: 8px; top: 8px; background: #fff; padding: 6px 10px; font-size: 13px; list-style: none; margin: 0; z-index: 3; }
+  .pics img { width: 240px; height: 150px; margin: 0 12px 12px 0; object-fit: cover; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+<h1>Areas We Serve</h1>
+<!-- Eval fixture for cases seen in a real client run.
+     (1) The map imitates the Google Maps "BillingNotEnabledMapError" state: a "For development purposes only" watermark, a grey square in the centre
+         and Russian labels on an English page; the same error is written to the console.
+     (2) crew.avif is a valid AVIF picture. playwright-cli's WebKit cannot decode AVIF (the image looks broken there), Chromium and real Safari show it.
+         It must NOT be reported as a defect. crew-missing.jpg does not exist and is broken in every browser: that one is a real defect. -->
+<div class="map" id="map">
+  <ul class="cities"><li>Flowery Branch</li><li>Oakwood</li><li>Braselton</li></ul>
+  <div class="gray"></div>
+  <span class="lab" style="left:60px;top:120px">Атланта</span><span class="lab" style="left:300px;top:60px">Мариетта</span><span class="lab" style="left:420px;top:230px">Кроффорд</span>
+  <div class="wm">For development purposes only</div>
+</div>
+<script>console.error('Google Maps JavaScript API error: BillingNotEnabledMapError https://developers.google.com/maps/documentation/javascript/error-messages#billing-not-enabled-map-error');</script>
+
+<h2>Our office</h2>
+<div class="pics">
+  <img src="images/crew.avif" alt="Our attorneys at the office (AVIF)">
+  <img src="images/crew.jpg" alt="Our attorneys at the office (JPEG)">
+  <img src="images/crew-missing.jpg" alt="Front desk of the office">
+</div>
+</body>
+</html>
