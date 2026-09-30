@@ -13,3 +13,4 @@ file:///C:/Users/Dev/Desktop/qa-agent-by-vlad/eval/fixture-site/index.html | | D
 - team.html — страница команды, доступна по ссылке "Our Team" в шапке.
 - sitemap.xml лежит в той же папке, что и index.html (`file:///.../fixture-site/sitemap.xml`) — так же, как обычно на корне сайта.
 - ТЗ на калькулятор Moving Cost Estimator: cost = base_rate + distance_charge (итог должен быть точной суммой показанных компонентов разбивки).
+- file:///C:/Users/Dev/Desktop/qa-agent-by-vlad/eval/fixture-site/visual.html — страница для визуального просмотра (Шаг 3.3): в sitemap и меню не входит; на ней выполни только визуальный просмотр, остальные проверки не оцениваются.

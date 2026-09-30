@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Crew and Services Gallery — Reliable Moving Co</title>
+<meta name="description" content="Meet the crew and see how we work. Reliable Moving Co, New York.">
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 16px; max-width: 900px; }
+  h1 { font-size: 26px; }
+  section { margin: 28px 0; }
+  .card { border: 1px solid #ccc; padding: 12px; background: #f7f7f7; }
+  .cols { display: flex; gap: 16px; align-items: flex-start; }
+  .cols .card { width: 260px; }
+  .cta { display: inline-block; background: #0a58ca; color: #fff; padding: 10px 12px; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<h1>Crew and Services Gallery</h1>
+
+<!-- Eval fixture for the visual glance step (CLAUDE.md, Step 3.3): only purely visual defects below.
+     Intentional: A (image did not load), B (stretched image), C (misaligned columns), D (clipped button).
+     E is a trap — decorative whitespace that must NOT be reported. -->
+
+<section id="a">
+  <h2>Our crew</h2>
+  <img src="images/crew-photo-missing.jpg" alt="Our moving crew" width="320" height="180" style="border:1px solid #ccc">
+</section>
+
+<section id="b">
+  <h2>Our badge</h2>
+  <img alt="Company badge" style="width:100%;max-width:640px;height:90px;object-fit:fill"
+       src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='100' cy='100' r='96' fill='%230a58ca'/%3E%3Ccircle cx='100' cy='100' r='60' fill='%23ffffff'/%3E%3C/svg%3E">
+</section>
+
+<section id="c">
+  <h2>How it works</h2>
+  <div class="cols">
+    <div class="card"><h3>Step 1</h3><p>We visit and estimate your move.</p></div>
+    <div class="card" style="margin-top:140px;width:180px"><h3>Step 2</h3><p>We pack and load your things.</p></div>
+  </div>
+</section>
+
+<section id="d">
+  <h2>Ready to move?</h2>
+  <a class="cta" href="index.html" style="width:70px;overflow:hidden;white-space:nowrap">Get a Free Quote</a>
+</section>
+
+<div aria-hidden="true" style="height:160px"></div><!-- E: decorative spacer, intentional -->
+
+<section id="f">
+  <h2>Service area</h2>
+  <p>We serve all five boroughs of New York City and nearby counties.</p>
+</section>
+
+</body>
+</html>
