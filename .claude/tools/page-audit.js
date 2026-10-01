@@ -81,7 +81,7 @@ async page => {
       targetBlank: cap(links.filter(l => l.target === '_blank').map(tag), 25),
       externalWithoutNofollow: cap(links.filter(l => l.u && /^https?:$/.test(l.u.protocol) && !l.internal && !/nofollow/i.test(l.rel)).map(tag), 15),
       externalWithNofollow: cap(links.filter(l => l.u && /^https?:$/.test(l.u.protocol) && !l.internal && /nofollow/i.test(l.rel)).map(tag), 15),
-      tel: cap(links.filter(l => /^tel:/i.test(l.raw)).map(l => ({ href: l.raw, aria: l.a.getAttribute('aria-label'), text: l.text })), 10),
+      tel: cap(links.filter(l => /^tel:/i.test(l.raw)).map(l => { const d = l.raw.replace(/\D/g, ''); return { href: l.raw, aria: l.a.getAttribute('aria-label'), text: l.text, digits: d, nonUsCode: /^tel:\s*(\+|00)/i.test(l.raw) ? !/^tel:\s*(\+|00)1\D*\d/i.test(l.raw) : (d.length > 10 && d[0] !== '1') }; }), 10),
       mailto: cap(links.filter(l => /^mailto:/i.test(l.raw)).map(l => l.raw), 5),
     };
 
@@ -111,7 +111,8 @@ async page => {
       lorem: lorem ? T(text.slice(Math.max(0, lorem.index - 20), lorem.index + 60), 90) : null,
       cyrillicWords: cyr.length, cyrillicSample: cap(cyr, 5),
       placeholders: cap(text.match(/\b(TODO|TBD|XXXX+|placeholder text|your (text|title) here|sample text)\b/gi) || [], 5),
-      phonesVisible: cap(phones.map(p => ({ raw: p, usFormat: /^\(\d{3}\) \d{3}-\d{4}$/.test(p), plus1: /^\+1/.test(p) })), 10),
+      phonesVisible: cap(phones.map(p => ({ raw: p, digits: p.replace(/\D/g, '') })), 10),
+      phonesNonUs: cap([...new Set((text.match(/(?:\+|00)(?!1[\s.\-()\d])\d{1,3}[\s.\-()]*\d[\d\s.\-()]{6,16}\d/g) || []).map(p => p.trim()))], 10),
       emailsVisible: cap([...new Set(text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g) || [])], 5),
     };
 
@@ -126,6 +127,7 @@ async page => {
       scrollableContainers: cap(all.filter(el => { const o = getComputedStyle(el).overflowX; return (o === 'auto' || o === 'scroll') && el.scrollWidth > el.clientWidth + 1; }).map(el => ({ el: desc(el), scrollWidth: el.scrollWidth, clientWidth: el.clientWidth })), 8),
       smallFontElements: cap(all.filter(el => [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim()) && isVis(el) && parseFloat(getComputedStyle(el).fontSize) < 12).map(el => ({ el: desc(el), px: parseFloat(getComputedStyle(el).fontSize) })), 6),
       bodyFontPx: document.body ? parseFloat(getComputedStyle(document.body).fontSize) : null,
+      chrome: (() => { const pick = el => { if (!el) return null; const cs = getComputedStyle(el), r = el.getBoundingClientRect(); return { el: desc(el), fontPx: parseFloat(cs.fontSize), lineHeightPx: parseFloat(cs.lineHeight) || null, heightPx: Math.round(r.height), paddingTopPx: parseFloat(cs.paddingTop) }; }; return { header: pick(document.querySelector('header') || document.querySelector('[role="banner"]')), footer: pick(document.querySelector('footer') || document.querySelector('[role="contentinfo"]')) }; })(),
       fixedOrSticky: cap(all.filter(el => /^(fixed|sticky)$/.test(getComputedStyle(el).position) && isVis(el)).map(el => { const r = el.getBoundingClientRect(); return { el: desc(el), pos: getComputedStyle(el).position, top: Math.round(r.top), height: Math.round(r.height), z: getComputedStyle(el).zIndex }; }), 8),
     };
     // наложения внутри шапки (геометрия бокса; ложные срабатывания возможны — агент проверяет глазами/скриншотом)

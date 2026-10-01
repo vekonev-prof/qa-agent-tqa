@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Fixture Phones</title>
+<meta name="description" content="Eval fixture: phone numbers in the header, a form area, a call-to-action block and the footer.">
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; color: #222; }
+  .site-header { background: #111; padding: 12px 24px; text-align: right; }
+  .site-header a { color: #fff; text-decoration: none; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px; }
+  .contact { border: 1px solid #ccc; padding: 16px; margin-bottom: 24px; }
+  .cta-call { display: inline-block; background: #b8860b; color: #000; padding: 12px 20px; text-decoration: none; }
+  .site-footer { background: #222; color: #ddd; padding: 20px 24px; font-size: 14px; }
+  .site-footer a { color: #fff; }
+</style>
+</head>
+<body>
+<!-- Eval fixture for phone-number rules (the numbers are read from the source code BEFORE the call-tracking swap).
+     Main number of the site: (555) 555-0123. Intentional cases:
+       (1) the call-to-action link shows the main number but its tel: points to another number (tel:+15555550199);
+       (2) in the paragraph next to the form the text shows (555) 555-0177 while the tel: of the same link is the main number;
+       (3) the footer shows the main number as "555.555.0123" (not the (XXX) XXX-XXXX form) in a prominent zone;
+       (4) the footer lists the Chicago office number (312) 555-0100 with the office name and address (a labelled office number);
+       (5) the paragraph "Our team" shows a personal number (214) 555-0199 of a team member, labelled with the name;
+       (6) a script replaces the number in the header after the page has loaded (imitates a call-tracking swap): only the number
+           in the source code counts, the replaced value (312) 555-0999 must not be reported. -->
+<header class="site-header"><a id="hdr-phone" href="tel:+15555550123">(555) 555-0123</a></header>
+<main>
+  <h1>Contact Us</h1>
+  <section class="contact">
+    <p>Prefer to call? <a href="tel:+15555550123">(555) 555-0177</a></p>
+    <p>Our team: Ivan Petrov, direct line (214) 555-0199.</p>
+    <form id="callback" onsubmit="return false">
+      <label for="cb-name">Your name</label> <input id="cb-name" name="name" type="text">
+      <button type="submit">Call me back</button>
+    </form>
+  </section>
+  <a class="cta-call" href="tel:+15555550199">Call now: (555) 555-0123</a>
+</main>
+<footer class="site-footer">
+  <p>Call 555.555.0123</p>
+  <p>Chicago office, 123 Lake St, Chicago, IL 60601: <a href="tel:+13125550100">(312) 555-0100</a></p>
+</footer>
+<script>
+  setTimeout(function () {
+    var h = document.getElementById('hdr-phone');
+    h.href = 'tel:+13125550999';
+    h.textContent = '(312) 555-0999';
+  }, 400);
+</script>
+</body>
+</html>
