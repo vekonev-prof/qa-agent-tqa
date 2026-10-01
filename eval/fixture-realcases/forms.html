@@ -25,6 +25,7 @@
        (1) the "required" check is `!value`, so a First Name made of spaces passes and is sent;
        (2) the phone mask treats a leading "1" (from "+1") as the first digit of the area code, so "+1 (555) 555-0105" becomes "(155) 555-5010";
        (3) error text is dark red 11px on a dark background and overlaps the next field;
+       (5) the Send button is never disabled and nothing guards against a repeated submit: a quick double click sends two requests (two leads);
        (4) the ZIP field is type=number without pattern/maxlength and is only checked for "not empty", so the one-digit ZIP "1" passes and is sent.
      Success is always shown after a request attempt; the last payload is exposed in data-last-payload so the sent value can be read. -->
 <form id="lead" novalidate>
