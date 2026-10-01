@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Areas We Serve | Fixture Media</title>
-<meta name="description" content="Eval fixture: map in developer mode, an AVIF picture (tool limitation trap) and a genuinely missing image.">
+<meta name="description" content="Eval fixture: map in developer mode, an AVIF picture (tool limitation trap), a genuinely missing image, a Russian-locale embed and a dead slider.">
 <style>
   body { margin: 0; font-family: Arial, sans-serif; color: #222; padding: 16px; max-width: 900px; }
   .map { position: relative; width: 100%; max-width: 640px; height: 320px; background: #e5e3df; border: 1px solid #aaa; overflow: hidden; }
@@ -13,6 +13,10 @@
   .map .lab { position: absolute; font-size: 12px; color: #333; }
   .cities { position: absolute; left: 8px; top: 8px; background: #fff; padding: 6px 10px; font-size: 13px; list-style: none; margin: 0; z-index: 3; }
   .pics img { width: 240px; height: 150px; margin: 0 12px 12px 0; object-fit: cover; border: 1px solid #ccc; }
+  .ba { position: relative; width: 100%; max-width: 640px; margin-top: 8px; }
+  .ba .track { display: flex; gap: 16px; overflow: visible; }
+  .ba .slide { flex: 0 0 300px; height: 160px; background: #cfd8e3; border: 1px solid #99a; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+  .ba button { margin: 8px 8px 0 0; padding: 6px 12px; }
 </style>
 </head>
 <body>
@@ -21,7 +25,11 @@
      (1) The map imitates the Google Maps "BillingNotEnabledMapError" state: a "For development purposes only" watermark, a grey square in the centre
          and Russian labels on an English page; the same error is written to the console.
      (2) crew.avif is a valid AVIF picture. playwright-cli's WebKit cannot decode AVIF (the image looks broken there), Chromium and real Safari show it.
-         It must NOT be reported as a defect. crew-missing.jpg does not exist and is broken in every browser: that one is a real defect. -->
+         It must NOT be reported as a defect. crew-missing.jpg does not exist and is broken in every browser: that one is a real defect.
+     (3) The video block embeds a third-party player whose URL carries lang=ru-RU, so a visitor of the English page sees Russian buttons and captions inside the iframe
+         (the Russian text is not in the page DOM: it is visible only on a screenshot or in the iframe).
+     (4) The "Before / After" slider has Previous/Next buttons without any handler (the slider script is not initialised): clicks change nothing, the track never moves
+         and on a 390 px phone the second slide is cut off by the screen edge. -->
 <div class="map" id="map">
   <ul class="cities"><li>Flowery Branch</li><li>Oakwood</li><li>Braselton</li></ul>
   <div class="gray"></div>
@@ -35,6 +43,15 @@
   <img src="images/crew.avif" alt="Our attorneys at the office (AVIF)">
   <img src="images/crew.jpg" alt="Our attorneys at the office (JPEG)">
   <img src="images/crew-missing.jpg" alt="Front desk of the office">
+</div>
+
+<h2>Watch our work</h2>
+<iframe src="embed-ru.html?lang=ru-RU&amp;referrer=fixture" title="Video player" width="325" height="200" style="border:1px solid #444"></iframe>
+
+<h2>Before / After</h2>
+<div class="ba" id="ba">
+  <div class="track"><div class="slide">Before photo</div><div class="slide">After photo</div></div>
+  <button type="button" aria-label="Previous slide">Prev</button><button type="button" aria-label="Next slide">Next</button>
 </div>
 </body>
 </html>

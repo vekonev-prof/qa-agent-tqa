@@ -1,0 +1,12 @@
+/* Eval fixture (real-run cases): shared template of project-a.html / project-b.html (header, article, FAQ, footer) */
+body { margin: 0; font-family: Arial, sans-serif; color: #222; background: #fff; }
+.top { background: #111; color: #fff; padding: 12px 24px; display: flex; justify-content: space-between; font-size: 14px; }
+.top a { color: #fff; }
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+.ba { display: flex; gap: 16px; }
+.ba figure { margin: 0; flex: 1; }
+.ba img { width: 100%; height: auto; display: block; border: 1px solid #ccc; }
+.faq-item { border-top: 1px solid #ddd; padding: 12px 0; }
+.faq-item h3 { margin: 0 0 6px; font-size: 18px; }
+footer { background: #222; color: #ddd; padding: 28px 24px; font-size: 13px; line-height: 1.5; }
+footer p { margin: 0 0 8px; }

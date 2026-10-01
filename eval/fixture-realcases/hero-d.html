@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Record Sealing and Expungement | Fixture</title>
+<meta name="description" content="Hero page D: the title sits in a thin header wrapper inside the hero section.">
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #0a0a0a; color: #fff; }
+  .top { background: #000; padding: 12px 24px; font-size: 14px; border-bottom: 1px solid #333; }
+  .hero { position: relative; min-height: 760px; overflow: hidden; }
+  .hero nav.crumbs { position: relative; z-index: 3; padding: 12px 16px; font-size: 13px; color: #bbb; }
+  /* the H1 lives in a thin <header> wrapper (about 110 px tall); the photo is a sibling of this wrapper, not inside it */
+  .hero header.hero-head { position: relative; z-index: 3; padding: 120px 16px 0; max-width: 1312px; margin: 0 auto; }
+  .hero header.hero-head h1 { display: inline-block; margin: 0; font: 700 96px/110px Arial, sans-serif; white-space: nowrap; }
+  .hero .photo { position: absolute; right: 0; top: 0; z-index: 1; height: 760px; width: 260px; object-fit: cover; }
+  .after { padding: 24px; background: #fff; color: #222; }
+  /* mid-size desktops: the photo grows under the title (the title box keeps its width) */
+  @media (min-width: 1001px) and (max-width: 1279px) { .hero .photo { width: 760px; } }
+  @media (max-width: 1000px) {
+    .hero { min-height: 0; }
+    .hero .photo { position: static; display: block; width: 100%; height: 360px; }
+    .hero header.hero-head { padding-top: 24px; }
+    .hero header.hero-head h1 { font-size: 48px; line-height: 56px; white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<!-- Eval fixture for cases seen in a real client run: Hero in which the only H1 sits inside a thin <header> wrapper (not the whole section).
+     A probe that takes "the nearest header/section of the H1" measures a thin strip with no photo and sees no overlap.
+     Intentional defect: at window widths 1001-1279 px the photo (760 px wide) lies under the title (about 600 px wide, starts at x=16). -->
+<div class="top">Free Consultations | 24/7 for Emergency Help</div>
+<section class="hero">
+  <nav class="crumbs">Home &rsaquo; Services &rsaquo; Record Sealing</nav>
+  <header class="hero-head"><h1>Record Sealing</h1></header>
+  <img class="photo" src="images/person.svg" alt="Attorney portrait">
+</section>
+<section class="after"><h2>How we can help</h2><p>Eval fixture page: only the first screen matters here.</p></section>
+</body>
+</html>

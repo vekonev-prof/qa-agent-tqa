@@ -1,10 +1,12 @@
 // hero-probe.js — замер первого экрана (Hero) на нескольких ширинах окна за один вызов.
-// Запуск (десктопная Chromium-сессия, страница уже открыта; ~15–30 с — скрипт сам меняет ширину и перезагружает страницу на каждой ширине):
+// Запуск (десктопная Chromium-сессия, страница уже открыта; ~15–30 с, до ~1 мин, если событие load не наступает — скрипт сам меняет ширину и перезагружает страницу на каждой ширине):
 //   playwright-cli --raw -s=<имя> run-code --filename=.claude/tools/hero-probe.js
 // После прогона вернёт окно к исходной ширине. Ничего не оценивает — только собирает факты:
 //   heroH — высота Hero; title — самый крупный текст в Hero (шрифт, число строк, левый/правый край); overlaps — картинки Hero, на которые
 //   заходит заголовок (пересечение ≥8×8 px); overflowX — элементы Hero с текстом, выходящие за окно; ctas — кнопки/ссылки-кнопки Hero (число, x-края).
-// Hero = секция (или контейнер), в которой лежит первый H1; на страницах без H1 — первая секция. Ширины подобраны так, чтобы ловить проблемы
+// Hero = ближайший к первому ВИДИМОМУ H1 блок-предок (section / header / [class*=hero|banner]) высотой от 35% до 150% высоты окна:
+// тонкая обёртка заголовка (<header> шириной в строку, полоса хлебных крошек) пропускается и берётся блок выше; блок выше 150% окна
+// (обёртка всей страницы) не берётся. Если подходящего блока нет — ближайший блок-предок, затем родитель H1; на страницах без H1 — первая секция. Ширины подобраны так, чтобы ловить проблемы
 // МЕЖДУ брейкпоинтами, которые не видны на стандартных 1920 / 768 / 390.
 async page => {
   const widths = [1920, 1440, 1280, 1200, 1100, 1024, 900, 768, 600, 390, 360];
@@ -13,8 +15,18 @@ async page => {
   const probe = () => {
     const T = (s, n = 60) => String(s == null ? '' : s).replace(/\s+/g, ' ').trim().slice(0, n);
     const isVis = el => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none' && cs.opacity !== '0'; };
-    const h1 = document.querySelector('h1');
-    const hero = (h1 && (h1.closest('section, header, [class*="hero" i]') || h1.parentElement)) || document.querySelector('section');
+    const vh = innerHeight;
+    const h1 = [...document.querySelectorAll('h1')].find(isVis) || document.querySelector('h1');
+    let hero = null;
+    if (h1) {
+      const cands = [];
+      for (let el = h1.parentElement; el && el !== document.body && el !== document.documentElement; el = el.parentElement) {
+        if (el.matches('section, header, [class*="hero" i], [class*="banner" i]')) cands.push(el);
+      }
+      const hOf = el => el.getBoundingClientRect().height;
+      hero = cands.find(el => hOf(el) >= vh * 0.35 && hOf(el) <= vh * 1.5) || cands[0] || h1.parentElement;
+    }
+    hero = hero || document.querySelector('section');
     if (!hero) return { noHero: true };
     const hr = hero.getBoundingClientRect(), vw = innerWidth;
     // самый крупный видимый текст в Hero
@@ -42,13 +54,15 @@ async page => {
   try {
     for (const w of widths) {
       await page.setViewportSize({ width: w, height: Math.min(orig.height, 900) });
-      await page.reload({ waitUntil: 'load' });
+      // не ждём событие load целиком: на DEV оно может не наступать (зависший сторонний ресурс) и reload падает по таймауту 30 с
+      await page.reload({ waitUntil: 'domcontentloaded', timeout: 20000 }).catch(() => {});
+      await page.waitForFunction(() => [...document.images].every(i => i.complete), null, { timeout: 3000 }).catch(() => {});
       await page.waitForTimeout(700);
       out.push(await page.evaluate(probe));
     }
   } finally {
     await page.setViewportSize(orig);
-    await page.reload({ waitUntil: 'load' });
+    await page.reload({ waitUntil: 'domcontentloaded', timeout: 20000 }).catch(() => {});
   }
   return out.map(r => r.noHero ? 'no hero' : `w${r.vw} heroH=${r.heroH} title[fs${r.title && r.title.fs} lh${r.title && r.title.lh} lines=${r.title && r.title.lines} x${r.title && r.title.l}-${r.title && r.title.r}] imgs=${r.imgs} overlaps=${JSON.stringify(r.overlaps)} overflowX=${JSON.stringify(r.overflowX)} ctas=${JSON.stringify(r.ctas)}`);
 }
