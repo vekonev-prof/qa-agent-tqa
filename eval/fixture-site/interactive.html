@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Widgets Test Page — Reliable Moving Co</title>
+<meta name="description" content="Eval fixture for the page interactivity part of the visual glance step: accordion, tabs, slider, modal, chat, forms, first screen.">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, sans-serif; color: #222; background: #fff; }
+  button { font: inherit; cursor: pointer; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #ddd; }
+  header a { color: #0a58ca; text-decoration: none; font-weight: bold; }
+  .hero { background: #0b2a5b; padding: 48px 16px; min-height: 260px; }
+  .hero h1 { margin: 0 0 10px; font-size: 34px; color: #1c2f55; } /* defect: dark text on a dark background */
+  .hero p { margin: 0 0 16px; color: #223a66; }
+  .btn { display: inline-block; background: #0a58ca; color: #fff; padding: 12px 18px; text-decoration: none; border: 0; }
+  section { padding: 24px 16px; max-width: 900px; }
+  h2 { margin: 0 0 12px; }
+
+  /* accordion (FAQ) */
+  .acc-item { border: 1px solid #ccc; margin-bottom: 8px; }
+  .acc-q { width: 100%; text-align: left; padding: 12px; background: #f5f5f5; border: 0; font-size: 16px; }
+  .acc-a { display: none; padding: 12px; line-height: 1.4; }
+  .acc-item.open .acc-a { display: block; }
+  /* defect: the last item has a fixed height, so its opened answer spills over the heading below it */
+  .acc-item.last.open { height: 48px; overflow: visible; }
+  .acc-item.last.open .acc-a { position: relative; z-index: 2; padding-top: 24px; pointer-events: none; }
+
+  /* tabs */
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tab { padding: 10px 14px; border: 1px solid #ccc; background: #f5f5f5; }
+  .tab.active { background: #0a58ca; color: #fff; border-color: #0a58ca; }
+  .tabpanel { display: none; border: 1px solid #ccc; padding: 16px; margin-top: 8px; min-height: 90px; }
+  .tabpanel.active { display: block; }
+
+  /* slider */
+  .slider { position: relative; max-width: 600px; height: 150px; overflow: hidden; border: 1px solid #ccc; }
+  .slide { display: none; height: 100%; align-items: center; justify-content: center; font-size: 22px; }
+  .slide.active { display: flex; }
+  .s1 { background: #cfe3ff; } .s2 { background: #ffe3c8; } .s3 { background: #d8f2d0; }
+  .slider-nav { display: flex; gap: 8px; margin-top: 8px; }
+  .slider-nav button { padding: 8px 14px; }
+
+  /* modal (works, with the usual dark overlay) */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 100; align-items: center; justify-content: center; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: #fff; padding: 24px; width: 320px; max-width: 90%; position: relative; }
+  .modal .x { position: absolute; right: 8px; top: 6px; background: none; border: 0; font-size: 22px; }
+
+  /* chat widget */
+  .chat-bubble { position: fixed; right: 12px; bottom: 12px; z-index: 50; background: #0a58ca; color: #fff; border: 0; border-radius: 24px; padding: 12px 16px; }
+  .chat-panel { display: none; position: fixed; right: 12px; bottom: 12px; width: 320px; height: 380px; background: #fff; border: 1px solid #999; z-index: 60; box-shadow: 0 4px 16px rgba(0,0,0,.3); }
+  .chat-panel.open { display: block; }
+  .chat-head { background: #0a58ca; color: #fff; padding: 12px; display: flex; justify-content: space-between; }
+  .chat-head button { background: none; border: 0; color: #fff; font-size: 18px; }
+  .chat-body { padding: 12px; font-size: 14px; }
+  /* defect: on the phone the opened chat fills the whole screen and has no close button */
+  @media (max-width: 480px) {
+    .chat-panel { inset: 0; width: auto; height: auto; right: 0; bottom: 0; }
+    .chat-close { display: none; }
+  }
+
+  /* forms */
+  form { max-width: 420px; margin-bottom: 24px; }
+  label { display: block; margin: 10px 0 4px; font-size: 14px; }
+  input, textarea { width: 100%; padding: 9px; border: 1px solid #999; font: inherit; }
+  .err { display: none; margin-top: 4px; padding: 4px 6px; font-size: 13px; color: #f3c1c1; background: #fde8e8; } /* defect: error text is almost invisible */
+  form.invalid .err { display: block; }
+  .ok { display: none; color: green; margin-top: 8px; }
+  footer { padding: 24px 16px; background: #222; color: #fff; }
+  .tall { min-height: 500px; }
+</style>
+</head>
+<body>
+
+<!-- Eval fixture for the page interactivity part of the visual glance step (visual-glance, sections "Interactive page", "Forms without submit", "First screen").
+     Planted defects: eval/ground-truth.md items 115-121. Traps: items 122-123. The chat widget here is the same site-wide component as on menu.html (item 129). -->
+
+<header><a href="index.html">Reliable Moving Co</a><a href="tel:+15555550123">Call (555) 555-0123</a></header>
+
+<div class="hero" id="hero">
+  <h1>Your move, done right</h1>
+  <p>Local and long distance moves in New York.</p>
+  <a class="btn" href="index.html#quote">Get a Free Quote</a>
+</div>
+
+<section id="faq">
+  <h2>Frequently asked questions</h2>
+  <div class="acc-item">
+    <button class="acc-q" aria-expanded="false">How much does a move cost?</button>
+    <div class="acc-a">Every move is priced by crew size and hours. You get a written estimate before we start.</div>
+  </div>
+  <div class="acc-item">
+    <button class="acc-q" aria-expanded="false">Are you insured?</button>
+    <div class="acc-a">Yes. We are licensed, bonded and insured for every job.</div>
+  </div>
+  <div class="acc-item last">
+    <button class="acc-q" aria-expanded="false">Can you move a piano?</button>
+    <div class="acc-a">Yes. Our crews move upright and grand pianos with special equipment. Please tell us about the stairs in advance so we can plan the crew size and the route.</div>
+  </div>
+</section>
+
+<section id="tabs">
+  <h2>Our services</h2>
+  <div class="tabs" role="tablist">
+    <button class="tab active" role="tab" data-panel="p1">Local</button>
+    <button class="tab" role="tab" data-panel="p2">Long distance</button>
+    <button class="tab" role="tab" data-panel="p3-missing">Packing</button>
+  </div>
+  <div class="tabpanel active" id="p1">Local moves inside the five boroughs, priced by the hour.</div>
+  <div class="tabpanel" id="p2">Long distance moves across state lines, priced by weight and distance.</div>
+  <div class="tabpanel" id="p3">Packing and unpacking by our crew, with all materials included.</div>
+</section>
+
+<section id="slider">
+  <h2>Customer stories</h2>
+  <div class="slider" id="sl">
+    <div class="slide s1 active">Story 1 of 3</div>
+    <div class="slide s2">Story 2 of 3</div>
+    <div class="slide s3">Story 3 of 3</div>
+  </div>
+  <div class="slider-nav"><button id="prev" aria-label="Previous slide">‹ Prev</button><button id="next" aria-label="Next slide">Next ›</button></div>
+</section>
+
+<section id="callback">
+  <h2>Prefer a call?</h2>
+  <button class="btn" id="open-modal">Request a callback</button>
+</section>
+
+<section id="contact">
+  <h2>Contact us</h2>
+  <form id="contact-form" novalidate>
+    <label for="c-name">Name</label>
+    <input id="c-name" name="name" type="text" required aria-required="true" placeholder="Your name">
+    <div class="err">Please enter your name.</div>
+    <label for="c-email">Email</label>
+    <input id="c-email" name="email" type="email" required aria-required="true" placeholder="you@example.com">
+    <div class="err">Please enter a valid email.</div>
+    <label for="c-phone">Phone</label>
+    <input id="c-phone" name="phone" type="tel" placeholder="undefined"><!-- defect: a broken placeholder -->
+    <label for="c-msg">Message</label>
+    <textarea id="c-msg" name="message" rows="3" placeholder="How can we help?"></textarea>
+    <p><button class="btn" type="submit">Send message</button></p>
+    <div class="ok" id="c-ok">Thanks! We will call you shortly.</div>
+  </form>
+
+  <!-- trap: this form has NO required field; clicking its button would submit an empty form -->
+  <form id="news-form">
+    <label for="n-email">Subscribe to our newsletter</label>
+    <input id="n-email" name="email" type="email" placeholder="you@example.com">
+    <p><button class="btn" type="submit">Subscribe</button></p>
+    <div class="ok" id="n-ok">Subscribed!</div>
+  </form>
+</section>
+
+<div class="tall"></div>
+<footer>© Reliable Moving Co · <a href="index.html" style="color:#fff">Home</a></footer>
+
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-label="Request a callback">
+  <div class="modal"><button class="x" id="close-modal" aria-label="Close">✕</button><h3>Request a callback</h3><p>Leave your number and we will call back within the hour.</p></div>
+</div>
+
+<button class="chat-bubble" id="chat-open">Chat with us</button>
+<div class="chat-panel" id="chat" role="dialog" aria-label="Chat">
+  <div class="chat-head"><span>Chat with us</span><button class="chat-close" id="chat-close" aria-label="Close chat">✕</button></div>
+  <div class="chat-body">Hi! How can we help you today?</div>
+</div>
+
+<script>
+(function () {
+  [].forEach.call(document.querySelectorAll('.acc-q'), function (b) {
+    b.addEventListener('click', function () {
+      var it = b.parentNode, open = !it.classList.contains('open');
+      it.classList.toggle('open', open); b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  [].forEach.call(document.querySelectorAll('.tab'), function (t) {
+    t.addEventListener('click', function () {
+      [].forEach.call(document.querySelectorAll('.tab'), function (x) { x.classList.remove('active'); });
+      [].forEach.call(document.querySelectorAll('.tabpanel'), function (p) { p.classList.remove('active'); });
+      t.classList.add('active');
+      var p = document.getElementById(t.getAttribute('data-panel'));
+      if (p) p.classList.add('active'); // defect: the third tab points to a missing panel, so its content area stays empty
+    });
+  });
+  var slides = document.querySelectorAll('.slide'), cur = 0;
+  function show(i) { [].forEach.call(slides, function (s, k) { s.classList.toggle('active', k === i); }); cur = i; }
+  document.getElementById('prev').addEventListener('click', function () { show((cur + slides.length - 1) % slides.length); });
+  document.getElementById('next').addEventListener('click', function () { /* defect: Next does nothing */ });
+  var modal = document.getElementById('modal');
+  document.getElementById('open-modal').addEventListener('click', function () { modal.classList.add('open'); });
+  document.getElementById('close-modal').addEventListener('click', function () { modal.classList.remove('open'); });
+  var chat = document.getElementById('chat');
+  document.getElementById('chat-open').addEventListener('click', function () { chat.classList.add('open'); });
+  document.getElementById('chat-close').addEventListener('click', function () { chat.classList.remove('open'); });
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, bad = !f.name.value.trim() || !f.email.value.trim();
+    f.classList.toggle('invalid', bad);
+    document.getElementById('c-ok').style.display = bad ? 'none' : 'block';
+  });
+  document.getElementById('news-form').addEventListener('submit', function (e) {
+    e.preventDefault(); document.getElementById('n-ok').style.display = 'block';
+  });
+})();
+</script>
+</body>
+</html>

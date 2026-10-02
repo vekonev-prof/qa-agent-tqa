@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu Test Page — Reliable Moving Co</title>
+<meta name="description" content="Eval fixture for the menu walk-through of the visual glance step (visual-glance, section Menu).">
+<style>
+  :root { --hdr: 56px; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, sans-serif; color: #222; background: #fff; }
+  button { font: inherit; cursor: pointer; }
+
+  .topbar { position: relative; background: #0a58ca; color: #fff; padding: 11px 48px 11px 16px; font-size: 14px; text-align: center; }
+  .tb-close { position: absolute; right: 8px; top: 5px; width: 34px; height: 30px; background: none; border: 0; color: #fff; font-size: 18px; }
+
+  .site-header { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 12px; height: var(--hdr); padding: 0 16px; background: #fff; border-bottom: 1px solid #ddd; transition: transform .2s; }
+  .site-header.hide { transform: translateY(-100%); }
+  .logo { font-weight: bold; color: #0a58ca; text-decoration: none; white-space: nowrap; }
+  .phone-text { display: none; color: #222; text-decoration: none; font-weight: bold; white-space: nowrap; }
+  .phone-icon { margin-left: auto; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid #0a58ca; border-radius: 50%; color: #0a58ca; text-decoration: none; font-size: 18px; }
+  .cta { background: #0a58ca; color: #fff; padding: 9px 12px; text-decoration: none; font-size: 14px; white-space: nowrap; }
+  .burger { width: 44px; height: 44px; background: none; border: 1px solid #999; font-size: 22px; }
+  nav { margin: 0; }
+  nav ul { list-style: none; margin: 0; padding: 0; }
+  .hero { background: #e9f0fb; padding: 40px 16px; }
+  .hero h1 { margin: 0 0 8px; font-size: 30px; }
+  main { padding: 16px; min-height: 2600px; max-width: 900px; }
+  main p { line-height: 1.5; }
+  .scrim { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.38); pointer-events: none; z-index: 20; }
+
+  /* chat widget (a site-wide component, the same as on interactive.html) */
+  .chat-bubble { position: fixed; right: 12px; bottom: 12px; z-index: 25; background: #0a58ca; color: #fff; border: 0; border-radius: 24px; padding: 12px 16px; }
+  .chat-panel { display: none; position: fixed; right: 12px; bottom: 12px; width: 320px; height: 380px; background: #fff; border: 1px solid #999; z-index: 60; box-shadow: 0 4px 16px rgba(0,0,0,.3); }
+  .chat-panel.open { display: block; }
+  .chat-head { background: #0a58ca; color: #fff; padding: 12px; display: flex; justify-content: space-between; }
+  .chat-head button { background: none; border: 0; color: #fff; font-size: 18px; }
+  .chat-body { padding: 12px; font-size: 14px; }
+  /* defect: on the phone the opened chat fills the whole screen and has no close button */
+  @media (max-width: 480px) { .chat-panel { inset: 0; width: auto; height: auto; } .chat-close { display: none; } }
+
+  /* ---------- hamburger layout: phone, tablet, landscape phone (width < 1024) ---------- */
+  @media (max-width: 1023px) {
+    nav { position: fixed; left: 0; right: 0; bottom: 0; top: var(--panel-top, 96px); background: #fff; z-index: 35; display: none; }
+    body.menu-open nav { display: block; }
+    nav ul.lvl1 { height: 100%; overflow-y: auto; }
+    nav li > a, nav li > .parent, nav li.back > button { display: block; width: 100%; min-height: 52px; padding: 15px 16px; text-align: left; font-size: 16px; color: #222; background: #fff; border: 0; border-bottom: 1px solid #eee; text-decoration: none; }
+    nav li.has-sub > .parent::after { content: " ›"; float: right; }
+    nav li > ul { display: none; }
+    nav li.open > ul { display: block; position: fixed; left: 0; right: 0; bottom: 0; top: var(--panel-top, 96px); background: #fff; overflow-y: auto; z-index: 36; }
+    nav li.open li.open > ul { z-index: 37; }
+    nav li.open li.open li.open > ul { z-index: 38; }
+    nav li.back > button { background: #f3f3f3; font-weight: bold; }
+    .panel-extra a { font-weight: bold; }
+    .scrim { display: none; }
+  }
+  /* defect: on the landscape phone (short screen) the top-level list does not scroll, so the rows below the fold cannot be reached */
+  @media (max-width: 1023px) and (max-height: 500px) { nav ul.lvl1 { overflow: hidden; } }
+  /* defect: on the portrait phone one item of the services list is cut off, and the phone icon is missing in the closed header */
+  @media (max-width: 480px) {
+    .clip > a { white-space: nowrap; overflow: hidden; width: 230px; }
+    .phone-icon { display: none; }
+    .cta { margin-left: auto; }
+  }
+  @media (max-width: 1023px) and (min-width: 481px) { .cta { margin-left: 0; } }
+
+  /* ---------- desktop layout (width >= 1024): hover dropdowns, flyouts to the right ---------- */
+  @media (min-width: 1024px) {
+    .burger, .phone-icon, .panel-extra, li.back { display: none; }
+    .phone-text { display: block; order: 2; margin-left: auto; }
+    .cta { order: 3; }
+    nav { order: 1; margin-left: 28px; }
+    nav ul.lvl1 { display: flex; }
+    nav li { position: relative; }
+    nav li > a, nav li > .parent { display: block; padding: 18px 14px; background: none; border: 0; color: #222; text-decoration: none; font-size: 15px; }
+    nav li > ul { display: none; position: absolute; top: 100%; left: 0; min-width: 240px; background: #fff; border: 1px solid #ddd; z-index: 40; }
+    nav li > ul li > a, nav li > ul li > .parent { width: 100%; text-align: left; padding: 11px 14px; border-bottom: 1px solid #f0f0f0; }
+    nav li > ul ul { top: 0; left: 100%; }
+    nav li.has-sub:hover > ul, nav li.has-sub:focus-within > ul, nav li.open > ul { display: block; }
+    /* defect: the Locations dropdown text is near-white on white, the list looks empty */
+    nav li.loc > ul a { color: #e8e8e8; }
+    .scrim { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Eval fixture for the menu walk-through (visual-glance, section "Menu"). One DOM, two layouts: hover dropdowns on desktop, a hamburger with full-screen levels below 1024px.
+     Menu depth: Services > Residential Moving > Packing Services > (Boxes, Fragile). Locations has a long list (20 cities). About has one level.
+     Planted defects: see eval/ground-truth.md, items 104-111. Trap: the sticky header hides on scroll down and comes back on scroll up (item 112). -->
+
+<div class="topbar" id="topbar">Free estimates this week — call (555) 555-0123<button class="tb-close" id="tbclose" aria-label="Close notice">✕</button></div>
+
+<header class="site-header" id="hdr">
+  <a class="logo" href="index.html">Reliable Moving Co</a>
+  <a class="phone-text" href="tel:+15555550123">(555) 555-0123</a>
+  <a class="phone-icon" href="tel:+15555550123" aria-label="Call us">☎</a>
+  <a class="cta" href="index.html#quote">Free Quote</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav id="nav" aria-label="Main">
+    <ul class="lvl1">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-sub" data-panel="2">
+        <button class="parent" aria-expanded="false">Services</button>
+        <ul>
+          <li class="back"><button type="button">‹ Back</button></li>
+          <li class="has-sub" data-panel="3">
+            <button class="parent" aria-expanded="false">Residential Moving</button>
+            <ul>
+              <li class="back"><button type="button">‹ Back</button></li>
+              <li><a href="services.html">Local Moves</a></li>
+              <li><a href="services.html">Long Distance Moves</a></li>
+              <li class="has-sub" data-panel="4">
+                <button class="parent" aria-expanded="false">Packing Services</button>
+                <ul>
+                  <li class="back"><button type="button">‹ Back</button></li>
+                  <li><a href="services.html">Boxes and Supplies</a></li>
+                  <li><a href="services.html">Fragile Items</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="clip"><a href="services.html">Commercial Relocation and Office Moving</a></li>
+          <li><a href="services.html">Storage</a></li>
+        </ul>
+      </li>
+      <li class="has-sub loc" data-panel="2">
+        <button class="parent" aria-expanded="false">Locations</button>
+        <ul>
+          <li class="back"><button type="button">‹ Back</button></li>
+          <li><a href="index.html">New York</a></li><li><a href="index.html">Brooklyn</a></li><li><a href="index.html">Queens</a></li>
+          <li><a href="index.html">The Bronx</a></li><li><a href="index.html">Staten Island</a></li><li><a href="index.html">Newark</a></li>
+          <li><a href="index.html">Jersey City</a></li><li><a href="index.html">Hoboken</a></li><li><a href="index.html">Yonkers</a></li>
+          <li><a href="index.html">White Plains</a></li><li><a href="index.html">Stamford</a></li><li><a href="index.html">Greenwich</a></li>
+          <li><a href="index.html">Hartford</a></li><li><a href="index.html">New Haven</a></li><li><a href="index.html">Bridgeport</a></li>
+          <li><a href="index.html">Long Beach</a></li><li><a href="index.html">Hempstead</a></li><li><a href="index.html">Huntington</a></li>
+          <li><a href="index.html">Albany</a></li><li><a href="index.html">Philadelphia</a></li>
+        </ul>
+      </li>
+      <li class="has-sub" data-panel="2">
+        <button class="parent" aria-expanded="false">About</button>
+        <ul>
+          <li class="back"><button type="button">‹ Back</button></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="index.html">Careers</a></li>
+          <li><a href="index.html">Reviews</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li class="panel-extra"><a href="tel:+15555550123">Call (555) 555-0123</a></li>
+      <li class="panel-extra"><a href="index.html#quote">Get a Free Quote</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<section class="hero">
+  <h1>Moving made simple</h1>
+  <p>Local and long distance moves in New York, New Jersey and Connecticut.</p>
+</section>
+
+<main>
+  <h2>Why choose us</h2>
+  <p>Licensed and insured crews, written estimates and no hidden fees.</p>
+  <p>This page is long on purpose, so the sticky header and the page behind the open menu can be scrolled.</p>
+  <p>Every move starts with a free estimate by phone or video call.</p>
+  <p>We pack, load, drive, unload and place your furniture where you want it.</p>
+</main>
+
+<button class="chat-bubble" id="chat-open">Chat with us</button>
+<div class="chat-panel" id="chat" role="dialog" aria-label="Chat">
+  <div class="chat-head"><span>Chat with us</span><button class="chat-close" id="chat-close" aria-label="Close chat">✕</button></div>
+  <div class="chat-body">Hi! How can we help you today?</div>
+</div>
+
+<script>
+(function () {
+  var body = document.body, burger = document.getElementById('burger'), nav = document.getElementById('nav');
+  var hdr = document.getElementById('hdr'), scrim = document.getElementById('scrim');
+  function closeAll() { [].forEach.call(nav.querySelectorAll('li.open'), function (li) { li.classList.remove('open'); li.firstElementChild.setAttribute('aria-expanded', 'false'); }); }
+  function setPanelTop() { document.documentElement.style.setProperty('--panel-top', Math.max(0, hdr.getBoundingClientRect().bottom) + 'px'); }
+
+  burger.addEventListener('click', function () {
+    var open = !body.classList.contains('menu-open');
+    if (open) { setPanelTop(); body.classList.add('menu-open'); scrim.style.display = 'block'; }
+    else { body.classList.remove('menu-open'); closeAll(); /* defect: the dark scrim is not hidden after closing */ }
+    burger.textContent = open ? '✕' : '☰';
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+
+  [].forEach.call(nav.querySelectorAll('.parent'), function (btn) {
+    btn.addEventListener('click', function () {
+      var li = btn.parentNode, open = !li.classList.contains('open');
+      li.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  [].forEach.call(nav.querySelectorAll('li.back > button'), function (btn) {
+    btn.addEventListener('click', function () {
+      var li = btn.parentNode.parentNode.parentNode; // the item whose panel is open
+      if (li.getAttribute('data-panel') === '3') { closeAll(); } // defect: Back on the 3rd level returns to the top level, not to the 2nd
+      else { li.classList.remove('open'); li.firstElementChild.setAttribute('aria-expanded', 'false'); }
+    });
+  });
+
+  var chat = document.getElementById('chat');
+  document.getElementById('chat-open').addEventListener('click', function () { chat.classList.add('open'); });
+  document.getElementById('chat-close').addEventListener('click', function () { chat.classList.remove('open'); });
+
+  // defect: the Top Bar close button does nothing
+  document.getElementById('tbclose').addEventListener('click', function () { });
+
+  // trap, not a defect: the sticky header hides when scrolling down and returns when scrolling up
+  var lastY = 0;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    if (y > lastY && y > 150 && !body.classList.contains('menu-open')) hdr.classList.add('hide');
+    else if (y < lastY) hdr.classList.remove('hide');
+    lastY = y;
+  });
+})();
+</script>
+</body>
+</html>

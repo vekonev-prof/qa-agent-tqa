@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank You — Reliable Moving Co</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; color: #222; }
+  header { padding: 12px 16px; border-bottom: 1px solid #ddd; }
+  header a { color: #0a58ca; text-decoration: none; font-weight: bold; }
+  main { padding: 32px 16px; max-width: 700px; }
+  footer { margin-top: 40px; padding: 20px 16px; background: #222; color: #fff; }
+  footer a { color: #fff; }
+</style>
+</head>
+<body>
+<!-- Eval fixture: the thank-you page shown after the quote form (visual-glance, section "404 and thank-you pages").
+     Defect: the template placeholders {{name}} and {{phone}} were not replaced. -->
+<header><a href="index.html">Reliable Moving Co</a></header>
+<main>
+  <h1>Thank you, {{name}}!</h1>
+  <p>We received your request and will call you at {{phone}} within one business hour.</p>
+  <p><a href="index.html">Back to the home page</a></p>
+</main>
+<footer>© Reliable Moving Co · <a href="index.html">Home</a></footer>
+</body>
+</html>
